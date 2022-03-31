@@ -1,0 +1,15 @@
+RQ-UC, UC01,UC01E1,UC01_1,
+R1,    V, , , 
+R2,    V, , , 
+R3,    V, , , 
+R4, ,    V, , 
+R5,    V, , , 
+R6,    V, , , 
+R7, , ,    V, 
+R8, , ,    V, 
+R9, , ,    V, 
+
+
+Sys-Cls, 	Sys1,
+typing.MainClass, 	O,
+typing.LogManager, , 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sWVS:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sWVS="http://www.example.org/sWVS" projectName="Dice Game">
+  <requirement reqId="Rq1" contents="The player plays a dice-based game."/>
+  <requirement reqId="Rq2" contents="The player checks the score."/>
+  <requirement reqId="Rq3" contents="The player sets up the map."/>
+  <system id="MainSys" objectType="Class" objectName="GameSystem" systemType="MainControlSystem" requirement="//@requirement.0 //@requirement.1 //@requirement.2">
+    <usecase id="UC01" usecaseName="Play Game" context="The player uses the system to play the game." actActors="Player" requirement="//@requirement.0">
+      <flow id="UC01_FL01" objectType="Function" objectName="playGame(name)" flowId="1" host="GameSystem" client="Player" requirement="//@requirement.0" context="Players enter their name and start the game." result="Game Start"/>
+      <flow id="UC01_FL02" objectType="Function" objectName="diceSetting()" flowId="2" host="GameSystem GameSystem" client="GameSystem GameSystem" requirement="//@requirement.0" context="The system prepares two dice." result="Returns/initializes the set two dice."/>
+      <flow id="UC01_FL03" objectType="Function" objectName="main()" flowId="3" host="GameSystem GameSystem" client="GameSystem GameSystem" requirement="//@requirement.0" context="Repeat the details until the game is over." result="End of the game.">
+        <detailFlow id="UC01_FL03_01" objectType="Function" objectName="diceRoll(dice)" flowId="1" host="GameSystem GameSystem" client="GameSystem GameSystem" requirement="//@requirement.0" context="The player selects a die and rolls it." result="Returns the result of the dice.">
+          <detailFlow id="UC01_FL03_01_01" data_base_SrcName="" objectType="Function" objectName="roll()" flowId="1" host="Dice Dice Dice Dice" client="GameSystem" context="Roll the selected die."/>
+        </detailFlow>
+        <detailFlow id="UC01_FL03_02" objectType="Function" objectName="move(dice,player)" flowId="2" host="GameSystem GameSystem" client="GameSystem GameSystem" requirement="//@requirement.0" context="The player moves by the value of the die." result="The player's piece moves by that value."/>
+      </flow>
+      <flow id="UC01_FL04" objectType="Function" objectName="gameEnd()" flowId="4" host="GameSystem GameSystem" client="GameSystem GameSystem" requirement="//@requirement.0" context="The system announces the winner and records the player's score." result="Record game scores and print results."/>
+    </usecase>
+    <usecase id="UC02" usecaseName="View Score" context="Players use the system to show scores." actActors="Player" requirement="//@requirement.1">
+      <flow id="UC02_FL01" objectName="readRecord()" host="GameSystem GameSystem" client="Player" context="Read the log file."/>
+      <flow id="UC02_FL01" objectName="printRecord()" host="GameSystem" client="GameSystem" context="Print the contents of the record." result="Print game record."/>
+    </usecase>
+  </system>
+  <actor id="ACTOR01" objectType="Function" objectName="Player" actorType="main Function" actUsecases="//@system.0/@usecase.0 //@system.0/@usecase.1"/>
+  <class id="Sys1" data_base_SrcName="gameSystem.GameSystem" objectType="Class" objectName="GameSystem" package="gameSystem" hasClass="Dice Map" defBase="GameSystem">
+    <field id="Map" objectName="playerList" typeName="Player[]" isClass="true"/>
+    <field id="dList" objectName="diceList" typeName="Dice[]" isClass="true"/>
+    <field id="plList" objectName="map" typeName="Map" isClass="true"/>
+    <method id="UC01_FL01" objectName="playGame(String name)" flow="playGame(name)" returnType="void"/>
+    <method id="UC01_FL02" objectName="diceSetting()" flow="diceSetting()" returnType="void"/>
+    <method id="UC01_FL03" objectName="main()" flow="main()" returnType="void"/>
+    <method id="UC01_FL04" objectName="gameEnd()" flow="gameEnd()" returnType="boolean"/>
+    <method id="UC01_FL03_01" objectName="diceRoll(Dice dice)" flow="diceRoll(dice)" returnType="void"/>
+    <method id="UC01_FL03_03" objectName="move(Dice dice, Player player)" flow="move(dice,player)" returnType="void"/>
+    <method id="UC02" objectName="printScore()" flow="readRecord() printRecord()" usecase="//@system.0/@usecase.1"/>
+  </class>
+  <class id="Player" data_base_SrcName="gameSystem.Player" objectType="Class" objectName="Player" package="gameSystem">
+    <field objectName="name" typeName="String"/>
+    <field objectName="pos" typeName="int"/>
+  </class>
+  <class id="Dice" data_base_SrcName="gameSystem.Dice" objectType="Class" objectName="Dice" package="gameSystem" defBase="Dice">
+    <field objectName="shapeList" typeName="int[]"/>
+    <method id="UC01_FL03_01_01" objectType="method" objectName="roll()" flow="roll()" returnType="int"/>
+  </class>
+  <class id="Map" data_base_SrcName="gameSystem.Map" objectType="Class" objectName="Map" package="gameSystem">
+    <field objectName="eventList" typeName="int[]"/>
+  </class>
+  <object xsi:type="sWVS:Class" id="ACTOR01" objectName="GameSystemTest" package="test" defBase="Player"/>
+  <object id="Dice" objectType="Class" objectName="Dice"/>
+</sWVS:Project>

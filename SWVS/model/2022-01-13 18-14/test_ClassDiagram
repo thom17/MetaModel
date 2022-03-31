@@ -1,0 +1,16 @@
+@startuml
+class TypingSystem 
+{
+
+	TypingSystem
+	playTyping()
+	loadTarget()
+	inputName()
+	checkTime(name)
+	typing()
+	checkTime()
+	finish()
+
+}
+
+@enduml

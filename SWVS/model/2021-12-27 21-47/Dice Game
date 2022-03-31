@@ -1,0 +1,45 @@
+@startuml
+ left to right direction
+	 actor "Player" as ACTOR01#red
+rectangle "GameSystem" as MainSys{
+	usecase "null" as UC01
+		usecase "UC01_FL01" as UC01
+			UC01--UC01_FL01 :<color> not implement 
+		usecase "UC01_FL02" as UC01
+			UC01--UC01_FL02 :<color> not implement 
+		usecase "UC01_FL03" as UC01
+			UC01--UC01_FL03 :<color> not implement 
+		usecase "UC01_FL04" as UC01
+			UC01--UC01_FL04 :<color> not implement 
+		ACTOR01--UC01
+	usecase "null" as UC02
+		usecase "UC02_FL01" as UC02
+			UC02--UC02_FL01 :<color> not implement 
+		usecase "UC02_FL01" as UC02
+			UC02--UC02_FL01 :<color> not implement 
+		ACTOR01--UC02
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "Player" as ACTOR01#red
+rectangle "GameSystem" as MainSys{
+	usecase "null" as UC01
+		usecase "UC01_FL01" as UC01
+			UC01--UC01_FL01 :<color> not implement 
+		usecase "UC01_FL02" as UC01
+			UC01--UC01_FL02 :<color> not implement 
+		usecase "UC01_FL03" as UC01
+			UC01--UC01_FL03 :<color> not implement 
+		usecase "UC01_FL04" as UC01
+			UC01--UC01_FL04 :<color> not implement 
+		ACTOR01--UC01
+	usecase "null" as UC02
+		usecase "UC02_FL01" as UC02
+			UC02--UC02_FL01 :<color> not implement 
+		usecase "UC02_FL01" as UC02
+			UC02--UC02_FL01 :<color> not implement 
+		ACTOR01--UC02
+}
+
+@enduml

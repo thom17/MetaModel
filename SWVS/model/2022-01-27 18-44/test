@@ -1,0 +1,53 @@
+@startuml
+ left to right direction
+	 actor "Actor-1" as Actor-1
+rectangle "Sys1" as Sys1{
+	usecase "null" as UC-1
+		Actor-1--UC-1
+	usecase "null" as UC-10
+		Actor-1--UC-10
+	usecase "null" as UC-2
+		Actor-1--UC-2
+	usecase "null" as UC-3
+		Actor-1--UC-3
+	usecase "null" as UC-4
+		Actor-1--UC-4
+	usecase "null" as UC-5
+		Actor-1--UC-5
+	usecase "null" as UC-6
+		Actor-1--UC-6
+	usecase "null" as UC-7
+		Actor-1--UC-7
+	usecase "null" as UC-8
+		Actor-1--UC-8
+	usecase "null" as UC-9
+		Actor-1--UC-9
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "Actor-1" as Actor-1
+rectangle "Sys1" as Sys1{
+	usecase "null" as UC-1
+		Actor-1--UC-1
+	usecase "null" as UC-10
+		Actor-1--UC-10
+	usecase "null" as UC-2
+		Actor-1--UC-2
+	usecase "null" as UC-3
+		Actor-1--UC-3
+	usecase "null" as UC-4
+		Actor-1--UC-4
+	usecase "null" as UC-5
+		Actor-1--UC-5
+	usecase "null" as UC-6
+		Actor-1--UC-6
+	usecase "null" as UC-7
+		Actor-1--UC-7
+	usecase "null" as UC-8
+		Actor-1--UC-8
+	usecase "null" as UC-9
+		Actor-1--UC-9
+}
+
+@enduml

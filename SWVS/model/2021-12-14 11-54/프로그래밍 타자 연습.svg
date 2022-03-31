@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="186px" preserveAspectRatio="none" style="width:533px;height:186px;" version="1.1" viewBox="0 0 533 186" width="533px" zoomAndPan="magnify"><defs><filter height="300%" id="f1kfjukcgb0cf6" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[5f9cfca025c350d9187f4eae00f76362]
+cluster Sys1--><rect fill="#FFFFFF" filter="url(#f1kfjukcgb0cf6)" height="167" style="stroke: #000000; stroke-width: 1.5;" width="419" x="102" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="182.5" y="25.1533">Programming Typing Practice System</text><ellipse cx="189.6446" cy="94.2289" fill="#FEFECE" filter="url(#f1kfjukcgb0cf6)" rx="71.6446" ry="16.7289" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="98" x="140.6446" y="100.3437">Typing Practice</text><ellipse cx="443.9828" cy="131.0973" fill="#FEFECE" filter="url(#f1kfjukcgb0cf6)" rx="60.9828" ry="16.5973" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="402.9828" y="137.2121">Save Record</text><ellipse cx="443.9117" cy="63.0973" fill="#FEFECE" filter="url(#f1kfjukcgb0cf6)" rx="53.9117" ry="16.5973" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="72" x="407.9117" y="69.2121">Code Make</text><!--MD5=[a2a951b1c513dcf22fc7f706bef8f05b]
+entity Actor01--><ellipse cx="30.5" cy="61.5" fill="#FEFECE" filter="url(#f1kfjukcgb0cf6)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M30.5,69.5 L30.5,96.5 M17.5,77.5 L43.5,77.5 M30.5,96.5 L17.5,111.5 M30.5,96.5 L43.5,111.5 " fill="none" filter="url(#f1kfjukcgb0cf6)" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="6" y="133.1533">Student</text><!--MD5=[73af0474f138b1b4c582b3d4d720fbdb]
+link UC01 to UC01_1--><path d="M249.75,102.89 C263.3,104.91 277.65,107.04 291,109 C321.92,113.54 356.39,118.54 384.67,122.62 " fill="none" id="UC01-to-UC01_1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="389.88,123.37,381.5425,118.1273,384.9311,122.6569,380.4015,126.0455,389.88,123.37" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="55" x="294.5" y="105.9995">«include»</text><!--MD5=[7a0068f98714fd6fde5d14bfe8f9dfc8]
+reverse link UC01 to UC01E1--><path d="M258.06,85.71 C300.72,80.47 354.88,73.82 393.54,69.07 " fill="none" id="UC01-backto-UC01E1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="252.92,86.34,262.3354,89.2296,257.8838,85.7392,261.3741,81.2875,252.92,86.34" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="60" x="292" y="71.9995">«extends»</text><!--MD5=[2eef38aab4a2ec90888648e4026244ce]
+link Actor01 to UC01--><path d="M55,94 C71.77,94 95.26,94 117.88,94 " fill="none" id="Actor01-UC01" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[db0fb4c3a410137ee1e66d87f828a8b4]
+@startuml
+ left to right direction
+	 actor "Student" as Actor01
+rectangle "Programming Typing Practice System" as Sys1{
+	usecase "Typing Practice" as UC01
+	usecase "Save Record" as UC01_1
+		UC01- ->UC01_1: <<include>>
+	usecase "Code Make" as UC01E1
+		UC01<- -UC01E1: <<extends>>
+		Actor01- -UC01
+}
+
+@enduml@startuml
+
+PlantUML version 1.2020.19(Tue Oct 13 00:10:01 KST 2020)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: MS949
+Language: ko
+Country: KR
+--></g></svg>

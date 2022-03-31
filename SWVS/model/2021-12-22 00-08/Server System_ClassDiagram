@@ -1,0 +1,15 @@
+@startuml
+class ServerManager 
+{
+
+	serverOn()
+
+}
+
+class GUIManager 
+{
+
+
+}
+
+@enduml

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sWVS:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sWVS="http://www.example.org/sWVS" projectName="Music ( For Class Dg Relation Example) ">
+  <requirement reqId="R1" contents="Instruments produce sound."/>
+  <requirement reqId="R2" contents="A guitarist creates a sound by playing through a guitar."/>
+  <requirement reqId="R3" contents="Guitar academies can be established only with a Guitarist teacher and a guitar that can be rented."/>
+  <requirement reqId="R4" contents="Guitar lessons are offered at a guitar academy."/>
+  <requirement reqId="R5" contents="The teacher demonstrates and the students perform."/>
+  <system objectName="GuitarAcademy">
+    <usecase id="UC02" usecaseName="Lesson" context="Lesson">
+      <flow id="UC02FL01" objectName="lesson(Guitarist student)" host="GuitarAcademy GuitarAcademy" client="Student Guitarist">
+        <detailFlow id="UC02FL01-1" objectName="teacher.playSong(academyGuitar)" host="GuitarAcademy GuitarAcademy" client="GuitarAcademy" requirement="//@requirement.3 //@requirement.4" result="sound  teacher's demonstration"/>
+        <detailFlow id="UC02FL01-2" objectName="student.playSong(academyGuitar)" host="GuitarAcademy" client="GuitarAcademy GuitarAcademy" requirement="//@requirement.3 //@requirement.4" result="sound student's practice"/>
+      </flow>
+    </usecase>
+  </system>
+  <system objectName="Guitarist">
+    <usecase id="UC01" usecaseName="Play Song">
+      <flow id="UC01FL01" objectName="playSong(Guitar guitar)" host="Guitarist" requirement="//@requirement.3 //@requirement.4" result="Guitaris play song with Guitar">
+        <detailFlow id="R1-F1" objectName="play()" host="Guitar" client="Instrument" context="Play an instrument." result="sound music">
+          <detailFlow id="R1-F2" objectName="Sound(10)" host="Instrument" client="Instrument"/>
+        </detailFlow>
+      </flow>
+    </usecase>
+  </system>
+  <actor objectType="Class Guitarist" objectName="Student"/>
+  <class data_base_SrcName="classRelation.GuitarAcademy" objectName="GuitarAcademy" package="classRelation" hasClass="Guitar"/>
+  <class data_base_SrcName="classRelation.Guitarist" objectName="Guitarist" package="classRelation" hasClass="Guitar"/>
+  <class data_base_SrcName="classRelation.Guitar" objectName="Guitar" package="classRelation" superClass="Instrument"/>
+  <class data_base_SrcName="classRelation.Instrument" objectType="abstract" objectName="Instrument" package="classRelation" hasClass="Sound"/>
+  <class data_base_SrcName="classRelation.Sound" objectName="Sound" package="classRelation" superClass="Instrument"/>
+</sWVS:Project>

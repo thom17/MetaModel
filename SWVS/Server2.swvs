@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sWVS:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sWVS="http://www.example.org/sWVS" projectName="Server System">
+  <requirement reqId="RqSM-1" contents="An administrator can open the server only through SM."/>
+  <requirement reqId="RqSM-1-1" contents="CS can only be run through SM when the server is open."/>
+  <requirement reqId="RqSM-2" contents="The SM program has a monitoring function."/>
+  <requirement reqId="RqSM-3" contents="The server supports the update function."/>
+  <requirement reqId="RqSM-4" contents="When the server is running, the parameters of the server are set through the setting file."/>
+  <requirement reqId="RqSM-5" contents="Server reset is supported when the server is shut down."/>
+  <requirement reqId="RqSM-MS-1" contents="The MS logs the status value of the monitoring system to SM log file."/>
+  <system id="SMS" objectName="Server Manage System" defClass="ServerManager">
+    <usecase id="UC01" usecaseName="Server Manage System" context="Server On. If has patch, then Update.">
+      <extend id="UC01-E1" objectName="Update" usecaseName="Update"/>
+      <extend id="UC01-I1" objectName="Update" usecaseName="Update"/>
+      <flow id="UC01-FL-1" objectName="turnOn()" flowId="1" context="Admin turn on Server." result="sucess return"/>
+      <flow id="UC01-FL-2" objectName="load(file)" flowId="2" context="Load the start file. Start file has setting file path and update file path. " result="Initialize Server Manager files."/>
+      <flow id="UC01-FL-3" objectName="checkUpdate()" flowId="3" context="Check there is update file." result="">
+        <detailFlow id="UC01-FL-3-1" flowId="3" context="1 Run UC01-E1" result="Update setting file with update file.">
+          <condition preCondition="There is update file." postCondition="Update setting file with update file."/>
+        </detailFlow>
+      </flow>
+      <flow id="UC01-FL-4" objectName="launch(file)" flowId="4" context=" Executes the server based on the setting value." result=""/>
+      <flow id="UC01-FL-5" objectName="runGui()" flowId="5" context=" Run UC01-I1" result="Print gui.">
+        <condition preCondition="" postCondition="Print gui."/>
+      </flow>
+    </usecase>
+  </system>
+  <system id="GUISYS" objectName="GUI"/>
+  <class id="SMS" data_base_SrcName="server.ServerManager" objectName="ServerManager" package="server" hasClass="GUIManager">
+    <field objectName="updateFile" typeName="File"/>
+    <field id="settingFile" objectType="" objectName="settingFile" typeName="File"/>
+    <field id="MS" objectType="" objectName="ms" typeName="MonitoringSystem"/>
+    <method id="serverOn" objectName="serverOn()" flow="load(file) checkUpdate() launch(file) runGui()" returnType="void" usecase="//@system.0/@usecase.0"/>
+    <method id="on" objectName="loadFile(file)" flow="load(file)" returnType="boolean"/>
+  </class>
+  <class id="GUIManage" data_base_SrcName="null.GUIManager" objectName="GUIManager"/>
+</sWVS:Project>

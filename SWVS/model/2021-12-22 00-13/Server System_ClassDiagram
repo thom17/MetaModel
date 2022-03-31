@@ -1,0 +1,18 @@
+@startuml
+class ServerManager 
+{
+	 File updateFile
+	 null settingFile
+
+	serverOn()
+
+}
+ ServerManager *-- GUIManager
+
+class GUIManager 
+{
+
+
+}
+
+@enduml

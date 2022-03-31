@@ -1,0 +1,12 @@
+@startuml
+ left to right direction
+	 actor "Student" as null
+rectangle "GuitarAcademy" as null{
+	usecase "Lesson" as UC02
+}
+
+rectangle "Guitarist" as null{
+	usecase "Play Song" as UC01
+}
+
+@enduml

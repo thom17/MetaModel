@@ -1,0 +1,17 @@
+@startuml
+ left to right direction
+	 actor "Actor-1" as Actor-1
+rectangle "null" as Sys11{
+	usecase "null" as UC-1
+		Actor-1--UC-1
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "Actor-1" as Actor-1
+rectangle "null" as Sys11{
+	usecase "null" as UC-1
+		Actor-1--UC-1
+}
+
+@enduml

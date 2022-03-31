@@ -1,0 +1,21 @@
+@startuml
+ left to right direction
+	 actor Player
+rectangle Game System{
+	usecase Play Game
+		Player--Play Game
+	usecase Configure Game
+		Player--Configure Game
+}
+
+@enduml@startuml
+ left to right direction
+	 actor Player
+rectangle Game System{
+	usecase Play Game
+		Player--Play Game
+	usecase Configure Game
+		Player--Configure Game
+}
+
+@enduml

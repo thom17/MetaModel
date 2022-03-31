@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sWVS -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="SWVS.presentation.SWVSModelWizardID"
+            name="%_UI_SWVSModelWizard_label"
+            class="SWVS.presentation.SWVSModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SWVSModelFile.gif">
+         <description>%_UI_SWVSModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sWVS -->
+      <editor
+            id="SWVS.presentation.SWVSEditorID"
+            name="%_UI_SWVSEditor_label"
+            icon="icons/full/obj16/SWVSModelFile.gif"
+            extensions="swvs"
+            class="SWVS.presentation.SWVSEditor"
+            contributorClass="SWVS.presentation.SWVSActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

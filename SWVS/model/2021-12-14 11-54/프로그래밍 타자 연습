@@ -1,0 +1,25 @@
+@startuml
+ left to right direction
+	 actor "Student" as Actor01
+rectangle "Programming Typing Practice System" as Sys1{
+	usecase "Typing Practice" as UC01
+	usecase "Save Record" as UC01_1
+		UC01-->UC01_1: <<include>>
+	usecase "Code Make" as UC01E1
+		UC01<--UC01E1: <<extends>>
+		Actor01--UC01
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "Student" as Actor01
+rectangle "Programming Typing Practice System" as Sys1{
+	usecase "Typing Practice" as UC01
+	usecase "Save Record" as UC01_1
+		UC01-->UC01_1: <<include>>
+	usecase "Code Make" as UC01E1
+		UC01<--UC01E1: <<extends>>
+		Actor01--UC01
+}
+
+@enduml

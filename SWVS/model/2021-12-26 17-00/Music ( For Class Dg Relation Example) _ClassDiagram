@@ -1,0 +1,35 @@
+@startuml
+class GuitarAcademy 
+{
+
+
+}
+ GuitarAcademy *-- Guitar
+
+class Guitarist 
+{
+
+
+}
+ Guitarist *-- Guitar
+
+class Guitar 
+{
+
+
+}
+
+abstract Instrument 
+{
+
+
+}
+ Instrument *-- Sound
+
+class Sound 
+{
+
+
+}
+
+@enduml

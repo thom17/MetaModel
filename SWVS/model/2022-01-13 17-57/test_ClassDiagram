@@ -1,0 +1,16 @@
+@startuml
+class 타자프로그램 
+{
+
+	null
+	playTyping()
+	loadTarget()
+	inputName()
+	checkTime(name)
+	typing()
+	checkTime()
+	finish()
+
+}
+
+@enduml

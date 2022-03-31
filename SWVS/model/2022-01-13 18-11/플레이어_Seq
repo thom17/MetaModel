@@ -1,0 +1,20 @@
+@startuml
+group UC01 타자프로그램
+	group playTyping()
+		타자프로그램->타자프로그램 : parameterSet()
+	타자프로그램-->타자프로그램 :  타겟 파일을 반환
+	end
+	타자프로그램->타자프로그램 : loadTarget()
+	타자프로그램->타자프로그램 : inputName()
+	타자프로그램->타자프로그램 : checkTime(name)
+	group typing()
+		타자프로그램->타자프로그램 : checkEnd()
+		타자프로그램->타자프로그램 : inputLine()
+		타자프로그램->타자프로그램 : checkAns()
+		타자프로그램->타자프로그램 : getNextLine()
+	타자프로그램-->타자프로그램 : 
+	end
+	타자프로그램->타자프로그램 : checkTime()
+	타자프로그램->타자프로그램 : finish()
+end
+@enduml

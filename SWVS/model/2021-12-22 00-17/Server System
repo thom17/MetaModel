@@ -1,0 +1,27 @@
+@startuml
+ left to right direction
+rectangle "Server Manage System" as SMS{
+	usecase "Server Manage System" as UC01
+	usecase "Update" as UC01-E1
+		UC01<--UC01-E1: <<extends>>
+	usecase "Update" as UC01-I1
+		UC01<--UC01-I1: <<extends>>
+}
+
+rectangle "GUI" as GUISYS{
+}
+
+@enduml@startuml
+ left to right direction
+rectangle "Server Manage System" as SMS{
+	usecase "Server Manage System" as UC01
+	usecase "Update" as UC01-E1
+		UC01<--UC01-E1: <<extends>>
+	usecase "Update" as UC01-I1
+		UC01<--UC01-I1: <<extends>>
+}
+
+rectangle "GUI" as GUISYS{
+}
+
+@enduml

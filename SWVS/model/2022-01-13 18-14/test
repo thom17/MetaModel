@@ -1,0 +1,17 @@
+@startuml
+ left to right direction
+	 actor "Player " as Player 
+rectangle "TypingSystem" as Msys{
+	usecase "TypingSystem" as UC01
+		Player --UC01
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "Player " as Player 
+rectangle "TypingSystem" as Msys{
+	usecase "TypingSystem" as UC01
+		Player --UC01
+}
+
+@enduml

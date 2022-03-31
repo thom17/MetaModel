@@ -1,0 +1,13 @@
+@startuml
+ left to right direction
+rectangle "null" as null{
+	usecase "null" as null
+}
+
+@enduml@startuml
+ left to right direction
+rectangle "null" as null{
+	usecase "null" as null
+}
+
+@enduml

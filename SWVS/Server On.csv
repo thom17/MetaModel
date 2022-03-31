@@ -1,0 +1,13 @@
+,context,Pre condition,After condition,host,client
+System Id,SMS,,,,
+System,Server Manage System,,,,
+Use case Name,Server On.,Setting file init.,Server running. Print gui.,,
+UC ID,UC01,,,Sys1,
+desc,"Server On. If has patch, then Update. ",,,,
+Use Actor,Admin,,,,
+serverOn(),1. Admin turn on Server.,,,,Player 
+UC01-FL-2,2. Load the setting file.,,,,FileSystem
+UC01-FL-3,3. Check there is update file.,,,,
+UC01-FL-3-1,3.1 Run UC01-E1,There is update file.,Update setting file with update file.,,
+UC01-FL-4,4. Executes the server based on the setting value.,,,,
+UC01-FL-5,5. Run UC01-I1,,Print gui.,,

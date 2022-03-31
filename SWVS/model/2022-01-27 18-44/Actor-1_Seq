@@ -1,0 +1,92 @@
+@startuml
+group UC-1 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-10 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-2 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-3 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-4 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-5 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-6 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-7 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-8 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+group UC-9 null
+	Sys1->Sys1 : flow1()
+	Sys1->Sys1 : flow2()
+	Sys1->Sys1 : flow3()
+	Sys1->Sys1 : flow4()
+	Sys1->Sys1 : flow5()
+	Sys1->Sys1 : flow6()
+	Sys1->Sys1 : flow7()
+end
+@enduml

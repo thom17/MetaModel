@@ -1,0 +1,27 @@
+@startuml
+class MainClass 
+{
+	 File target
+	 String name
+	 null codeLineList
+	 String[] ansLineList
+
+	main(String args[])
+	fileSet(args)
+	load(file)
+	readName()
+	setStartTime()
+	main()
+	setEndTime()
+
+}
+
+class LogManager 
+{
+	 File saveFile
+
+	null
+
+}
+
+@enduml
