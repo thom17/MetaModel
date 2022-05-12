@@ -1,0 +1,21 @@
+,context,,,,
+System Id,Problem,,,,
+System,문제 출제 시스템,,,,
+Use case Name,Solve,,,,
+UC ID,UC01,,,,
+desc,"Server On. If has patch, then Update. ",,,,
+Use Actor,Admin,,,,
+Pre condition,문제 풀기 시작,,,,
+Post condition,"다음 문제 설정, 결과 출력",,,,
+,,,,,
+Flow of Event,,,,,
+Message Name,context,Pre condition,After condition,host,client
+serverOn(),1. 오늘의 추가된 단어 단어장과 문제지에 추가,,,,Player 
+UC01-FL-2,2. 3일차 7일차 30일차에 해당하는 단어 문제지에 추가.,,,,FileSystem
+UC01-FL-3,3. 문제지 셔플하여 순서에 따른 암기 방지,,,,
+UC01-FL-3-1,4. 각각의 문제 출력 ( Print Problem) ,There is update file.,Update setting file with update file.,,
+UC01-FL-4,5. 영단어를 보고 뜻을 입력,,,,
+UC01-FL-5,6. 정답이 포함된 주간식 문제들 단어에 따라 적합하게 번호 및 정답 생성,,Print gui.,,
+,7. 정답 및 오답에 따라 해당 단어 폴더화,,,,
+,7.1 정답시 1일->3일->7일->30일 (현재 기점에서 해당일에 문제 출제),,,,
+,7.2 오답시 1일<-1일<-3일<-7일<-30일 (현재 기점에서 해당일에 문제 출제),,,,

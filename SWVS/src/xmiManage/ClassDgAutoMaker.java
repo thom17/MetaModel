@@ -46,6 +46,7 @@ public class ClassDgAutoMaker
 	private void usecase2Method(Class cls, UseCase uc) 
 	{
 		// TODO Auto-generated method stub
+		
 		Method fun = f.createMethod();
 		fun.setUsecase(uc);
 		fun.setId(uc.getId());

@@ -3,7 +3,7 @@ package main;
 import java.io.File;
 import java.io.IOException;
 
-import codeGenerater.CodeGenerater;
+import codeGenerater.JavaCodeGenerater;
 import diagram.ClassDg;
 import diagram.SequenceDg;
 import diagram.UsecaseDg;
@@ -62,7 +62,7 @@ public class Test
 	}
 	public static void codeMaker()
 	{
-		CodeGenerater maker = new CodeGenerater(mmg.project);	
+		JavaCodeGenerater maker = new JavaCodeGenerater(mmg.project);	
 		maker.make();
 		System.out.println("Code Generator done");
 		

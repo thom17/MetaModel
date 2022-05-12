@@ -60,7 +60,6 @@ public class CmdManager
 		{
 			xmiReader = new XmiReader(filePath);
 			project = xmiReader.getProject();
-			
 		}
 			
 	}

@@ -17,7 +17,7 @@ import SWVS.Flow;
 import SWVS.Method;
 import SWVS.Project;
 import SWVS.impl.SWVSPackageImpl;
-import codeGenerater.CodeGenerater;
+import codeGenerater.JavaCodeGenerater;
 
 import diagram.ClassDg;
 import diagram.SequenceDg;
@@ -92,7 +92,7 @@ public class XmiReader
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		CodeGenerater maker = new CodeGenerater(project);
+		JavaCodeGenerater maker = new JavaCodeGenerater(project);
 		maker.make();
 		xmi.save();
 
@@ -110,7 +110,7 @@ public class XmiReader
 		UsecaseDg.main(project);
 		ClassDg.main(project);
 		SequenceDg.main(project);
-		CodeGenerater maker = new CodeGenerater(project);
+		JavaCodeGenerater maker = new JavaCodeGenerater(project);
 		maker.make();
 		xmi.save();
 

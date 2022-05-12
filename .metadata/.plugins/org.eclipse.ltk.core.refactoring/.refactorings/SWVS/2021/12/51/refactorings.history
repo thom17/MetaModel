@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;UCS.csv&apos; to &apos;SWVS&apos;&#x0D;&#x0A;- Original project: &apos;SWVS&apos;&#x0D;&#x0A;- Destination element: &apos;SWVS&apos;&#x0D;&#x0A;- Original element: &apos;UCS.csv&apos;" description="Copy file" element1="UCS.csv" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1639721905443" target="/SWVS" units="0" version="1.0"/>
+</session>

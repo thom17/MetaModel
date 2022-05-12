@@ -1,0 +1,34 @@
+package utill;
+
+import java.io.File;
+import java.util.ArrayList;
+
+public class FileReader {
+	//static ArrayList<File> fileList;
+	public static File[] read(String path, String extend[]) {
+		ArrayList<File> fileList = new ArrayList<File>();
+		File file = new File(path);
+		if ( file.isDirectory() )
+			searchFolder(file, fileList, extend);
+		return (File[]) fileList.toArray();
+	}
+	private static void searchFolder(File folder, ArrayList<File> fileList, String extend[]) {
+		// TODO Auto-generated method stub
+		for(File file : folder.listFiles()) {
+			if(file.isDirectory())
+			{
+				searchFolder(file, fileList, extend);
+			}else {
+				file.getName();
+			}
+		}
+	}
+	public static void main(String []args) {
+		File file = new File("model");
+		System.out.println(file.getName());
+		for(File f : file.listFiles()) {
+			System.out.println(f.getName());
+		}
+		
+	}
+}

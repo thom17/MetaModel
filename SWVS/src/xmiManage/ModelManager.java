@@ -21,10 +21,12 @@ import SWVS.Function;
 import SWVS.Method;
 import SWVS.System;
 import SWVS.impl.SWVSPackageImpl;
+import fileLoader.UcSpecific;
 
 public class ModelManager 
 {
 	XmiReader xmiReader;
+
 	public Project project;
 	public EList<System> systemList;
 	public EList<Class> classList;
@@ -100,6 +102,7 @@ public class ModelManager
 		function.setAddedObject(true);
 		xmiReader.save();
 	}
+	
 	public void addMethod(String clsSrcName, String name, String sig)
 	{
 		Class cls = findClass(clsSrcName);
@@ -114,6 +117,13 @@ public class ModelManager
 		function.setAddedObject(true);
 		xmiReader.save();
 	}
+	public void readUseCaseSpec(File file)
+	{
+		UcSpecific ucSpec = new UcSpecific(file);
+		UsecaseManager umg = new UsecaseManager(this, ucSpec);
+		
+	}
+	
 	public void save() {
 		xmiReader.save();	
 	}
