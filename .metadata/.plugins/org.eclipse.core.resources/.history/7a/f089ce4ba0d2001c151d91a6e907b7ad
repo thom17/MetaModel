@@ -18,7 +18,7 @@ public class Test
 {
 	final static String M_FILE = "test.swvs";
 	final static String RQ_FILE = "rqTable.csv";
-	final static String UC_DIR = "C:\\Users\\thom1\\Desktop\\jsj\\파이썬\\AutoGentProject\\result";
+	final static String UC_DIR = "target";
 	static ModelManager mmg;
 	public static void main(String argsp[])
 	{
@@ -28,8 +28,7 @@ public class Test
 	public static void readRqFile(String rqFile)
 	{
 		RqSpecific rqs = new RqSpecific(new File(rqFile));
-		RqManager rqm = new RqManager(mmg);
-		rqm.addRq(rqs);
+		RqManager rqm = new RqManager(mmg, rqs);
 		System.out.println("RQTable done");
 	}
 	
@@ -45,8 +44,7 @@ public class Test
 		}else
 		{
 			UcSpecific ucs = new UcSpecific(file);
-			UsecaseManager ucm = new UsecaseManager(mmg);
-			ucm.addUcSpecific(ucs);
+			UsecaseManager ucm = new UsecaseManager(mmg, ucs);
 			System.out.println(file.getAbsolutePath() +" UseCase Spec done");
 		}
 	}
@@ -78,7 +76,7 @@ public class Test
 		mmg = new ModelManager(M_FILE);
 		readRqFile(RQ_FILE);
 		readUseCaseSpec(UC_DIR);
-		new ClassDgAutoMaker(mmg).autoMake();	//Class Diagram 자동 생성
+		new ClassDgAutoMaker(mmg);	//Class Diagram 자동 생성
 		graphMake();
 		codeMaker();
 		System.out.println("oneWay done");

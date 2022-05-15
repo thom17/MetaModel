@@ -33,15 +33,18 @@ public class RqManager {
 	{
 		RqSpecific rqs  = new RqSpecific(new File("RqTable.csv"));
 		ModelManager mmg = new ModelManager("test.swvs");
-		RqManager ucm = new RqManager(mmg);
+		RqManager ucm = new RqManager(mmg, rqs);
 		java.lang.System.out.println("Rqs Mananger Main Done");
 	}
-	public RqManager(ModelManager mmg)
+	public RqManager(ModelManager mmg, RqSpecific rq)
 	{
 		this.mmg = mmg;
 		f = SWVSFactory.eINSTANCE;
 		SWVSPackageImpl.init();
 		project = mmg.project;
+		this.rqs = rq;
+		addRq(rq);
+		mmg.xmiReader.save();
 	}
 	
 	public void addRq(RqSpecific rqs)

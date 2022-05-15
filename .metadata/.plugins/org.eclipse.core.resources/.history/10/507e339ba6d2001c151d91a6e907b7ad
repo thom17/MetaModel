@@ -16,8 +16,7 @@ public class FileReader {
 			searchFolder(file, fileList);
 		return  castArray(fileList);
 	}
-	private static File[] castArray(ArrayList<File> arrayList) 
-	{
+	private static File[] castArray(ArrayList<File> arrayList) {
 		File list[] = new File[arrayList.size()];
 		for(int i = 0; i<list.length; i++) {
 			list[i] = arrayList.get(i);

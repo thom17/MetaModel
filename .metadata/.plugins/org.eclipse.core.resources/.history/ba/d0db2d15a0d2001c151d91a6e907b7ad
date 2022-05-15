@@ -110,8 +110,7 @@ public class ModelManager
 	public void readUseCaseSpec(File file)
 	{
 		UcSpecific ucSpec = new UcSpecific(file);
-		usecaseManager.addUcSpecific(ucSpec);
-		
+		umg.addUcSpecific(ucSpec);
 	}
 	
 	public void save() {

@@ -29,14 +29,15 @@ public class UsecaseManager
 	SWVSFactory f;
 	UcSpecific ucs;
 	
-	public UsecaseManager(ModelManager mmg)
+	public UsecaseManager(ModelManager mmg, UcSpecific ucs)
 	{
 		this.mmg = mmg;
 		f = SWVSFactory.eINSTANCE;
 		SWVSPackageImpl.init();
 		project = mmg.project;
+		addUcSpecific(ucs);
+		mmg.xmiReader.save();
 	}
-	
 	public void addUcSpecific(UcSpecific ucs)
 	{
 		this.ucs = ucs;
@@ -229,9 +230,9 @@ public class UsecaseManager
 	public static void main(String args[])
 	{
 
-		ModelManager mmg = new ModelManager("test.swvs");
-		UsecaseManager ucm = new UsecaseManager(mmg);
 		UcSpecific ucs  = new UcSpecific(new File("test.csv"));
+		ModelManager mmg = new ModelManager("test.swvs");
+		UsecaseManager ucm = new UsecaseManager(mmg, ucs);
 		java.lang.System.out.println("Usecase Mananger Main Done");
 		
 	}

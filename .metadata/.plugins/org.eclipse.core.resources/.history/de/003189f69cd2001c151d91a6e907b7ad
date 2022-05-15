@@ -26,9 +26,7 @@ import fileLoader.UcSpecific;
 public class ModelManager 
 {
 	XmiReader xmiReader;
-	UsecaseManager usecaseManager = new UsecaseManager(this);
-	RqManager rqManager = new RqManager(this);
-	
+
 	public Project project;
 	public EList<System> systemList;
 	public EList<Class> classList;
@@ -110,7 +108,7 @@ public class ModelManager
 	public void readUseCaseSpec(File file)
 	{
 		UcSpecific ucSpec = new UcSpecific(file);
-		usecaseManager.addUcSpecific(ucSpec);
+		UsecaseManager umg = new UsecaseManager(this, ucSpec);
 		
 	}
 	

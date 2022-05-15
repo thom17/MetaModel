@@ -21,8 +21,10 @@ public class ClassDgAutoMaker
 	{
 		this.mmg = mmg;
 		f= mmg.f;
+		autoMake();
+		mmg.save();
 	}
-	public void autoMake() 
+	private void autoMake() 
 	{
 		// TODO Auto-generated method stub
 		system2Class();
@@ -46,7 +48,6 @@ public class ClassDgAutoMaker
 		// TODO Auto-generated method stub
 		
 		Method fun = f.createMethod();
-		
 		fun.setUsecase(uc);
 		fun.setId(uc.getId());
 		fun.setObjectName(uc.getObjectName());

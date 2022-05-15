@@ -26,9 +26,7 @@ import fileLoader.UcSpecific;
 public class ModelManager 
 {
 	XmiReader xmiReader;
-	UsecaseManager usecaseManager = new UsecaseManager(this);
-	RqManager rqManager = new RqManager(this);
-	
+
 	public Project project;
 	public EList<System> systemList;
 	public EList<Class> classList;
@@ -46,11 +44,11 @@ public class ModelManager
 	}
 	public EList<Class> getClassList(){return classList;}
 	
-	public Class findClass(String data_base_src)
+	public Class findClass(String srcName)
 	{
 		for(Class cls : classList)
 		{
-			if( cls.getData_base_SrcName().equals(data_base_src) )
+			if( cls.getData_base_SrcName().equals(srcName) )
 				return cls;
 		}
 		return null;
@@ -110,7 +108,7 @@ public class ModelManager
 	public void readUseCaseSpec(File file)
 	{
 		UcSpecific ucSpec = new UcSpecific(file);
-		usecaseManager.addUcSpecific(ucSpec);
+		UsecaseManager umg = new UsecaseManager(this, ucSpec);
 		
 	}
 	
