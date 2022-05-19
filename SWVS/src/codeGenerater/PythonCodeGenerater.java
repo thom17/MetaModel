@@ -20,7 +20,7 @@ import SWVS.UseCase;
 
 public class PythonCodeGenerater 
 {
-	String codePath = "autoGen/src";
+	String codePath = "autoGen/python/";
 	Project project;
 	EList<Class> classList;
 	File filePath;
@@ -36,7 +36,7 @@ public class PythonCodeGenerater
 		Date date = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm");//mm-ss
 		String time =  format.format(date);
-		String src = "autoGen"+"/"+time;
+		String src = codePath+time;
 		File folder = new File(src);
 		folder.mkdir();
 		src += "/src";
@@ -132,9 +132,9 @@ public class PythonCodeGenerater
 	}
 	
 	private String makeMethodComment(UseCase uc, String tab) {
-		StringBuilder sb = new StringBuilder(tab+"/**"+uc.getId()+"\n");
+		StringBuilder sb = new StringBuilder(tab+"\"\"\""+uc.getId()+"\n");
 		sb.append(tab+uc.getContext()+"\n");
-		sb.append(tab+"*/\n");
+		sb.append(tab+"\"\"\"\n");
 		return sb.toString();
 	}
 	private String makeMethodComment(Flow flow, String tab) 
@@ -243,7 +243,7 @@ public class PythonCodeGenerater
 		if(!filePath.exists())	//폴더 존재.
 			filePath.mkdir();
 		
-		filePath = new File(codePath+"/"+packageName+"/"+className+".java");
+		filePath = new File(codePath+"/"+packageName+"/"+className+".py");
 		
 	}
 	

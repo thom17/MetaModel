@@ -6,7 +6,7 @@
     <semanticResources>../My.uml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_mWHl0AZGEeyypdA2wL_zFg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mW-hcAZGEeyypdA2wL_zFg" name="sWVS" repPath="#_mWwfAAZGEeyypdA2wL_zFg" changeId="4f4ea0e8-75cf-425b-9cb8-83689892e0cc">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mW-hcAZGEeyypdA2wL_zFg" name="sWVS" repPath="#_mWwfAAZGEeyypdA2wL_zFg" changeId="c43a97bc-28b9-485f-b6e8-aa1adba6e2f9">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="sWVS.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -114,10 +114,6 @@
         <children xmi:type="notation:Node" xmi:id="_c9ri4AZeEeyypdA2wL_zFg" type="2003" element="_c9ofkAZeEeyypdA2wL_zFg">
           <children xmi:type="notation:Node" xmi:id="_c9ri4wZeEeyypdA2wL_zFg" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_c9sJ8AZeEeyypdA2wL_zFg" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_EFfE0AZfEeyypdA2wL_zFg" type="3010" element="_EFazcAZfEeyypdA2wL_zFg">
-              <styles xmi:type="notation:FontStyle" xmi:id="_EFfE0QZfEeyypdA2wL_zFg" fontName="맑은 고딕" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_EFfE0gZfEeyypdA2wL_zFg"/>
-            </children>
             <children xmi:type="notation:Node" xmi:id="_bG9mkAr4EeyypdA2wL_zFg" type="3010" element="_bG4HAAr4EeyypdA2wL_zFg">
               <styles xmi:type="notation:FontStyle" xmi:id="_bG9mkQr4EeyypdA2wL_zFg" fontColor="2697711" fontName="맑은 고딕" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_bG9mkgr4EeyypdA2wL_zFg"/>
@@ -1027,14 +1023,6 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_EFazcAZfEeyypdA2wL_zFg" name="usecaseName : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="sWVS.ecore#//UseCase/usecaseName"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="sWVS.ecore#//UseCase/usecaseName"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_EFbacAZfEeyypdA2wL_zFg" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_bG4HAAr4EeyypdA2wL_zFg" name="context : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="sWVS.ecore#//UseCase/context"/>
         <semanticElements xmi:type="ecore:EAttribute" href="sWVS.ecore#//UseCase/context"/>
@@ -2939,8 +2927,6 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_0qp3MlizEeyrxqnZ0ijMAA" name="usecaseName : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="sWVS.ecore#//UseCase/usecaseName"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="sWVS.ecore#//UseCase/usecaseName"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_0qp3M1izEeyrxqnZ0ijMAA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>

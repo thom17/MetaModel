@@ -78,7 +78,7 @@ public class UsecaseDg2 extends Base
 		if(p == 1)
 			sb.append("\t"+"usecase \""+ usecase.getData_base_SrcName()+"\" as "+usecase.getId()+"\n");
 		else
-			sb.append("\t"+"usecase \""+ usecase.getUsecaseName()+"("+percent+"%)"+"\" as "+usecase.getId()+" #red\n");
+			sb.append("\t"+"usecase \""+ usecase.getObjectName()+"("+percent+"%)"+"\" as "+usecase.getId()+" #red\n");
 		
 		for(Flow fl : usecase.getFlow())
 		{
@@ -99,7 +99,7 @@ public class UsecaseDg2 extends Base
 			if(ui.getData_base_SrcName() != null)
 				sb.append("\t"+"usecase \""+ ui.getData_base_SrcName()+"\" as "+ui.getId()+"\n");
 			else
-				sb.append("\t"+"usecase \""+ ui.getUsecaseName()+"\" as "+ui.getId()+"\n");
+				sb.append("\t"+"usecase \""+ ui.getObjectName()+"\" as "+ui.getId()+"\n");
 			sb.append("\t\t"+usecase.getId()+"-->"+ui.getId()+": <<include>>#red\n");
 		}
 		for(UseCase ui : usecase.getExtend())
@@ -107,7 +107,7 @@ public class UsecaseDg2 extends Base
 			if(ui.getData_base_SrcName() != null)
 				sb.append("\t"+"usecase \""+ ui.getData_base_SrcName()+"\" as "+ui.getId()+"\n");
 			else
-				sb.append("\t"+"usecase \""+ ui.getUsecaseName()+"\" as "+ui.getId()+"\n");
+				sb.append("\t"+"usecase \""+ ui.getObjectName()+"\" as "+ui.getId()+"\n");
 			sb.append("\t\t"+usecase.getId()+"<--"+ui.getId()+": <<extends>>#red\n");
 		}
 		for(Actor actor : actorList)

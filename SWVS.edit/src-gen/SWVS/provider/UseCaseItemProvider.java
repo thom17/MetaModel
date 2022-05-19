@@ -47,28 +47,11 @@ public class UseCaseItemProvider extends ObjectItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUsecaseNamePropertyDescriptor(object);
 			addContextPropertyDescriptor(object);
 			addActActorsPropertyDescriptor(object);
 			addRequirementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Usecase Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsecaseNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UseCase_usecaseName_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_UseCase_usecaseName_feature",
-								"_UI_UseCase_type"),
-						SWVSPackage.Literals.USE_CASE__USECASE_NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -196,7 +179,6 @@ public class UseCaseItemProvider extends ObjectItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UseCase.class)) {
-		case SWVSPackage.USE_CASE__USECASE_NAME:
 		case SWVSPackage.USE_CASE__CONTEXT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

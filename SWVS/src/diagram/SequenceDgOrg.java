@@ -50,7 +50,7 @@ public class SequenceDgOrg extends Base
 		sb.append("@startuml\n");
 		for(UseCase usecase : actor.getActUsecases())
 		{
-			sb.append("group "+usecase.getId()+" "+usecase.getUsecaseName()+"\n");
+			sb.append("group "+usecase.getId()+" "+usecase.getObjectName()+"\n");
 			drawUsecase(usecase);
 			sb.append("end\n");
 		}
