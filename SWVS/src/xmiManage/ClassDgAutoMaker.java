@@ -49,7 +49,8 @@ public class ClassDgAutoMaker
 		
 		fun.setUsecase(uc);
 		fun.setId(uc.getId());
-		fun.setObjectName(uc.getObjectName());
+		fun.setObjectName(uc.getObjectName()+"()");
+		fun.setReturnType("void");
 		cls.getMethod().add(fun);
 		for(Flow fl : uc.getFlow())
 		{

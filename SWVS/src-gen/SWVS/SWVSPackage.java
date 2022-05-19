@@ -157,16 +157,6 @@ public interface SWVSPackage extends EPackage {
 	int PROJECT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link SWVS.impl.RequirementImpl <em>Requirement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SWVS.impl.RequirementImpl
-	 * @see SWVS.impl.SWVSPackageImpl#getRequirement()
-	 * @generated
-	 */
-	int REQUIREMENT = 1;
-
-	/**
 	 * The meta object id for the '{@link SWVS.impl.ObjectImpl <em>Object</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,6 +246,16 @@ public interface SWVSPackage extends EPackage {
 	 * @ordered
 	 */
 	int OBJECT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link SWVS.impl.RequirementImpl <em>Requirement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SWVS.impl.RequirementImpl
+	 * @see SWVS.impl.SWVSPackageImpl#getRequirement()
+	 * @generated
+	 */
+	int REQUIREMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -575,22 +575,13 @@ public interface SWVSPackage extends EPackage {
 	int USE_CASE__OBJECT_NAME = OBJECT__OBJECT_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Usecase Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE__USECASE_NAME = OBJECT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Extend</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__EXTEND = OBJECT_FEATURE_COUNT + 1;
+	int USE_CASE__EXTEND = OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Include</b></em>' containment reference list.
@@ -599,7 +590,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__INCLUDE = OBJECT_FEATURE_COUNT + 2;
+	int USE_CASE__INCLUDE = OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Flow</b></em>' containment reference list.
@@ -608,7 +599,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__FLOW = OBJECT_FEATURE_COUNT + 3;
+	int USE_CASE__FLOW = OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' attribute.
@@ -617,7 +608,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__CONTEXT = OBJECT_FEATURE_COUNT + 4;
+	int USE_CASE__CONTEXT = OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Act Actors</b></em>' reference list.
@@ -626,7 +617,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__ACT_ACTORS = OBJECT_FEATURE_COUNT + 5;
+	int USE_CASE__ACT_ACTORS = OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -635,7 +626,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__CONDITION = OBJECT_FEATURE_COUNT + 6;
+	int USE_CASE__CONDITION = OBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Requirement</b></em>' reference list.
@@ -644,7 +635,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE__REQUIREMENT = OBJECT_FEATURE_COUNT + 7;
+	int USE_CASE__REQUIREMENT = OBJECT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Use Case</em>' class.
@@ -653,7 +644,7 @@ public interface SWVSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USE_CASE_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 8;
+	int USE_CASE_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Use Case</em>' class.
@@ -1998,17 +1989,6 @@ public interface SWVSPackage extends EPackage {
 	EClass getUseCase();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SWVS.UseCase#getUsecaseName <em>Usecase Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Usecase Name</em>'.
-	 * @see SWVS.UseCase#getUsecaseName()
-	 * @see #getUseCase()
-	 * @generated
-	 */
-	EAttribute getUseCase_UsecaseName();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link SWVS.UseCase#getExtend <em>Extend</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2856,14 +2836,6 @@ public interface SWVSPackage extends EPackage {
 		 * @generated
 		 */
 		EClass USE_CASE = eINSTANCE.getUseCase();
-
-		/**
-		 * The meta object literal for the '<em><b>Usecase Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute USE_CASE__USECASE_NAME = eINSTANCE.getUseCase_UsecaseName();
 
 		/**
 		 * The meta object literal for the '<em><b>Extend</b></em>' containment reference list feature.

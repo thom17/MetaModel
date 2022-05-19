@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link SWVS.UseCase#getUsecaseName <em>Usecase Name</em>}</li>
  *   <li>{@link SWVS.UseCase#getExtend <em>Extend</em>}</li>
  *   <li>{@link SWVS.UseCase#getInclude <em>Include</em>}</li>
  *   <li>{@link SWVS.UseCase#getFlow <em>Flow</em>}</li>
@@ -28,28 +27,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface UseCase extends SWVS.Object {
-	/**
-	 * Returns the value of the '<em><b>Usecase Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Usecase Name</em>' attribute.
-	 * @see #setUsecaseName(String)
-	 * @see SWVS.SWVSPackage#getUseCase_UsecaseName()
-	 * @model
-	 * @generated
-	 */
-	String getUsecaseName();
-
-	/**
-	 * Sets the value of the '{@link SWVS.UseCase#getUsecaseName <em>Usecase Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usecase Name</em>' attribute.
-	 * @see #getUsecaseName()
-	 * @generated
-	 */
-	void setUsecaseName(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Extend</b></em>' containment reference list.
 	 * The list contents are of type {@link SWVS.UseCase}.

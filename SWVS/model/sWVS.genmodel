@@ -40,7 +40,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/objectName"/>
     </genClasses>
     <genClasses ecoreClass="sWVS.ecore#//UseCase">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//UseCase/usecaseName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/extend"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/include"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/flow"/>

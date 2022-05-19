@@ -53,16 +53,16 @@ public class UsecaseDg extends Base
 	private void drawUsecase(UseCase usecase) 
 	{
 		EList<Actor> actorList = usecase.getActActors();
-		sb.append("\t"+"usecase \""+ usecase.getUsecaseName()+"\" as "+usecase.getId()+"\n");
+		sb.append("\t"+"usecase \""+ usecase.getObjectName()+"\" as "+usecase.getId()+"\n");
 		
 		for(UseCase ui : usecase.getInclude())
 		{
-			sb.append("\t"+"usecase \""+ ui.getUsecaseName()+"\" as "+ui.getId()+"\n");
+			sb.append("\t"+"usecase \""+ ui.getObjectName()+"\" as "+ui.getId()+"\n");
 			sb.append("\t\t"+usecase.getId()+"-->"+ui.getId()+": <<include>>\n");
 		}
 		for(UseCase ui : usecase.getExtend())
 		{
-			sb.append("\t"+"usecase \""+ ui.getUsecaseName()+"\" as "+ui.getId()+"\n");
+			sb.append("\t"+"usecase \""+ ui.getObjectName()+"\" as "+ui.getId()+"\n");
 			sb.append("\t\t"+usecase.getId()+"<--"+ui.getId()+": <<extends>>\n");
 		}
 		for(Actor actor : actorList)

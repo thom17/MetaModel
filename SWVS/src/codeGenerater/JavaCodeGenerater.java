@@ -20,7 +20,7 @@ import SWVS.UseCase;
 
 public class JavaCodeGenerater 
 {
-	String codePath = "autoGen/src";
+	String codePath = "autoGen/java/";
 	Project project;
 	EList<Class> classList;
 	File filePath;
@@ -36,7 +36,7 @@ public class JavaCodeGenerater
 		Date date = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH-mm");//mm-ss
 		String time =  format.format(date);
-		String src = "autoGen"+"/"+time;
+		String src = codePath+time;
 		File folder = new File(src);
 		folder.mkdir();
 		src += "/src";
@@ -141,7 +141,10 @@ public class JavaCodeGenerater
     {
 		StringBuilder sb = new StringBuilder(tab+"/**"+flow.getId()+"\n");
 		sb.append(tab+flow.getContext()+"\n");
-		sb.append(tab+"@return "+flow.getResult()+"\n");
+		
+		if(flow.getResult() != null &&  0 < flow.getResult().length() )
+			sb.append(tab+"@return "+flow.getResult()+"\n");
+		
 		sb.append(tab+"*/\n");
 		return sb.toString();
 	}

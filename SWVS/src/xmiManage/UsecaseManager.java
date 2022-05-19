@@ -40,10 +40,9 @@ public class UsecaseManager
 	public void addUcSpecific(UcSpecific ucs)
 	{
 		this.ucs = ucs;
-		String sysName = ucs.getSysName();
 		String sysId = ucs.getSysId();
 		String id = ucs.getUcId();
-		String ucName = ucs.getSysName();
+		String ucName = ucs.getUcName();
 		baseSys = findSystem(sysId);
 		UseCase uc = findUseCase(baseSys, id, ucName);
 		
@@ -197,9 +196,8 @@ public class UsecaseManager
 		SWVSPackageImpl.init();
 		UseCase uc = f.createUseCase();
 		uc.setId(id);
-		uc.setUsecaseName(ucName);
-		uc.setContext(ucs.getDesc());
 		uc.setObjectName(ucName);
+		uc.setContext(ucs.getDesc());
 		return uc;
 	}
 

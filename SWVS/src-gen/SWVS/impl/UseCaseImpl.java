@@ -34,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link SWVS.impl.UseCaseImpl#getUsecaseName <em>Usecase Name</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getExtend <em>Extend</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getInclude <em>Include</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getFlow <em>Flow</em>}</li>
@@ -47,26 +46,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class UseCaseImpl extends ObjectImpl implements UseCase {
-	/**
-	 * The default value of the '{@link #getUsecaseName() <em>Usecase Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsecaseName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String USECASE_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUsecaseName() <em>Usecase Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsecaseName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String usecaseName = USECASE_NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getExtend() <em>Extend</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -164,28 +143,6 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
 	@Override
 	protected EClass eStaticClass() {
 		return SWVSPackage.Literals.USE_CASE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUsecaseName() {
-		return usecaseName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUsecaseName(String newUsecaseName) {
-		String oldUsecaseName = usecaseName;
-		usecaseName = newUsecaseName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.USE_CASE__USECASE_NAME, oldUsecaseName,
-					usecaseName));
 	}
 
 	/**
@@ -366,8 +323,6 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case SWVSPackage.USE_CASE__USECASE_NAME:
-			return getUsecaseName();
 		case SWVSPackage.USE_CASE__EXTEND:
 			return getExtend();
 		case SWVSPackage.USE_CASE__INCLUDE:
@@ -395,9 +350,6 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case SWVSPackage.USE_CASE__USECASE_NAME:
-			setUsecaseName((String) newValue);
-			return;
 		case SWVSPackage.USE_CASE__EXTEND:
 			getExtend().clear();
 			getExtend().addAll((Collection<? extends UseCase>) newValue);
@@ -436,9 +388,6 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case SWVSPackage.USE_CASE__USECASE_NAME:
-			setUsecaseName(USECASE_NAME_EDEFAULT);
-			return;
 		case SWVSPackage.USE_CASE__EXTEND:
 			getExtend().clear();
 			return;
@@ -472,8 +421,6 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case SWVSPackage.USE_CASE__USECASE_NAME:
-			return USECASE_NAME_EDEFAULT == null ? usecaseName != null : !USECASE_NAME_EDEFAULT.equals(usecaseName);
 		case SWVSPackage.USE_CASE__EXTEND:
 			return extend != null && !extend.isEmpty();
 		case SWVSPackage.USE_CASE__INCLUDE:
@@ -503,9 +450,7 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (usecaseName: ");
-		result.append(usecaseName);
-		result.append(", context: ");
+		result.append(" (context: ");
 		result.append(context);
 		result.append(')');
 		return result.toString();

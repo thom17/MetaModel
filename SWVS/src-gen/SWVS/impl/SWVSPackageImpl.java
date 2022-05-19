@@ -486,17 +486,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUseCase_UsecaseName() {
-		return (EAttribute) useCaseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getUseCase_Extend() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(1);
+		return (EReference) useCaseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -505,7 +496,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * @generated
 	 */
 	public EReference getUseCase_Include() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(2);
+		return (EReference) useCaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -514,7 +505,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * @generated
 	 */
 	public EReference getUseCase_Flow() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(3);
+		return (EReference) useCaseEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -523,7 +514,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * @generated
 	 */
 	public EAttribute getUseCase_Context() {
-		return (EAttribute) useCaseEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) useCaseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -532,7 +523,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * @generated
 	 */
 	public EReference getUseCase_ActActors() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(5);
+		return (EReference) useCaseEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -541,7 +532,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * @generated
 	 */
 	public EReference getUseCase_Condition() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(6);
+		return (EReference) useCaseEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -550,7 +541,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 	 * @generated
 	 */
 	public EReference getUseCase_Requirement() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(7);
+		return (EReference) useCaseEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1046,7 +1037,6 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 		createEAttribute(objectEClass, OBJECT__OBJECT_NAME);
 
 		useCaseEClass = createEClass(USE_CASE);
-		createEAttribute(useCaseEClass, USE_CASE__USECASE_NAME);
 		createEReference(useCaseEClass, USE_CASE__EXTEND);
 		createEReference(useCaseEClass, USE_CASE__INCLUDE);
 		createEReference(useCaseEClass, USE_CASE__FLOW);
@@ -1232,8 +1222,6 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(useCaseEClass, UseCase.class, "UseCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUseCase_UsecaseName(), ecorePackage.getEString(), "usecaseName", null, 0, 1, UseCase.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUseCase_Extend(), this.getUseCase(), null, "extend", null, 0, -1, UseCase.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -41,7 +41,7 @@ public class UcSpecific
 		for(int y=1; y<rowName.size(); y++)
 		{
 			String type = datas[0].get(y);
-			if(type.equals("Use case Name"))
+			if(type.equals("Usecase Name"))
 				ucName = datas[1].get(y);
 			else if(type.equals("System"))
 				sysName = datas[1].get(y);
