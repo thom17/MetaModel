@@ -1,0 +1,12 @@
+Usecase Specific,,,,,
+Usecase Name,,,,,
+System Id,,,,,
+UC Id,,,,,
+desc,,,,,
+Use Actor,,,,,
+Related Rq,,,,,
+Pre-Condition,,,,,
+Post-Condition,,,,,
+,,,,,
+Scenario,,,,,
+Sequence Name,context,Pre-Condition,Post-Condition,Host,Client

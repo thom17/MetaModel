@@ -1,7 +1,9 @@
 package main;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import codeGenerater.JavaCodeGenerater;
 import codeGenerater.PythonCodeGenerater;
 import diagram.ClassDg;
@@ -9,22 +11,53 @@ import diagram.SequenceDg;
 import diagram.UsecaseDg;
 import fileLoader.RqSpecific;
 import fileLoader.UcSpecific;
-import xmiManage.ClassDgAutoMaker;
+import xmiManage.ClassAutoMaker;
 import xmiManage.ModelManager;
+import xmiManage.RQTracer;
 import xmiManage.RqManager;
 import xmiManage.UsecaseManager;
 
 public class Test {
-  final static String M_FILE = "target/wordbook/wordbook.swvs";
-  final static String RQ_FILE = "target/wordbook/rqTable.csv";
-  final static String UC_DIR = "target/wordbook/addWord.csv";
+  final static String M_FILE = "test.swvs";
+  final static String RQ_FILE =
+      "C:\\Users\\thom1\\Desktop\\jsj\\python\\AutoGentProject\\result\\0615\\rqTable.csv";
+  final static String UC_DIR =
+      "C:\\Users\\thom1\\Desktop\\jsj\\python\\AutoGentProject\\result\\0615\\uc";
   static ModelManager mmg;
 
   public static void main(String argsp[]) {
-    mmg = new ModelManager("test.swvs");
+    mmg = new ModelManager(init("test.swvs"));
     // makeCode();
     readRqFile("rqTable.csv");
+    readUseCaseSpec("Sys11-UC-1.csv");
+    new ClassAutoMaker(mmg).autoMake();
+    RQTracer.projectTrace(mmg.project);
+    mmg.save();
+
+    codeMaker();
+    mmg.save();
+    System.out.println("Test Main End");
+    // oneWay();
   }
+
+  private static String init(String fileName) {
+    File file = new File(fileName);
+    FileWriter fw;
+    try {
+      fw = new FileWriter(file);
+      PrintWriter pw = new PrintWriter(fw);
+      pw.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+      pw.println(
+          "<sWVS:Project xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:sWVS=\"http://www.example.org/sWVS\" projectName=\"test\">");
+      pw.println("</sWVS:Project>");
+      pw.close();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    return fileName;
+  }
+
 
   private static void makeCode() {
     // TODO Auto-generated method stub
@@ -80,18 +113,21 @@ public class Test {
   }
 
   /**
-   * UseCase 명세서, 요구사항 테이블 입력하여 ClassDg UML 생성 가이드 코드 자동 생성
+   * 
+   * 초기화, UseCase 명세서, 요구사항 테이블 입력하여 ClassDg UML 생성 가이드 코드 자동 생성
    * 
    */
   public static void oneWay() {
+    init(M_FILE);
     mmg = new ModelManager(M_FILE);
     readRqFile(RQ_FILE);
     readUseCaseSpec(UC_DIR);
-    new ClassDgAutoMaker(mmg).autoMake(); // Class Diagram 자동 생성
+    new ClassAutoMaker(mmg).autoMake(); // Class Diagram 자동 생성
+    RQTracer.projectTrace(mmg.project);
     mmg.save();
-    graphMake();
-    codeMaker();
-    mmg.save();
+    // graphMake();
+    // codeMaker();
+    // mmg.save();
     System.out.println("oneWay done");
 
 

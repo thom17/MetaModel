@@ -26,22 +26,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="usecase" upperBound="-1"
         eType="#//UseCase" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defClass" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defClass" upperBound="-1"
+        eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" upperBound="-1"
         eType="#//State" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" upperBound="-1"
-        eType="#//Requirement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Object">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" unique="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_base_SrcName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addedObject" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectName" ordered="false"
+        unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" upperBound="-1"
+        eType="#//Requirement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UseCase" eSuperTypes="#//Object">
     <eStructuralFeatures xsi:type="ecore:EReference" name="extend" upperBound="-1"
@@ -55,25 +56,20 @@
         eType="#//Actor" eOpposite="#//Actor/actUsecases"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" upperBound="-1"
-        eType="#//Requirement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="#//Object">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="host" upperBound="-1" eType="#//Object"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="client" upperBound="-1"
         eType="#//Object"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" upperBound="-1"
-        eType="#//Requirement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="detailFlow" upperBound="-1"
         eType="#//Flow" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
-        eType="#//Condition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Object">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actorType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actUsecases" upperBound="-1"
         eType="#//UseCase" eOpposite="#//UseCase/actActors"/>
   </eClassifiers>
@@ -119,10 +115,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="beverage" eType="#//Beverage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//Object">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="flow" upperBound="-1" eType="#//Flow"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="usecase" eType="#//UseCase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base" upperBound="-1" eType="#//Object"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argument" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stateId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

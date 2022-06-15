@@ -86,7 +86,7 @@ public class ModelManager {
 
   public void implementM(Method m, String srcName) {
     if (m.getUsecase() == null)
-      for (Flow fl : m.getFlow()) {
+      for (Object fl : m.getBase()) {
         fl.setData_base_SrcName(srcName);
         EObject usecase = fl.eContainer();
       }
@@ -94,6 +94,8 @@ public class ModelManager {
       m.getUsecase().setData_base_SrcName(srcName);
     xmiReader.save();
   }
+
+
 
   public void addMethod(Class cls, String sig) {
     if (cls == null)

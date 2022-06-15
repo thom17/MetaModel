@@ -28,6 +28,8 @@ public class RqManager {
     RqSpecific rqs = new RqSpecific(new File("RqTable.csv"));
     ModelManager mmg = new ModelManager("test.swvs");
     RqManager ucm = new RqManager(mmg);
+    ucm.addRq(rqs);
+    mmg.save();
     java.lang.System.out.println("Rqs Mananger Main Done");
   }
 
