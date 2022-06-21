@@ -23,7 +23,7 @@ public class UcSpecific {
   Map<String, EventFlow> flowMap = new LinkedHashMap<String, EventFlow>();
 
   public static void main(String args[]) {
-    UcSpecific uc = new UcSpecific(new File("Sys11-UC-1.csv"));
+    UcSpecific uc = new UcSpecific(new File("target/smartMedia/Usecase Spec.csv"));
     String li[] = uc.getRelatedRq();
     System.out.println(uc.getRelatedRq());
     System.out.println("main End");
@@ -178,7 +178,7 @@ public class UcSpecific {
       flow.preCond = datas[2].get(y);
       flow.aftCond = datas[3].get(y);
       flow.hostList = makeActorList(datas[4].get(y));
-      flow.clientList = makeActorList(datas[4].get(y));
+      flow.clientList = makeActorList(datas[5].get(y));
     }
   }
 }

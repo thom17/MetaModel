@@ -1,0 +1,83 @@
+@startuml
+group UC-10 UC-10_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-2 UC-2_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-3 UC-3_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-4 UC-4_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-5 UC-5_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-6 UC-6_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-7 UC-7_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-8 UC-8_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+group UC-9 UC-9_name
+	null->null : flow1()
+	null->null : flow2()
+	null->null : flow3()
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+@enduml

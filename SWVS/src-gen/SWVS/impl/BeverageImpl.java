@@ -27,192 +27,194 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class BeverageImpl extends MinimalEObjectImpl.Container implements Beverage {
-	/**
-	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PRICE_EDEFAULT = 0;
+  /**
+   * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPrice()
+   * @generated
+   * @ordered
+   */
+  protected static final int PRICE_EDEFAULT = 0;
 
-	/**
-	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected int price = PRICE_EDEFAULT;
+  /**
+   * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPrice()
+   * @generated
+   * @ordered
+   */
+  protected int price = PRICE_EDEFAULT;
 
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
 
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BeverageImpl() {
-		super();
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected BeverageImpl() {
+    super();
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return SWVSPackage.Literals.BEVERAGE;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass() {
+    return SWVSPackage.Literals.BEVERAGE;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPrice() {
-		return price;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getPrice() {
+    return price;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrice(int newPrice) {
-		int oldPrice = price;
-		price = newPrice;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.BEVERAGE__PRICE, oldPrice, price));
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPrice(int newPrice) {
+    int oldPrice = price;
+    price = newPrice;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.BEVERAGE__PRICE, oldPrice,
+          price));
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName() {
+    return name;
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.BEVERAGE__NAME, oldName, name));
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName) {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(
+          new ENotificationImpl(this, Notification.SET, SWVSPackage.BEVERAGE__NAME, oldName, name));
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-		case SWVSPackage.BEVERAGE__PRICE:
-			return getPrice();
-		case SWVSPackage.BEVERAGE__NAME:
-			return getName();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    switch (featureID) {
+      case SWVSPackage.BEVERAGE__PRICE:
+        return getPrice();
+      case SWVSPackage.BEVERAGE__NAME:
+        return getName();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-		case SWVSPackage.BEVERAGE__PRICE:
-			setPrice((Integer) newValue);
-			return;
-		case SWVSPackage.BEVERAGE__NAME:
-			setName((String) newValue);
-			return;
-		}
-		super.eSet(featureID, newValue);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue) {
+    switch (featureID) {
+      case SWVSPackage.BEVERAGE__PRICE:
+        setPrice((Integer) newValue);
+        return;
+      case SWVSPackage.BEVERAGE__NAME:
+        setName((String) newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-		case SWVSPackage.BEVERAGE__PRICE:
-			setPrice(PRICE_EDEFAULT);
-			return;
-		case SWVSPackage.BEVERAGE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		}
-		super.eUnset(featureID);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID) {
+    switch (featureID) {
+      case SWVSPackage.BEVERAGE__PRICE:
+        setPrice(PRICE_EDEFAULT);
+        return;
+      case SWVSPackage.BEVERAGE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-		case SWVSPackage.BEVERAGE__PRICE:
-			return price != PRICE_EDEFAULT;
-		case SWVSPackage.BEVERAGE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		}
-		return super.eIsSet(featureID);
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID) {
+    switch (featureID) {
+      case SWVSPackage.BEVERAGE__PRICE:
+        return price != PRICE_EDEFAULT;
+      case SWVSPackage.BEVERAGE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    }
+    return super.eIsSet(featureID);
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString() {
+    if (eIsProxy())
+      return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (price: ");
-		result.append(price);
-		result.append(", name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (price: ");
+    result.append(price);
+    result.append(", name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
 
 } //BeverageImpl

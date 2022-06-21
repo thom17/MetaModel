@@ -1,0 +1,15 @@
+@startuml
+class MOBILE 
+{
+
+	"P2P/CORP,Sendinge-mailsonthego"()
+	completeComposition()
+	sendEmail(target : Addr)
+	"upLoadEmail(mail : EMail  , target : Addr)"
+	sendEmail(target : Addr)
+	save(mail : EMail)
+	fiterEmail(mail : EMai)
+
+}
+
+@enduml

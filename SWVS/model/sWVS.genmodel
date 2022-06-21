@@ -106,5 +106,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//State/useCaseStatus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//State/implementationStatus"/>
     </genClasses>
+    <genClasses ecoreClass="sWVS.ecore#//Object.1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/data_base_SrcName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/objectType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/filePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/addedObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/implementName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/objectName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Object.1/requirement"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -114,7 +114,7 @@ public class UsecaseManager {
     for (String str : d_list) {
       find = false;
       for (Actor actor : project.getActor()) { // 액터에서 찾기
-        if (actor.getId().equals(str) || actor.getObjectName().equals(str)) {
+        if (actor.getId().equals(str) || str.equals(actor.getObjectName())) {
           m_list.add(actor);
           find = true;
           break;
@@ -124,7 +124,7 @@ public class UsecaseManager {
         continue;
 
       for (System sys : project.getSystem()) { // 시스템에서 찾기
-        if (sys.getId().equals(str) || sys.getObjectName().equals(str)) {
+        if (sys.getId().equals(str) || str.equals(sys.getObjectName())) {
           find = true;
           m_list.add(sys);
           break;
@@ -134,7 +134,7 @@ public class UsecaseManager {
         continue;
 
       for (SWVS.Object obj : project.getObject()) { // Object에서 찾기
-        if (obj.getId().equals(str) || obj.getObjectName().equals(str)) {
+        if (obj.getId().equals(str) || str.equals(obj.getObjectName())) {
           find = true;
           m_list.add(obj);
           break;
@@ -142,8 +142,17 @@ public class UsecaseManager {
       } // 없으면 Obj로 추가하기
       SWVS.Object obj = f.createObject();
       obj.setId(str);
+      obj.setObjectName(getSimpleName(str));
       m_list.add(obj);
     }
+  }
+
+  private String getSimpleName(String str) {
+    String match = "[^\uAC00-\uD7A30-9a-zA-Z]";
+    str = str.replaceAll(match, "");
+    str = str.toUpperCase();
+    // TODO Auto-generated method stub
+    return str;
   }
 
   /**
@@ -240,7 +249,10 @@ public class UsecaseManager {
   private System makeSys(UcSpecific ucs) {
     SWVSPackageImpl.init();
     SWVS.System sys = f.createSystem();
-    sys.setObjectName(ucs.getSysName());
+    String sysName = ucs.getSysName();
+    if (sysName == null || sysName.length() < 1)
+      sysName = this.getSimpleName(ucs.getSysId());
+    sys.setObjectName(sysName);
     sys.setId(ucs.getSysId());
     return sys;
   }

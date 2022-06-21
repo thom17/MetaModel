@@ -1,0 +1,21 @@
+@startuml
+group UC-P2P-SEND-EMAIL "P2P / CORP, Sending e-mails on the go"
+	group completeComposition()
+		MOBILE->MOBILE : editMsg()
+		MOBILE->MOBILE : attachFile(file : File)
+		MOBILE->MOBILE : reEdit()
+	MOBILE-->actor : 
+	end
+	actor->EMAILSERVER : sendEmail(target : Addr)
+	group "upLoadEmail(mail : EMail  , target : Addr)"
+		MOBILE->MOBILE : while(!connection())
+	MOBILE-->MOBILE : 
+	end
+	group sendEmail(target : Addr)
+		MOBILE->MOBILE : save(mail : EMail)
+	MOBILE-->MOBILE : 
+	end
+	MOBILE->MOBILE : save(mail : EMail)
+	MOBILE->EMAILSERVER : fiterEmail(mail : EMai)
+end
+@enduml

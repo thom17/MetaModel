@@ -1,0 +1,25 @@
+@startuml
+ left to right direction
+	 actor "actor" as MOBILE
+	 actor "actor" as  SERVER
+	 actor "actor" as  USER
+rectangle "null" as MOBILE{
+	usecase ""P2P / CORP, Sending e-mails on the go"" as UC-P2P-SEND-EMAIL
+		MOBILE--UC-P2P-SEND-EMAIL
+		 SERVER--UC-P2P-SEND-EMAIL
+		 USER--UC-P2P-SEND-EMAIL
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "actor" as MOBILE
+	 actor "actor" as  SERVER
+	 actor "actor" as  USER
+rectangle "null" as MOBILE{
+	usecase ""P2P / CORP, Sending e-mails on the go"" as UC-P2P-SEND-EMAIL
+		MOBILE--UC-P2P-SEND-EMAIL
+		 SERVER--UC-P2P-SEND-EMAIL
+		 USER--UC-P2P-SEND-EMAIL
+}
+
+@enduml

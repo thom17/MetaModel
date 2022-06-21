@@ -1,0 +1,13 @@
+@startuml
+group Make Self Make
+	null->null : flow1()
+	group flow2()
+		null->null : flow3()
+	null-->null : 
+	end
+	null->null : flow4()
+	null->null : flow5()
+	null->null : flow6()
+	null->null : flow7()
+end
+@enduml

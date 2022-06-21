@@ -1,0 +1,61 @@
+@startuml
+ left to right direction
+	 actor "User" as User
+	 actor "Actor-1" as Actor-1
+rectangle "null" as Maker{
+	usecase "Self Make" as Make
+		User--Make
+}
+
+rectangle "null" as Sys1{
+	usecase "UC-10_name" as UC-10
+		Actor-1--UC-10
+	usecase "UC-2_name" as UC-2
+		Actor-1--UC-2
+	usecase "UC-3_name" as UC-3
+		Actor-1--UC-3
+	usecase "UC-4_name" as UC-4
+		Actor-1--UC-4
+	usecase "UC-5_name" as UC-5
+		Actor-1--UC-5
+	usecase "UC-6_name" as UC-6
+		Actor-1--UC-6
+	usecase "UC-7_name" as UC-7
+		Actor-1--UC-7
+	usecase "UC-8_name" as UC-8
+		Actor-1--UC-8
+	usecase "UC-9_name" as UC-9
+		Actor-1--UC-9
+}
+
+@enduml@startuml
+ left to right direction
+	 actor "User" as User
+	 actor "Actor-1" as Actor-1
+rectangle "null" as Maker{
+	usecase "Self Make" as Make
+		User--Make
+}
+
+rectangle "null" as Sys1{
+	usecase "UC-10_name" as UC-10
+		Actor-1--UC-10
+	usecase "UC-2_name" as UC-2
+		Actor-1--UC-2
+	usecase "UC-3_name" as UC-3
+		Actor-1--UC-3
+	usecase "UC-4_name" as UC-4
+		Actor-1--UC-4
+	usecase "UC-5_name" as UC-5
+		Actor-1--UC-5
+	usecase "UC-6_name" as UC-6
+		Actor-1--UC-6
+	usecase "UC-7_name" as UC-7
+		Actor-1--UC-7
+	usecase "UC-8_name" as UC-8
+		Actor-1--UC-8
+	usecase "UC-9_name" as UC-9
+		Actor-1--UC-9
+}
+
+@enduml

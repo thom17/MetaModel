@@ -19,25 +19,23 @@ import xmiManage.UsecaseManager;
 
 public class Test {
   final static String M_FILE = "test.swvs";
-  final static String RQ_FILE =
-      "C:\\Users\\thom1\\Desktop\\jsj\\python\\AutoGentProject\\result\\0615\\rqTable.csv";
-  final static String UC_DIR =
-      "C:\\Users\\thom1\\Desktop\\jsj\\python\\AutoGentProject\\result\\0615\\uc";
+  final static String RQ_FILE = "target/smartMedia/rqTable.csv";
+  final static String UC_DIR = "target/smartMedia/Usecase Spec.csv";
   static ModelManager mmg;
 
   public static void main(String argsp[]) {
-    mmg = new ModelManager(init("test.swvs"));
-    // makeCode();
-    readRqFile("rqTable.csv");
-    readUseCaseSpec("Sys11-UC-1.csv");
-    new ClassAutoMaker(mmg).autoMake();
-    RQTracer.projectTrace(mmg.project);
-    mmg.save();
-
-    codeMaker();
-    mmg.save();
-    System.out.println("Test Main End");
-    // oneWay();
+    // mmg = new ModelManager(init("test.swvs"));
+    // // makeCode();
+    // readRqFile("rqTable.csv");
+    // readUseCaseSpec("Sys11-UC-1.csv");
+    // new ClassAutoMaker(mmg).autoMake();
+    // RQTracer.projectTrace(mmg.project);
+    // mmg.save();
+    //
+    // codeMaker();
+    // mmg.save();
+    // System.out.println("Test Main End");
+    oneWay();
   }
 
   private static String init(String fileName) {
@@ -125,8 +123,8 @@ public class Test {
     new ClassAutoMaker(mmg).autoMake(); // Class Diagram 자동 생성
     RQTracer.projectTrace(mmg.project);
     mmg.save();
-    // graphMake();
-    // codeMaker();
+    graphMake();
+    codeMaker();
     // mmg.save();
     System.out.println("oneWay done");
 

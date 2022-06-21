@@ -17,23 +17,23 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class FunctionImpl extends MinimalEObjectImpl.Container implements Function {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionImpl() {
-		super();
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected FunctionImpl() {
+    super();
+  }
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return SWVSPackage.Literals.FUNCTION;
-	}
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass() {
+    return SWVSPackage.Literals.FUNCTION;
+  }
 
 } //FunctionImpl

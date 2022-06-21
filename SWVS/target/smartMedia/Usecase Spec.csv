@@ -1,0 +1,42 @@
+Usecase Specific,,,,,,
+Usecase Name,"P2P / CORP, Sending e-mails on the go",,,,,
+System Id,MOBILE,,,,,
+UC Id,UC-P2P-SEND-EMAIL,,,,,
+desc,"An e-mail is composed by a mobile worker.  
+Upon selecting to send the e-mail, it is immediately securely sent from the e-mail 
+server of the user (and not another server, e.g., operator provided SMTP server).  
+A mobile user composes a mobile e-mail.  
+The composition of an e-mail can include editing desired messages, attaching 
+various files, re-editing any saved drafts, and so forth.  
+After choosing to send the e-mail, it is uploaded on the e-mail server of the user and 
+immediately and securely sent from the server. 
+(and not another server, e.g., operator provided SMTP server).",,,,,
+Use Actor,"MOBILE, SERVER, USER",,,,,
+Related Rq,"RQ-1-1, RQ-1-2, RQ-1-3, RQ-1-4, RQ-2-1, RQ-2-6",,,,,
+Pre-Condition,"The user of mobile e-mail has an account with email providers.
+The user of mobile e-mail has a device with a client able to compose and send e-mails.
+The user of mobile e-mail has a device with applications which can create, manipulate, and attach various attachments.
+Client and Account is appropriately configured.",,,,,
+Post-Condition,"E-mail sent by user has been sent from the e-mail server 
+(located in appropriate domain).",,,,,
+,,,,,,
+Scenario,,,,,,
+Sequence Name,context,Pre-Condition,Post-Condition,Host,Client,
+completeComposition(),"1. User completes composition of an e-mail on mobile client, which includes:",,,MOBILE,USER,
+editMsg(),1.1. Editing a new desired message.,,,,,
+attachFile(file : File),"1.2. Attaching various files (document files, media files, 
+fully or not fully downloaded files, etc.)",,,,,
+reEdit(),1.3. Re-editing the saved draft,,,,,
+sendEmail(target : Addr),2. User selects to send the e-mail,,, E-MAIL-SERVER,MOBILE,
+"upLoadEmail(mail : EMail  , target : Addr)",3. Client connects with e-mail server and uploads the e-mail,,,,,
+while(!connection()),"3.1. Base on settings or preference the e-mail can be queued and sent as soon that 
+the connectivity is re-established or the user may be prompted to confirm desire to send them.",Steps 3 and after may be delayed is device is not online.,,,,
+sendEmail(target : Addr),4. E-mail is sent from e-mail server.,,,,,
+save(mail : EMail),"4.1. E-mail may be saved in a sent folder (based on preference of user or 
+behaviour/settings of e-mail server)","User want to save 
+the e-mail.",,,,
+save(mail : EMail),"5. Sent e-mail in sent folder is reflected in e-mail sent folder as in 5 (based on 
+preference of user or behaviour/settings of e-mail server). ",,,,,
+fiterEmail(mail : EMai),6. UC-P2P-FILTERING-EMAIL. Other flows may be considered.,may change with the e-mail saved from the client reconciled with the server,"Do use case  
+UC-P2P-FILTERING-EMAIL.", E-MAIL-SERVER,,
+,,,,,,

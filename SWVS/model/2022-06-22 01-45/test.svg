@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="266px" preserveAspectRatio="none" style="width:570px;height:266px;background:#000000;" version="1.1" viewBox="0 0 570 266" width="570px" zoomAndPan="magnify"><defs/><g><rect fill="#160B09" height="1" style="stroke: #160B09; stroke-width: 1.0;" width="1" x="0" y="0"/><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="114" x="5" y="17">PlantUML 1.2020.19</text><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="316" x="5" y="33.4824">This version of PlantUML is 617 days old, so you should</text><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="317" x="11" y="49.9648">consider upgrading from https://plantuml.com/download</text><rect fill="#33FF02" height="24.2295" style="stroke: #33FF02; stroke-width: 1.0;" width="224" x="5" y="62.4473"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="6" y="77.4473">[From test (line 7) ]</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="100.6768"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="119.9063">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="145" x="9" y="139.1357">left to right direction</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="169" x="41" y="158.3652">actor "actor" as MOBILE</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="174" x="41" y="177.5947">actor "actor" as  SERVER</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="156" x="41" y="196.8242">actor "actor" as  USER</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="224" x="5" y="216.0537">rectangle "MOBILE" as MOBILE{</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="526" x="37" y="235.2832">usecase ""P2P / CORP, Sending e-mails on the go"" as UC-P2P-SEND-EMAIL</text><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="254.5127">Syntax Error?</text><!--MD5=[6b97a42942645dedd345abb17540db09]
+@startuml
+ left to right direction
+	 actor "actor" as MOBILE
+	 actor "actor" as  SERVER
+	 actor "actor" as  USER
+rectangle "MOBILE" as MOBILE{
+	usecase ""P2P / CORP, Sending e-mails on the go"" as UC-P2P-SEND-EMAIL
+		MOBILE- -UC-P2P-SEND-EMAIL
+		 SERVER- -UC-P2P-SEND-EMAIL
+		 USER- -UC-P2P-SEND-EMAIL
+}
+
+@enduml@startuml
+
+PlantUML version 1.2020.19(Tue Oct 13 00:10:01 KST 2020)
+(APACHE source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: MS949
+Language: ko
+Country: KR
+--></g></svg>

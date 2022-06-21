@@ -1,9 +1,0 @@
-@startuml
-group UC01 Server Manage System
-	Server Manage System->Server Manage System : serverOn()
-	Server Manage System->Server Manage System : UC01-FL-2
-	Server Manage System->Server Manage System : UC01-FL-3-1
-	Server Manage System->Server Manage System : UC01-FL-4
-	Server Manage System->Server Manage System : UC01-FL-5
-end
-@enduml

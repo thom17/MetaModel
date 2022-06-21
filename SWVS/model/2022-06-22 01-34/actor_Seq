@@ -1,0 +1,21 @@
+@startuml
+group UC-P2P-SEND-EMAIL "P2P / CORP, Sending e-mails on the go"
+	group completeComposition()
+		null->null : editMsg()
+		null->null : attachFile(file : File)
+		null->null : reEdit()
+	null-->actor : 
+	end
+	EMAILSERVER->EMAILSERVER : sendEmail(target : Addr)
+	group "upLoadEmail(mail : EMail  , target : Addr)"
+		null->null : while(!connection())
+	null-->null : 
+	end
+	group sendEmail(target : Addr)
+		null->null : save(mail : EMail)
+	null-->null : 
+	end
+	null->null : save(mail : EMail)
+	EMAILSERVER->EMAILSERVER : fiterEmail(mail : EMai)
+end
+@enduml

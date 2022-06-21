@@ -2,6 +2,7 @@
  */
 package SWVS;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Requirement</b></em>'.
@@ -21,70 +22,70 @@ package SWVS;
  * @generated
  */
 public interface Requirement extends SWVS.Object {
-	/**
-	 * Returns the value of the '<em><b>Contents</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contents</em>' attribute.
-	 * @see #setContents(String)
-	 * @see SWVS.SWVSPackage#getRequirement_Contents()
-	 * @model
-	 * @generated
-	 */
-	String getContents();
+  /**
+   * Returns the value of the '<em><b>Contents</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Contents</em>' attribute.
+   * @see #setContents(String)
+   * @see SWVS.SWVSPackage#getRequirement_Contents()
+   * @model
+   * @generated
+   */
+  String getContents();
 
-	/**
-	 * Sets the value of the '{@link SWVS.Requirement#getContents <em>Contents</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Contents</em>' attribute.
-	 * @see #getContents()
-	 * @generated
-	 */
-	void setContents(String value);
+  /**
+   * Sets the value of the '{@link SWVS.Requirement#getContents <em>Contents</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Contents</em>' attribute.
+   * @see #getContents()
+   * @generated
+   */
+  void setContents(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Rq Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rq Type</em>' attribute.
-	 * @see #setRqType(String)
-	 * @see SWVS.SWVSPackage#getRequirement_RqType()
-	 * @model
-	 * @generated
-	 */
-	String getRqType();
+  /**
+   * Returns the value of the '<em><b>Rq Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Rq Type</em>' attribute.
+   * @see #setRqType(String)
+   * @see SWVS.SWVSPackage#getRequirement_RqType()
+   * @model
+   * @generated
+   */
+  String getRqType();
 
-	/**
-	 * Sets the value of the '{@link SWVS.Requirement#getRqType <em>Rq Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rq Type</em>' attribute.
-	 * @see #getRqType()
-	 * @generated
-	 */
-	void setRqType(String value);
+  /**
+   * Sets the value of the '{@link SWVS.Requirement#getRqType <em>Rq Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Rq Type</em>' attribute.
+   * @see #getRqType()
+   * @generated
+   */
+  void setRqType(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Department</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Department</em>' attribute.
-	 * @see #setDepartment(String)
-	 * @see SWVS.SWVSPackage#getRequirement_Department()
-	 * @model
-	 * @generated
-	 */
-	String getDepartment();
+  /**
+   * Returns the value of the '<em><b>Department</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Department</em>' attribute.
+   * @see #setDepartment(String)
+   * @see SWVS.SWVSPackage#getRequirement_Department()
+   * @model
+   * @generated
+   */
+  String getDepartment();
 
-	/**
-	 * Sets the value of the '{@link SWVS.Requirement#getDepartment <em>Department</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Department</em>' attribute.
-	 * @see #getDepartment()
-	 * @generated
-	 */
-	void setDepartment(String value);
+  /**
+   * Sets the value of the '{@link SWVS.Requirement#getDepartment <em>Department</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Department</em>' attribute.
+   * @see #getDepartment()
+   * @generated
+   */
+  void setDepartment(String value);
 
 } // Requirement
