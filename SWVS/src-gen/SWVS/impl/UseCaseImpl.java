@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link SWVS.impl.UseCaseImpl#getExtend <em>Extend</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getInclude <em>Include</em>}</li>
- *   <li>{@link SWVS.impl.UseCaseImpl#getFlow <em>Flow</em>}</li>
+ *   <li>{@link SWVS.impl.UseCaseImpl#getFlows <em>Flows</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getContext <em>Context</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getActActors <em>Act Actors</em>}</li>
  *   <li>{@link SWVS.impl.UseCaseImpl#getCondition <em>Condition</em>}</li>
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class UseCaseImpl extends ObjectImpl implements UseCase {
+public class UseCaseImpl extends MObjectImpl implements UseCase {
   /**
    * The cached value of the '{@link #getExtend() <em>Extend</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -64,14 +64,14 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
   protected EList<UseCase> include;
 
   /**
-   * The cached value of the '{@link #getFlow() <em>Flow</em>}' containment reference list.
+   * The cached value of the '{@link #getFlows() <em>Flows</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFlow()
+   * @see #getFlows()
    * @generated
    * @ordered
    */
-  protected EList<Flow> flow;
+  protected EList<Flow> flows;
 
   /**
    * The default value of the '{@link #getContext() <em>Context</em>}' attribute.
@@ -163,11 +163,11 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Flow> getFlow() {
-    if (flow == null) {
-      flow = new EObjectContainmentEList<Flow>(Flow.class, this, SWVSPackage.USE_CASE__FLOW);
+  public EList<Flow> getFlows() {
+    if (flows == null) {
+      flows = new EObjectContainmentEList<Flow>(Flow.class, this, SWVSPackage.USE_CASE__FLOWS);
     }
-    return flow;
+    return flows;
   }
 
   /**
@@ -285,8 +285,8 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
         return ((InternalEList<?>) getExtend()).basicRemove(otherEnd, msgs);
       case SWVSPackage.USE_CASE__INCLUDE:
         return ((InternalEList<?>) getInclude()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.USE_CASE__FLOW:
-        return ((InternalEList<?>) getFlow()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.USE_CASE__FLOWS:
+        return ((InternalEList<?>) getFlows()).basicRemove(otherEnd, msgs);
       case SWVSPackage.USE_CASE__ACT_ACTORS:
         return ((InternalEList<?>) getActActors()).basicRemove(otherEnd, msgs);
       case SWVSPackage.USE_CASE__CONDITION:
@@ -307,8 +307,8 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
         return getExtend();
       case SWVSPackage.USE_CASE__INCLUDE:
         return getInclude();
-      case SWVSPackage.USE_CASE__FLOW:
-        return getFlow();
+      case SWVSPackage.USE_CASE__FLOWS:
+        return getFlows();
       case SWVSPackage.USE_CASE__CONTEXT:
         return getContext();
       case SWVSPackage.USE_CASE__ACT_ACTORS:
@@ -336,9 +336,9 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
         getInclude().clear();
         getInclude().addAll((Collection<? extends UseCase>) newValue);
         return;
-      case SWVSPackage.USE_CASE__FLOW:
-        getFlow().clear();
-        getFlow().addAll((Collection<? extends Flow>) newValue);
+      case SWVSPackage.USE_CASE__FLOWS:
+        getFlows().clear();
+        getFlows().addAll((Collection<? extends Flow>) newValue);
         return;
       case SWVSPackage.USE_CASE__CONTEXT:
         setContext((String) newValue);
@@ -368,8 +368,8 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
       case SWVSPackage.USE_CASE__INCLUDE:
         getInclude().clear();
         return;
-      case SWVSPackage.USE_CASE__FLOW:
-        getFlow().clear();
+      case SWVSPackage.USE_CASE__FLOWS:
+        getFlows().clear();
         return;
       case SWVSPackage.USE_CASE__CONTEXT:
         setContext(CONTEXT_EDEFAULT);
@@ -396,8 +396,8 @@ public class UseCaseImpl extends ObjectImpl implements UseCase {
         return extend != null && !extend.isEmpty();
       case SWVSPackage.USE_CASE__INCLUDE:
         return include != null && !include.isEmpty();
-      case SWVSPackage.USE_CASE__FLOW:
-        return flow != null && !flow.isEmpty();
+      case SWVSPackage.USE_CASE__FLOWS:
+        return flows != null && !flows.isEmpty();
       case SWVSPackage.USE_CASE__CONTEXT:
         return CONTEXT_EDEFAULT == null ? context != null : !CONTEXT_EDEFAULT.equals(context);
       case SWVSPackage.USE_CASE__ACT_ACTORS:

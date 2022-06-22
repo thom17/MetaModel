@@ -7,17 +7,18 @@ import org.eclipse.emf.common.util.EList;
 import SWVS.Actor;
 import SWVS.Condition;
 import SWVS.Flow;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.SWVSFactory;
-import SWVS.System;
 import SWVS.UseCase;
 import SWVS.impl.SWVSPackageImpl;
 import fileLoader.EventFlow;
 import fileLoader.UcSpecific;
 
 public class UsecaseManager {
-  SWVS.System baseSys;
+  MSystem baseSys;
   ModelManager mmg;
   Project project;
   SWVSFactory f;
@@ -42,7 +43,7 @@ public class UsecaseManager {
     String useActorList[] = ucs.getUseActor();
     if (useActorList != null) {
       for (int i = 0; i < useActorList.length; i++) {
-        for (Actor actor : project.getActor()) {
+        for (Actor actor : project.getActorList()) {
           if (actor.getId().equals(useActorList[i])
               || actor.getObjectName().equals(useActorList[i])) {
             actorList.add(actor);
@@ -51,7 +52,7 @@ public class UsecaseManager {
         }
         if (actorList.size() == i) {
           Actor newActor = makeActor(useActorList[i]);
-          project.getActor().add(newActor);
+          project.getActorList().add(newActor);
           actorList.add(newActor);
         }
       }
@@ -71,7 +72,7 @@ public class UsecaseManager {
     Map<String, EventFlow> flowMap = ucs.getFlowMap();
     flowManager = new FlowManager(uc);
     Map<String, Flow> flowModelMap = flowManager.getFlowMap();
-    addFlow(uc.getFlow(), flowMap.values(), flowModelMap);
+    addFlow(uc.getFlows(), flowMap.values(), flowModelMap);
   }
 
   private Actor makeActor(String str) {
@@ -100,20 +101,20 @@ public class UsecaseManager {
       }
       setFlowCallRelation(flow_m, data);
       flowManager.updateFlow(flow_m, data);
-      addFlow(flow_m.getDetailFlow(), data.alterEvent, flowModelMap);
+      addFlow(flow_m.getDetailFlows(), data.alterEvent, flowModelMap);
     }
   }
 
   /**
    * 
    * @param d_list : string[] (id값, objectName 값 으로 구성된)
-   * @param m_list : EList<SWVS.Object> 추가할 리스트 대상 객체
+   * @param m_list : EList<MObject> 추가할 리스트 대상 객체
    */
-  private void setList(String d_list[], EList<SWVS.Object> m_list) {
+  private void setList(String d_list[], EList<MObject> m_list) {
     boolean find = false;
     for (String str : d_list) {
       find = false;
-      for (Actor actor : project.getActor()) { // 액터에서 찾기
+      for (Actor actor : project.getActorList()) { // 액터에서 찾기
         if (actor.getId().equals(str) || str.equals(actor.getObjectName())) {
           m_list.add(actor);
           find = true;
@@ -123,7 +124,7 @@ public class UsecaseManager {
       if (find)
         continue;
 
-      for (System sys : project.getSystem()) { // 시스템에서 찾기
+      for (MSystem sys : project.getSystems()) { // 시스템에서 찾기
         if (sys.getId().equals(str) || str.equals(sys.getObjectName())) {
           find = true;
           m_list.add(sys);
@@ -133,14 +134,14 @@ public class UsecaseManager {
       if (find)
         continue;
 
-      for (SWVS.Object obj : project.getObject()) { // Object에서 찾기
+      for (MObject obj : project.getObjects()) { // Object에서 찾기
         if (obj.getId().equals(str) || str.equals(obj.getObjectName())) {
           find = true;
           m_list.add(obj);
           break;
         }
       } // 없으면 Obj로 추가하기
-      SWVS.Object obj = f.createObject();
+      MObject obj = f.createMObject();
       obj.setId(str);
       obj.setObjectName(getSimpleName(str));
       m_list.add(obj);
@@ -162,8 +163,8 @@ public class UsecaseManager {
    * @param data : EventFlow 데이터 객체
    */
   private void setFlowCallRelation(Flow flow, EventFlow data) {
-    EList<SWVS.Object> hostList = flow.getHost();
-    EList<SWVS.Object> clientList = flow.getClient();
+    EList<MObject> hostList = flow.getHost();
+    EList<MObject> clientList = flow.getClients();
     String client[] = data.clientList;
     String host[] = data.hostList;
     // TODO Auto-generated method stub
@@ -187,7 +188,7 @@ public class UsecaseManager {
    * @param ucName 없을시 설정할 이름.
    * @return 찾거나 생성된 System
    */
-  private UseCase findUseCase(System sys, UcSpecific ucs) {
+  private UseCase findUseCase(MSystem sys, UcSpecific ucs) {
     EList<UseCase> ucList = sys.getUsecase();
     for (UseCase uc : ucList) {
       if (uc.getId().equals(ucs.getUcId())) // || uc.getUsecaseName().equals(ucName))
@@ -221,34 +222,34 @@ public class UsecaseManager {
    * id를 기반으로 검색 없다면 생성하여 project에 추가 후 반환.
    * 
    * @param findId
-   * @return sys : SWVS.System
+   * @return sys : MSystem
    */
-  public SWVS.System findSystem(UcSpecific ucs) {
+  public MSystem findSystem(UcSpecific ucs) {
     String findId = ucs.getSysId();
-    EList<System> sysList = project.getSystem();
+    EList<MSystem> sysList = project.getSystems();
     for (int i = 0; i < sysList.size(); i++) {
-      SWVS.System sys = sysList.get(i);
+      MSystem sys = sysList.get(i);
       if (sys.getId().equals(findId))
         return sys;
       else
         continue;
     }
 
-    SWVS.System sys = makeSys(ucs);
-    project.getSystem().add(sys);
+    MSystem sys = makeSys(ucs);
+    project.getSystems().add(sys);
     return sys;
   }
 
 
   /**
-   * SWVS.System 모델 생성하여 반환
+   * MSystem 모델 생성하여 반환
    * 
    * @param ucs usecases specific
-   * @return sys : SWVS.System
+   * @return sys : MSystem
    */
-  private System makeSys(UcSpecific ucs) {
+  private MSystem makeSys(UcSpecific ucs) {
     SWVSPackageImpl.init();
-    SWVS.System sys = f.createSystem();
+    MSystem sys = f.createMSystem();
     String sysName = ucs.getSysName();
     if (sysName == null || sysName.length() < 1)
       sysName = this.getSimpleName(ucs.getSysId());
@@ -268,11 +269,11 @@ public class UsecaseManager {
   private void addRelatedRq(UseCase uc, UcSpecific ucs) {
     String relatedRqList[] = ucs.getRelatedRq();
     EList<Requirement> rqModels = project.getRequirement();
-    EList<Requirement> ucRequireList = uc.getRequirement();
+    EList<Requirement> ucRequireList = uc.getRequirements();
     for (String rqId : relatedRqList) {
       for (Requirement model : rqModels) {
-        if (model.getId().equals(rqId) && !uc.getRequirement().contains(model)) {
-          uc.getRequirement().add(model);
+        if (model.getId().equals(rqId) && !uc.getRequirements().contains(model)) {
+          uc.getRequirements().add(model);
         }
       }
 

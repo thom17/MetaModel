@@ -11,11 +11,11 @@
     <genClasses ecoreClass="sWVS.ecore#//Project">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Project/projectName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/requirement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/system"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/actor"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/class"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/object"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/objList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/systems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/actorList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/classList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/mObjects"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Project/objects"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Project/finDate"/>
     </genClasses>
     <genClasses ecoreClass="sWVS.ecore#//Requirement">
@@ -23,26 +23,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Requirement/rqType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Requirement/department"/>
     </genClasses>
-    <genClasses ecoreClass="sWVS.ecore#//System">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//System/systemType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//System/usecase"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//System/defClass"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//System/state"/>
+    <genClasses ecoreClass="sWVS.ecore#//MSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MSystem/systemType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//MSystem/usecase"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MSystem/defClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//MSystem/states"/>
     </genClasses>
-    <genClasses ecoreClass="sWVS.ecore#//Object">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/data_base_SrcName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/objectType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/filePath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/addedObject"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/implementName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/objectName"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Object/requirement"/>
+    <genClasses ecoreClass="sWVS.ecore#//MObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/data_base_SrcName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/objectType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/filePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/addedObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/implementName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MObject/objectName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MObject/requirements"/>
     </genClasses>
     <genClasses ecoreClass="sWVS.ecore#//UseCase">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/extend"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/include"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/flow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/flows"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//UseCase/context"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/actActors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//UseCase/condition"/>
@@ -50,9 +50,9 @@
     <genClasses ecoreClass="sWVS.ecore#//Flow">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Flow/flowId"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Flow/host"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Flow/client"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Flow/clients"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Flow/context"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Flow/detailFlow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Flow/detailFlows"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Flow/result"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Flow/condition"/>
     </genClasses>
@@ -64,14 +64,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Condition/postCondition"/>
     </genClasses>
     <genClasses ecoreClass="sWVS.ecore#//Function"/>
-    <genClasses ecoreClass="sWVS.ecore#//Class">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Class/field"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Class/package"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Class/hasClass"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Class/superClass"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//Class/method"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Class/defBase"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Class/classType"/>
+    <genClasses ecoreClass="sWVS.ecore#//MClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//MClass/fields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MClass/package"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MClass/hasClassList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MClass/superClassList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWVS.ecore#//MClass/methods"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MClass/defBase"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MClass/classType"/>
     </genClasses>
     <genClasses ecoreClass="sWVS.ecore#//Field">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Field/typeName"/>
@@ -94,27 +94,27 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Customer/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Customer/beverage"/>
     </genClasses>
-    <genClasses ecoreClass="sWVS.ecore#//Method">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Method/returnType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Method/isStatic"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Method/usecase"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Method/base"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Method/argument"/>
+    <genClasses ecoreClass="sWVS.ecore#//MMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MMethod/returnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MMethod/isStatic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MMethod/testUsecase"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//MMethod/base"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//MMethod/argument"/>
     </genClasses>
     <genClasses ecoreClass="sWVS.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//State/stateId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//State/useCaseStatus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//State/implementationStatus"/>
     </genClasses>
-    <genClasses ecoreClass="sWVS.ecore#//Object.1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/data_base_SrcName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/objectType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/filePath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/addedObject"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/implementName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object.1/objectName"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Object.1/requirement"/>
+    <genClasses ecoreClass="sWVS.ecore#//Object">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/data_base_SrcName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/objectType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/filePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/addedObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/implementName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWVS.ecore#//Object/objectName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWVS.ecore#//Object/requirement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -20,7 +20,7 @@ package SWVS;
  * @model
  * @generated
  */
-public interface Field extends SWVS.Object {
+public interface Field extends MObject {
   /**
    * Returns the value of the '<em><b>Type Name</b></em>' attribute.
    * <!-- begin-user-doc -->

@@ -54,7 +54,7 @@ public class FlowManager {
    */
   public static ArrayList<Flow> getAllFlowList(UseCase uc) {
     ArrayList<Flow> flowList = new ArrayList<Flow>();
-    flowSearch(flowList, uc.getFlow());
+    flowSearch(flowList, uc.getFlows());
     return flowList;
   }
 
@@ -64,7 +64,7 @@ public class FlowManager {
 
     for (Flow flow : flows) {
       flowList.add(flow);
-      flowSearch(flowList, flow.getDetailFlow());
+      flowSearch(flowList, flow.getDetailFlows());
     }
 
   }

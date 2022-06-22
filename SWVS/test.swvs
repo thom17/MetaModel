@@ -63,57 +63,57 @@
   <requirement id="RQ-61" filePath="201.248.87.55/requirement/RQ-61" objectName="RQ-61's Name" contents="RQ-61's desc." rqType="Non-Functional"/>
   <requirement id="RQ-62" filePath="201.248.87.55/requirement/RQ-62" objectName="RQ-62's Name" contents="RQ-62's desc." rqType="Non-Functional"/>
   <requirement id="RQ-63" filePath="201.248.87.55/requirement/RQ-63" objectName="RQ-63's Name" contents="RQ-63's desc." rqType="Functional"/>
-  <requirement id="RQ-6-4" filePath="201.248.87.55/requirement/RQ-64" objectName="RQ-64's Name" contents="RQ-64's desc." rqType="Non-Functional"/>
-  <requirement id="RQ-6-5" filePath="201.248.87.55/requirement/RQ-65" objectName="RQ-65's Name" contents="RQ-65's desc." rqType="Functional"/>
-  <requirement id="RQ-6-6" filePath="201.248.87.55/requirement/RQ-66" objectName="RQ-66's Name" contents="RQ-66's desc." rqType="Functional"/>
-  <system id="MOBILE" objectName="MOBILE" defClass="cls-MOBILE">
+  <requirement id="RQ-64" filePath="201.248.87.55/requirement/RQ-64" objectName="RQ-64's Name" contents="RQ-64's desc." rqType="Non-Functional"/>
+  <requirement id="RQ-65" filePath="201.248.87.55/requirement/RQ-65" objectName="RQ-65's Name" contents="RQ-65's desc." rqType="Functional"/>
+  <requirement id="RQ-66" filePath="201.248.87.55/requirement/RQ-66" objectName="RQ-66's Name" contents="RQ-66's desc." rqType="Functional"/>
+  <systems id="MOBILE" objectName="MOBILE" defClass="cls-MOBILE">
     <usecase id="UC-P2P-SEND-EMAIL" objectType="usecase Speicifc" filePath="C:\Users\thom1\Desktop\jsj\dev\java\modeling\SWVS\target\smartMedia\Usecase Spec.csv" objectName="&quot;P2P / CORP, Sending e-mails on the go&quot;" context="&quot;An e-mail is composed by a mobile worker.  &#xA;Upon selecting to send the e-mail, it is immediately securely sent from the e-mail &#xA;server of the user (and not another server, e.g., operator provided SMTP server).  &#xA;A mobile user composes a mobile e-mail.  &#xA;The composition of an e-mail can include editing desired messages, attaching &#xA;various files, re-editing any saved drafts, and so forth.  &#xA;After choosing to send the e-mail, it is uploaded on the e-mail server of the user and &#xA;immediately and securely sent from the server. &#xA;(and not another server, e.g., operator provided SMTP server).&quot;" actActors="MOBILE  SERVER  USER">
-      <flow id="UC-P2P-SEND-EMAIL-FL-1" objectName="completeComposition()" flowId="1" host="MOBILE" client="USER" context=" User completes composition of an e-mail on mobile client, which includes:" result="">
-        <detailFlow id="UC-P2P-SEND-EMAIL-FL-1-1" objectName="editMsg()" flowId="1.1" host="MOBILE" client="MOBILE" context=" Editing a new desired message." result="">
+      <flows id="UC-P2P-SEND-EMAIL-FL-1" objectName="completeComposition()" flowId="1" host="MOBILE" clients="USER" context=" User completes composition of an e-mail on mobile client, which includes:" result="">
+        <detailFlows id="UC-P2P-SEND-EMAIL-FL-1-1" objectName="editMsg()" flowId="1.1" host="MOBILE" clients="MOBILE" context=" Editing a new desired message." result="">
           <condition preCondition="" postCondition=""/>
-        </detailFlow>
-        <detailFlow id="UC-P2P-SEND-EMAIL-FL-1-2" objectName="attachFile(file : File)" flowId="1.2" host="MOBILE" client="MOBILE" context=" Attaching various files (document files, media files, &#xA;fully or not fully downloaded files, etc.)" result="">
+        </detailFlows>
+        <detailFlows id="UC-P2P-SEND-EMAIL-FL-1-2" objectName="attachFile(file : File)" flowId="1.2" host="MOBILE" clients="MOBILE" context=" Attaching various files (document files, media files, &#xA;fully or not fully downloaded files, etc.)" result="">
           <condition preCondition="" postCondition=""/>
-        </detailFlow>
-        <detailFlow id="UC-P2P-SEND-EMAIL-FL-1-3" objectName="reEdit()" flowId="1.3" host="MOBILE" client="MOBILE" context=" Re-editing the saved draft" result="">
+        </detailFlows>
+        <detailFlows id="UC-P2P-SEND-EMAIL-FL-1-3" objectName="reEdit()" flowId="1.3" host="MOBILE" clients="MOBILE" context=" Re-editing the saved draft" result="">
           <condition preCondition="" postCondition=""/>
-        </detailFlow>
+        </detailFlows>
         <condition preCondition="" postCondition=""/>
-      </flow>
-      <flow id="UC-P2P-SEND-EMAIL-FL-2" objectName="sendEmail(target : Addr)" flowId="2" host=" E-MAIL-SERVER" client="MOBILE" context=" User selects to send the e-mail" result="">
+      </flows>
+      <flows id="UC-P2P-SEND-EMAIL-FL-2" objectName="sendEmail(target : Addr)" flowId="2" host=" E-MAIL-SERVER" clients="MOBILE" context=" User selects to send the e-mail" result="">
         <condition preCondition="" postCondition=""/>
-      </flow>
-      <flow id="UC-P2P-SEND-EMAIL-FL-3" objectName="&quot;upLoadEmail(mail : EMail  , target : Addr)&quot;" flowId="3" host="MOBILE" client="MOBILE" context=" Client connects with e-mail server and uploads the e-mail" result="">
-        <detailFlow id="UC-P2P-SEND-EMAIL-FL-3-1" objectName="while(!connection())" flowId="3.1" host="MOBILE" client="MOBILE" context=" Base on settings or preference the e-mail can be queued and sent as soon that &#xA;the connectivity is re-established or the user may be prompted to confirm desire to send them." result="">
+      </flows>
+      <flows id="UC-P2P-SEND-EMAIL-FL-3" objectName="&quot;upLoadEmail(mail : EMail  , target : Addr)&quot;" flowId="3" host="MOBILE" clients="MOBILE" context=" Client connects with e-mail server and uploads the e-mail" result="">
+        <detailFlows id="UC-P2P-SEND-EMAIL-FL-3-1" objectName="while(!connection())" flowId="3.1" host="MOBILE" clients="MOBILE" context=" Base on settings or preference the e-mail can be queued and sent as soon that &#xA;the connectivity is re-established or the user may be prompted to confirm desire to send them." result="">
           <condition preCondition="Steps 3 and after may be delayed is device is not online." postCondition=""/>
-        </detailFlow>
+        </detailFlows>
         <condition preCondition="" postCondition=""/>
-      </flow>
-      <flow id="UC-P2P-SEND-EMAIL-FL-4" objectName="sendEmail(target : Addr)" flowId="4" host="MOBILE" client="MOBILE" context=" E-mail is sent from e-mail server." result="">
-        <detailFlow id="UC-P2P-SEND-EMAIL-FL-4-1" objectName="save(mail : EMail)" flowId="4.1" host="MOBILE" client="MOBILE" context=" E-mail may be saved in a sent folder (based on preference of user or &#xA;behaviour/settings of e-mail server)" result="">
+      </flows>
+      <flows id="UC-P2P-SEND-EMAIL-FL-4" objectName="sendEmail(target : Addr)" flowId="4" host="MOBILE" clients="MOBILE" context=" E-mail is sent from e-mail server." result="">
+        <detailFlows id="UC-P2P-SEND-EMAIL-FL-4-1" objectName="save(mail : EMail)" flowId="4.1" host="MOBILE" clients="MOBILE" context=" E-mail may be saved in a sent folder (based on preference of user or &#xA;behaviour/settings of e-mail server)" result="">
           <condition preCondition="&quot;User want to save &#xA;the e-mail.&quot;" postCondition=""/>
-        </detailFlow>
+        </detailFlows>
         <condition preCondition="" postCondition=""/>
-      </flow>
-      <flow id="UC-P2P-SEND-EMAIL-FL-5" objectName="save(mail : EMail)" flowId="5" host="MOBILE" client="MOBILE" context=" Sent e-mail in sent folder is reflected in e-mail sent folder as in 5 (based on &#xA;preference of user or behaviour/settings of e-mail server). " result="">
+      </flows>
+      <flows id="UC-P2P-SEND-EMAIL-FL-5" objectName="save(mail : EMail)" flowId="5" host="MOBILE" clients="MOBILE" context=" Sent e-mail in sent folder is reflected in e-mail sent folder as in 5 (based on &#xA;preference of user or behaviour/settings of e-mail server). " result="">
         <condition preCondition="" postCondition=""/>
-      </flow>
-      <flow id="UC-P2P-SEND-EMAIL-FL-6" objectName="fiterEmail(mail : EMai)" flowId="6" host=" E-MAIL-SERVER" client="MOBILE" context=" UC-P2P-FILTERING-EMAIL. Other flows may be considered." result="&quot;Do use case  &#xA;UC-P2P-FILTERING-EMAIL.&quot;">
+      </flows>
+      <flows id="UC-P2P-SEND-EMAIL-FL-6" objectName="fiterEmail(mail : EMai)" flowId="6" host=" E-MAIL-SERVER" clients="MOBILE" context=" UC-P2P-FILTERING-EMAIL. Other flows may be considered." result="&quot;Do use case  &#xA;UC-P2P-FILTERING-EMAIL.&quot;">
         <condition preCondition="may change with the e-mail saved from the client reconciled with the server" postCondition="&quot;Do use case  &#xA;UC-P2P-FILTERING-EMAIL.&quot;"/>
-      </flow>
+      </flows>
       <condition preCondition="&quot;The user of mobile e-mail has an account with email providers.&#xA;The user of mobile e-mail has a device with a client able to compose and send e-mails.&#xA;The user of mobile e-mail has a device with applications which can create, manipulate, and attach various attachments.&#xA;Client and Account is appropriately configured.&quot;" postCondition="&quot;E-mail sent by user has been sent from the e-mail server &#xA;(located in appropriate domain).&quot;"/>
     </usecase>
-  </system>
-  <actor id="MOBILE" objectName="actor" actUsecases="UC-P2P-SEND-EMAIL"/>
-  <actor id=" SERVER" objectName="actor" actUsecases="UC-P2P-SEND-EMAIL"/>
-  <actor id=" USER" objectName="actor" actUsecases="UC-P2P-SEND-EMAIL"/>
-  <class id="cls-MOBILE" objectType="autoGenClass" objectName="MOBILE" package="default" defBase="MOBILE" classType="SystemClass">
-    <method id="fun-UC-P2P-SEND-EMAIL" objectType="autoGenFunUc" objectName="&quot;P2P/CORP,Sendinge-mailsonthego&quot;()" returnType="void" usecase="UC-P2P-SEND-EMAIL" base="UC-P2P-SEND-EMAIL-FL-1 UC-P2P-SEND-EMAIL-FL-2 UC-P2P-SEND-EMAIL-FL-3 UC-P2P-SEND-EMAIL-FL-4 UC-P2P-SEND-EMAIL-FL-5 UC-P2P-SEND-EMAIL-FL-6"/>
-    <method id="UC-P2P-SEND-EMAIL-FL-1" objectType="autoGenFunFlow" objectName="completeComposition()" returnType="void" base="UC-P2P-SEND-EMAIL-FL-1"/>
-    <method id="UC-P2P-SEND-EMAIL-FL-2" objectType="autoGenFunFlow" objectName="sendEmail(target : Addr)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-2"/>
-    <method id="UC-P2P-SEND-EMAIL-FL-3" objectType="autoGenFunFlow" objectName="&quot;upLoadEmail(mail : EMail  , target : Addr)&quot;" returnType="void" base="UC-P2P-SEND-EMAIL-FL-3"/>
-    <method id="UC-P2P-SEND-EMAIL-FL-4" objectType="autoGenFunFlow" objectName="sendEmail(target : Addr)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-4"/>
-    <method id="UC-P2P-SEND-EMAIL-FL-5" objectType="autoGenFunFlow" objectName="save(mail : EMail)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-5"/>
-    <method id="UC-P2P-SEND-EMAIL-FL-6" objectType="autoGenFunFlow" objectName="fiterEmail(mail : EMai)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-6"/>
-  </class>
+  </systems>
+  <actorList id="MOBILE" objectName="actor" actUsecases="UC-P2P-SEND-EMAIL"/>
+  <actorList id=" SERVER" objectName="actor" actUsecases="UC-P2P-SEND-EMAIL"/>
+  <actorList id=" USER" objectName="actor" actUsecases="UC-P2P-SEND-EMAIL"/>
+  <classList id="cls-MOBILE" data_base_SrcName="default.MOBILE" objectType="autoGenClass" objectName="MOBILE" package="default" defBase="MOBILE" classType="SystemClass">
+    <methods id="fun-UC-P2P-SEND-EMAIL" objectType="autoGenFunUc" objectName="&quot;P2P/CORP,Sendinge-mailsonthego&quot;()" returnType="void" testUsecase="UC-P2P-SEND-EMAIL" base="UC-P2P-SEND-EMAIL-FL-1 UC-P2P-SEND-EMAIL-FL-2 UC-P2P-SEND-EMAIL-FL-3 UC-P2P-SEND-EMAIL-FL-4 UC-P2P-SEND-EMAIL-FL-5 UC-P2P-SEND-EMAIL-FL-6"/>
+    <methods id="UC-P2P-SEND-EMAIL-FL-1" objectType="autoGenFunFlow" objectName="completeComposition()" returnType="void" base="UC-P2P-SEND-EMAIL-FL-1"/>
+    <methods id="UC-P2P-SEND-EMAIL-FL-2" objectType="autoGenFunFlow" objectName="sendEmail(target : Addr)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-2"/>
+    <methods id="UC-P2P-SEND-EMAIL-FL-3" objectType="autoGenFunFlow" objectName="&quot;upLoadEmail(mail : EMail  , target : Addr)&quot;" returnType="void" base="UC-P2P-SEND-EMAIL-FL-3"/>
+    <methods id="UC-P2P-SEND-EMAIL-FL-4" objectType="autoGenFunFlow" objectName="sendEmail(target : Addr)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-4"/>
+    <methods id="UC-P2P-SEND-EMAIL-FL-5" objectType="autoGenFunFlow" objectName="save(mail : EMail)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-5"/>
+    <methods id="UC-P2P-SEND-EMAIL-FL-6" objectType="autoGenFunFlow" objectName="fiterEmail(mail : EMai)" returnType="void" base="UC-P2P-SEND-EMAIL-FL-6"/>
+  </classList>
 </sWVS:Project>

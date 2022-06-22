@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link SWVS.Project#getProjectName <em>Project Name</em>}</li>
  *   <li>{@link SWVS.Project#getRequirement <em>Requirement</em>}</li>
- *   <li>{@link SWVS.Project#getSystem <em>System</em>}</li>
- *   <li>{@link SWVS.Project#getActor <em>Actor</em>}</li>
- *   <li>{@link SWVS.Project#getClass_ <em>Class</em>}</li>
- *   <li>{@link SWVS.Project#getObject <em>Object</em>}</li>
- *   <li>{@link SWVS.Project#getObjList <em>Obj List</em>}</li>
+ *   <li>{@link SWVS.Project#getSystems <em>Systems</em>}</li>
+ *   <li>{@link SWVS.Project#getActorList <em>Actor List</em>}</li>
+ *   <li>{@link SWVS.Project#getClassList <em>Class List</em>}</li>
+ *   <li>{@link SWVS.Project#getMObjects <em>MObjects</em>}</li>
+ *   <li>{@link SWVS.Project#getObjects <em>Objects</em>}</li>
  *   <li>{@link SWVS.Project#getFinDate <em>Fin Date</em>}</li>
  * </ul>
  *
@@ -65,64 +65,64 @@ public interface Project extends EObject {
   EList<Requirement> getRequirement();
 
   /**
-   * Returns the value of the '<em><b>System</b></em>' containment reference list.
-   * The list contents are of type {@link SWVS.System}.
+   * Returns the value of the '<em><b>Systems</b></em>' containment reference list.
+   * The list contents are of type {@link SWVS.MSystem}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>System</em>' containment reference list.
-   * @see SWVS.SWVSPackage#getProject_System()
+   * @return the value of the '<em>Systems</em>' containment reference list.
+   * @see SWVS.SWVSPackage#getProject_Systems()
    * @model containment="true"
    * @generated
    */
-  EList<SWVS.System> getSystem();
+  EList<MSystem> getSystems();
 
   /**
-   * Returns the value of the '<em><b>Actor</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Actor List</b></em>' containment reference list.
    * The list contents are of type {@link SWVS.Actor}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Actor</em>' containment reference list.
-   * @see SWVS.SWVSPackage#getProject_Actor()
+   * @return the value of the '<em>Actor List</em>' containment reference list.
+   * @see SWVS.SWVSPackage#getProject_ActorList()
    * @model containment="true"
    * @generated
    */
-  EList<Actor> getActor();
+  EList<Actor> getActorList();
 
   /**
-   * Returns the value of the '<em><b>Class</b></em>' containment reference list.
-   * The list contents are of type {@link SWVS.Class}.
+   * Returns the value of the '<em><b>Class List</b></em>' containment reference list.
+   * The list contents are of type {@link SWVS.MClass}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Class</em>' containment reference list.
-   * @see SWVS.SWVSPackage#getProject_Class()
+   * @return the value of the '<em>Class List</em>' containment reference list.
+   * @see SWVS.SWVSPackage#getProject_ClassList()
    * @model containment="true"
    * @generated
    */
-  EList<SWVS.Class> getClass_();
+  EList<MClass> getClassList();
 
   /**
-   * Returns the value of the '<em><b>Object</b></em>' containment reference list.
-   * The list contents are of type {@link SWVS.Object}.
+   * Returns the value of the '<em><b>MObjects</b></em>' containment reference list.
+   * The list contents are of type {@link SWVS.MObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Object</em>' containment reference list.
-   * @see SWVS.SWVSPackage#getProject_Object()
+   * @return the value of the '<em>MObjects</em>' containment reference list.
+   * @see SWVS.SWVSPackage#getProject_MObjects()
    * @model containment="true"
    * @generated
    */
-  EList<SWVS.Object> getObject();
+  EList<MObject> getMObjects();
 
   /**
-   * Returns the value of the '<em><b>Obj List</b></em>' reference list.
-   * The list contents are of type {@link SWVS.Object}.
+   * Returns the value of the '<em><b>Objects</b></em>' reference list.
+   * The list contents are of type {@link SWVS.MObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Obj List</em>' reference list.
-   * @see SWVS.SWVSPackage#getProject_ObjList()
+   * @return the value of the '<em>Objects</em>' reference list.
+   * @see SWVS.SWVSPackage#getProject_Objects()
    * @model
    * @generated
    */
-  EList<SWVS.Object> getObjList();
+  EList<MObject> getObjects();
 
   /**
    * Returns the value of the '<em><b>Fin Date</b></em>' attribute.

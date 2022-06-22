@@ -3,8 +3,8 @@ package diagram;
 import java.io.IOException;
 import org.eclipse.emf.common.util.EList;
 import SWVS.Actor;
+import SWVS.MSystem;
 import SWVS.Project;
-import SWVS.System;
 import SWVS.UseCase;
 import xmiManage.ModelManager;
 
@@ -22,16 +22,16 @@ public class UsecaseDg extends Base {
 
   protected void draw() {
     sb.append("@startuml\n left to right direction\n");
-    for (Actor actor : project.getActor()) {
+    for (Actor actor : project.getActorList()) {
       drwaActor(actor);
     }
-    for (SWVS.System system : project.getSystem()) {
+    for (SWVS.MSystem system : project.getSystems()) {
       drawSystem(system);
     }
     sb.append("@enduml");
   }
 
-  private void drawSystem(System system) {
+  private void drawSystem(MSystem system) {
     sb.append("rectangle \"" + system.getObjectName() + "\" as " + system.getId() + "{\n");
     for (UseCase usecase : system.getUsecase()) {
       drawUsecase(usecase);

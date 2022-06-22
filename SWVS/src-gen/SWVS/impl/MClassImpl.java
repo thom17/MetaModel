@@ -3,7 +3,9 @@
 package SWVS.impl;
 
 import SWVS.Field;
-import SWVS.Method;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
 import SWVS.SWVSPackage;
 
 import java.util.Collection;
@@ -24,33 +26,33 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Class</b></em>'.
+ * An implementation of the model object '<em><b>MClass</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link SWVS.impl.ClassImpl#getField <em>Field</em>}</li>
- *   <li>{@link SWVS.impl.ClassImpl#getPackage <em>Package</em>}</li>
- *   <li>{@link SWVS.impl.ClassImpl#getHasClass <em>Has Class</em>}</li>
- *   <li>{@link SWVS.impl.ClassImpl#getSuperClass <em>Super Class</em>}</li>
- *   <li>{@link SWVS.impl.ClassImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link SWVS.impl.ClassImpl#getDefBase <em>Def Base</em>}</li>
- *   <li>{@link SWVS.impl.ClassImpl#getClassType <em>Class Type</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getFields <em>Fields</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getPackage <em>Package</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getHasClassList <em>Has Class List</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getSuperClassList <em>Super Class List</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getMethods <em>Methods</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getDefBase <em>Def Base</em>}</li>
+ *   <li>{@link SWVS.impl.MClassImpl#getClassType <em>Class Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ClassImpl extends ObjectImpl implements SWVS.Class {
+public class MClassImpl extends MObjectImpl implements MClass {
   /**
-   * The cached value of the '{@link #getField() <em>Field</em>}' containment reference list.
+   * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getField()
+   * @see #getFields()
    * @generated
    * @ordered
    */
-  protected EList<Field> field;
+  protected EList<Field> fields;
 
   /**
    * The default value of the '{@link #getPackage() <em>Package</em>}' attribute.
@@ -73,34 +75,34 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
   protected String package_ = PACKAGE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getHasClass() <em>Has Class</em>}' reference list.
+   * The cached value of the '{@link #getHasClassList() <em>Has Class List</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHasClass()
+   * @see #getHasClassList()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Class> hasClass;
+  protected EList<MClass> hasClassList;
 
   /**
-   * The cached value of the '{@link #getSuperClass() <em>Super Class</em>}' reference list.
+   * The cached value of the '{@link #getSuperClassList() <em>Super Class List</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSuperClass()
+   * @see #getSuperClassList()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Class> superClass;
+  protected EList<MClass> superClassList;
 
   /**
-   * The cached value of the '{@link #getMethod() <em>Method</em>}' containment reference list.
+   * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMethod()
+   * @see #getMethods()
    * @generated
    * @ordered
    */
-  protected EList<Method> method;
+  protected EList<MMethod> methods;
 
   /**
    * The cached value of the '{@link #getDefBase() <em>Def Base</em>}' reference list.
@@ -110,7 +112,7 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Object> defBase;
+  protected EList<MObject> defBase;
 
   /**
    * The default value of the '{@link #getClassType() <em>Class Type</em>}' attribute.
@@ -137,7 +139,7 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ClassImpl() {
+  protected MClassImpl() {
     super();
   }
 
@@ -148,7 +150,7 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    */
   @Override
   protected EClass eStaticClass() {
-    return SWVSPackage.Literals.CLASS;
+    return SWVSPackage.Literals.MCLASS;
   }
 
   /**
@@ -156,11 +158,11 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Field> getField() {
-    if (field == null) {
-      field = new EObjectContainmentEList<Field>(Field.class, this, SWVSPackage.CLASS__FIELD);
+  public EList<Field> getFields() {
+    if (fields == null) {
+      fields = new EObjectContainmentEList<Field>(Field.class, this, SWVSPackage.MCLASS__FIELDS);
     }
-    return field;
+    return fields;
   }
 
   /**
@@ -181,7 +183,7 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
     String oldPackage = package_;
     package_ = newPackage;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.CLASS__PACKAGE, oldPackage,
+      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.MCLASS__PACKAGE, oldPackage,
           package_));
   }
 
@@ -190,12 +192,12 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Class> getHasClass() {
-    if (hasClass == null) {
-      hasClass = new EObjectResolvingEList<SWVS.Class>(SWVS.Class.class, this,
-          SWVSPackage.CLASS__HAS_CLASS);
+  public EList<MClass> getHasClassList() {
+    if (hasClassList == null) {
+      hasClassList =
+          new EObjectResolvingEList<MClass>(MClass.class, this, SWVSPackage.MCLASS__HAS_CLASS_LIST);
     }
-    return hasClass;
+    return hasClassList;
   }
 
   /**
@@ -203,12 +205,12 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Class> getSuperClass() {
-    if (superClass == null) {
-      superClass = new EObjectResolvingEList<SWVS.Class>(SWVS.Class.class, this,
-          SWVSPackage.CLASS__SUPER_CLASS);
+  public EList<MClass> getSuperClassList() {
+    if (superClassList == null) {
+      superClassList = new EObjectResolvingEList<MClass>(MClass.class, this,
+          SWVSPackage.MCLASS__SUPER_CLASS_LIST);
     }
-    return superClass;
+    return superClassList;
   }
 
   /**
@@ -216,11 +218,12 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Method> getMethod() {
-    if (method == null) {
-      method = new EObjectContainmentEList<Method>(Method.class, this, SWVSPackage.CLASS__METHOD);
+  public EList<MMethod> getMethods() {
+    if (methods == null) {
+      methods =
+          new EObjectContainmentEList<MMethod>(MMethod.class, this, SWVSPackage.MCLASS__METHODS);
     }
-    return method;
+    return methods;
   }
 
   /**
@@ -228,10 +231,10 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Object> getDefBase() {
+  public EList<MObject> getDefBase() {
     if (defBase == null) {
-      defBase = new EObjectResolvingEList<SWVS.Object>(SWVS.Object.class, this,
-          SWVSPackage.CLASS__DEF_BASE);
+      defBase =
+          new EObjectResolvingEList<MObject>(MObject.class, this, SWVSPackage.MCLASS__DEF_BASE);
     }
     return defBase;
   }
@@ -254,7 +257,7 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
     String oldClassType = classType;
     classType = newClassType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.CLASS__CLASS_TYPE,
+      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.MCLASS__CLASS_TYPE,
           oldClassType, classType));
   }
 
@@ -267,10 +270,10 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
       NotificationChain msgs) {
     switch (featureID) {
-      case SWVSPackage.CLASS__FIELD:
-        return ((InternalEList<?>) getField()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.CLASS__METHOD:
-        return ((InternalEList<?>) getMethod()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.MCLASS__FIELDS:
+        return ((InternalEList<?>) getFields()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.MCLASS__METHODS:
+        return ((InternalEList<?>) getMethods()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -283,19 +286,19 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case SWVSPackage.CLASS__FIELD:
-        return getField();
-      case SWVSPackage.CLASS__PACKAGE:
+      case SWVSPackage.MCLASS__FIELDS:
+        return getFields();
+      case SWVSPackage.MCLASS__PACKAGE:
         return getPackage();
-      case SWVSPackage.CLASS__HAS_CLASS:
-        return getHasClass();
-      case SWVSPackage.CLASS__SUPER_CLASS:
-        return getSuperClass();
-      case SWVSPackage.CLASS__METHOD:
-        return getMethod();
-      case SWVSPackage.CLASS__DEF_BASE:
+      case SWVSPackage.MCLASS__HAS_CLASS_LIST:
+        return getHasClassList();
+      case SWVSPackage.MCLASS__SUPER_CLASS_LIST:
+        return getSuperClassList();
+      case SWVSPackage.MCLASS__METHODS:
+        return getMethods();
+      case SWVSPackage.MCLASS__DEF_BASE:
         return getDefBase();
-      case SWVSPackage.CLASS__CLASS_TYPE:
+      case SWVSPackage.MCLASS__CLASS_TYPE:
         return getClassType();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -310,30 +313,30 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case SWVSPackage.CLASS__FIELD:
-        getField().clear();
-        getField().addAll((Collection<? extends Field>) newValue);
+      case SWVSPackage.MCLASS__FIELDS:
+        getFields().clear();
+        getFields().addAll((Collection<? extends Field>) newValue);
         return;
-      case SWVSPackage.CLASS__PACKAGE:
+      case SWVSPackage.MCLASS__PACKAGE:
         setPackage((String) newValue);
         return;
-      case SWVSPackage.CLASS__HAS_CLASS:
-        getHasClass().clear();
-        getHasClass().addAll((Collection<? extends SWVS.Class>) newValue);
+      case SWVSPackage.MCLASS__HAS_CLASS_LIST:
+        getHasClassList().clear();
+        getHasClassList().addAll((Collection<? extends MClass>) newValue);
         return;
-      case SWVSPackage.CLASS__SUPER_CLASS:
-        getSuperClass().clear();
-        getSuperClass().addAll((Collection<? extends SWVS.Class>) newValue);
+      case SWVSPackage.MCLASS__SUPER_CLASS_LIST:
+        getSuperClassList().clear();
+        getSuperClassList().addAll((Collection<? extends MClass>) newValue);
         return;
-      case SWVSPackage.CLASS__METHOD:
-        getMethod().clear();
-        getMethod().addAll((Collection<? extends Method>) newValue);
+      case SWVSPackage.MCLASS__METHODS:
+        getMethods().clear();
+        getMethods().addAll((Collection<? extends MMethod>) newValue);
         return;
-      case SWVSPackage.CLASS__DEF_BASE:
+      case SWVSPackage.MCLASS__DEF_BASE:
         getDefBase().clear();
-        getDefBase().addAll((Collection<? extends SWVS.Object>) newValue);
+        getDefBase().addAll((Collection<? extends MObject>) newValue);
         return;
-      case SWVSPackage.CLASS__CLASS_TYPE:
+      case SWVSPackage.MCLASS__CLASS_TYPE:
         setClassType((String) newValue);
         return;
     }
@@ -348,25 +351,25 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case SWVSPackage.CLASS__FIELD:
-        getField().clear();
+      case SWVSPackage.MCLASS__FIELDS:
+        getFields().clear();
         return;
-      case SWVSPackage.CLASS__PACKAGE:
+      case SWVSPackage.MCLASS__PACKAGE:
         setPackage(PACKAGE_EDEFAULT);
         return;
-      case SWVSPackage.CLASS__HAS_CLASS:
-        getHasClass().clear();
+      case SWVSPackage.MCLASS__HAS_CLASS_LIST:
+        getHasClassList().clear();
         return;
-      case SWVSPackage.CLASS__SUPER_CLASS:
-        getSuperClass().clear();
+      case SWVSPackage.MCLASS__SUPER_CLASS_LIST:
+        getSuperClassList().clear();
         return;
-      case SWVSPackage.CLASS__METHOD:
-        getMethod().clear();
+      case SWVSPackage.MCLASS__METHODS:
+        getMethods().clear();
         return;
-      case SWVSPackage.CLASS__DEF_BASE:
+      case SWVSPackage.MCLASS__DEF_BASE:
         getDefBase().clear();
         return;
-      case SWVSPackage.CLASS__CLASS_TYPE:
+      case SWVSPackage.MCLASS__CLASS_TYPE:
         setClassType(CLASS_TYPE_EDEFAULT);
         return;
     }
@@ -381,19 +384,19 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case SWVSPackage.CLASS__FIELD:
-        return field != null && !field.isEmpty();
-      case SWVSPackage.CLASS__PACKAGE:
+      case SWVSPackage.MCLASS__FIELDS:
+        return fields != null && !fields.isEmpty();
+      case SWVSPackage.MCLASS__PACKAGE:
         return PACKAGE_EDEFAULT == null ? package_ != null : !PACKAGE_EDEFAULT.equals(package_);
-      case SWVSPackage.CLASS__HAS_CLASS:
-        return hasClass != null && !hasClass.isEmpty();
-      case SWVSPackage.CLASS__SUPER_CLASS:
-        return superClass != null && !superClass.isEmpty();
-      case SWVSPackage.CLASS__METHOD:
-        return method != null && !method.isEmpty();
-      case SWVSPackage.CLASS__DEF_BASE:
+      case SWVSPackage.MCLASS__HAS_CLASS_LIST:
+        return hasClassList != null && !hasClassList.isEmpty();
+      case SWVSPackage.MCLASS__SUPER_CLASS_LIST:
+        return superClassList != null && !superClassList.isEmpty();
+      case SWVSPackage.MCLASS__METHODS:
+        return methods != null && !methods.isEmpty();
+      case SWVSPackage.MCLASS__DEF_BASE:
         return defBase != null && !defBase.isEmpty();
-      case SWVSPackage.CLASS__CLASS_TYPE:
+      case SWVSPackage.MCLASS__CLASS_TYPE:
         return CLASS_TYPE_EDEFAULT == null ? classType != null
             : !CLASS_TYPE_EDEFAULT.equals(classType);
     }
@@ -419,4 +422,4 @@ public class ClassImpl extends ObjectImpl implements SWVS.Class {
     return result.toString();
   }
 
-} //ClassImpl
+} //MClassImpl

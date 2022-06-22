@@ -7,12 +7,14 @@ import SWVS.SWVSPackage;
 import SWVS.UseCase;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -29,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ActorImpl extends ObjectImpl implements Actor {
+public class ActorImpl extends MObjectImpl implements Actor {
   /**
    * The cached value of the '{@link #getActUsecases() <em>Act Usecases</em>}' reference list.
    * <!-- begin-user-doc -->

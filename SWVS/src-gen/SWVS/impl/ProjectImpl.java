@@ -3,6 +3,9 @@
 package SWVS.impl;
 
 import SWVS.Actor;
+import SWVS.MClass;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.SWVSPackage;
@@ -34,11 +37,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link SWVS.impl.ProjectImpl#getProjectName <em>Project Name</em>}</li>
  *   <li>{@link SWVS.impl.ProjectImpl#getRequirement <em>Requirement</em>}</li>
- *   <li>{@link SWVS.impl.ProjectImpl#getSystem <em>System</em>}</li>
- *   <li>{@link SWVS.impl.ProjectImpl#getActor <em>Actor</em>}</li>
- *   <li>{@link SWVS.impl.ProjectImpl#getClass_ <em>Class</em>}</li>
- *   <li>{@link SWVS.impl.ProjectImpl#getObject <em>Object</em>}</li>
- *   <li>{@link SWVS.impl.ProjectImpl#getObjList <em>Obj List</em>}</li>
+ *   <li>{@link SWVS.impl.ProjectImpl#getSystems <em>Systems</em>}</li>
+ *   <li>{@link SWVS.impl.ProjectImpl#getActorList <em>Actor List</em>}</li>
+ *   <li>{@link SWVS.impl.ProjectImpl#getClassList <em>Class List</em>}</li>
+ *   <li>{@link SWVS.impl.ProjectImpl#getMObjects <em>MObjects</em>}</li>
+ *   <li>{@link SWVS.impl.ProjectImpl#getObjects <em>Objects</em>}</li>
  *   <li>{@link SWVS.impl.ProjectImpl#getFinDate <em>Fin Date</em>}</li>
  * </ul>
  *
@@ -76,54 +79,54 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
   protected EList<Requirement> requirement;
 
   /**
-   * The cached value of the '{@link #getSystem() <em>System</em>}' containment reference list.
+   * The cached value of the '{@link #getSystems() <em>Systems</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSystem()
+   * @see #getSystems()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.System> system;
+  protected EList<MSystem> systems;
 
   /**
-   * The cached value of the '{@link #getActor() <em>Actor</em>}' containment reference list.
+   * The cached value of the '{@link #getActorList() <em>Actor List</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActor()
+   * @see #getActorList()
    * @generated
    * @ordered
    */
-  protected EList<Actor> actor;
+  protected EList<Actor> actorList;
 
   /**
-   * The cached value of the '{@link #getClass_() <em>Class</em>}' containment reference list.
+   * The cached value of the '{@link #getClassList() <em>Class List</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getClass_()
+   * @see #getClassList()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Class> class_;
+  protected EList<MClass> classList;
 
   /**
-   * The cached value of the '{@link #getObject() <em>Object</em>}' containment reference list.
+   * The cached value of the '{@link #getMObjects() <em>MObjects</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObject()
+   * @see #getMObjects()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Object> object;
+  protected EList<MObject> mObjects;
 
   /**
-   * The cached value of the '{@link #getObjList() <em>Obj List</em>}' reference list.
+   * The cached value of the '{@link #getObjects() <em>Objects</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObjList()
+   * @see #getObjects()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Object> objList;
+  protected EList<MObject> objects;
 
   /**
    * The default value of the '{@link #getFinDate() <em>Fin Date</em>}' attribute.
@@ -204,12 +207,12 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.System> getSystem() {
-    if (system == null) {
-      system = new EObjectContainmentEList<SWVS.System>(SWVS.System.class, this,
-          SWVSPackage.PROJECT__SYSTEM);
+  public EList<MSystem> getSystems() {
+    if (systems == null) {
+      systems =
+          new EObjectContainmentEList<MSystem>(MSystem.class, this, SWVSPackage.PROJECT__SYSTEMS);
     }
-    return system;
+    return systems;
   }
 
   /**
@@ -217,11 +220,12 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Actor> getActor() {
-    if (actor == null) {
-      actor = new EObjectContainmentEList<Actor>(Actor.class, this, SWVSPackage.PROJECT__ACTOR);
+  public EList<Actor> getActorList() {
+    if (actorList == null) {
+      actorList =
+          new EObjectContainmentEList<Actor>(Actor.class, this, SWVSPackage.PROJECT__ACTOR_LIST);
     }
-    return actor;
+    return actorList;
   }
 
   /**
@@ -229,12 +233,12 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Class> getClass_() {
-    if (class_ == null) {
-      class_ = new EObjectContainmentEList<SWVS.Class>(SWVS.Class.class, this,
-          SWVSPackage.PROJECT__CLASS);
+  public EList<MClass> getClassList() {
+    if (classList == null) {
+      classList =
+          new EObjectContainmentEList<MClass>(MClass.class, this, SWVSPackage.PROJECT__CLASS_LIST);
     }
-    return class_;
+    return classList;
   }
 
   /**
@@ -242,12 +246,12 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Object> getObject() {
-    if (object == null) {
-      object = new EObjectContainmentEList<SWVS.Object>(SWVS.Object.class, this,
-          SWVSPackage.PROJECT__OBJECT);
+  public EList<MObject> getMObjects() {
+    if (mObjects == null) {
+      mObjects =
+          new EObjectContainmentEList<MObject>(MObject.class, this, SWVSPackage.PROJECT__MOBJECTS);
     }
-    return object;
+    return mObjects;
   }
 
   /**
@@ -255,12 +259,12 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Object> getObjList() {
-    if (objList == null) {
-      objList = new EObjectResolvingEList<SWVS.Object>(SWVS.Object.class, this,
-          SWVSPackage.PROJECT__OBJ_LIST);
+  public EList<MObject> getObjects() {
+    if (objects == null) {
+      objects =
+          new EObjectResolvingEList<MObject>(MObject.class, this, SWVSPackage.PROJECT__OBJECTS);
     }
-    return objList;
+    return objects;
   }
 
   /**
@@ -296,14 +300,14 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
     switch (featureID) {
       case SWVSPackage.PROJECT__REQUIREMENT:
         return ((InternalEList<?>) getRequirement()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.PROJECT__SYSTEM:
-        return ((InternalEList<?>) getSystem()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.PROJECT__ACTOR:
-        return ((InternalEList<?>) getActor()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.PROJECT__CLASS:
-        return ((InternalEList<?>) getClass_()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.PROJECT__OBJECT:
-        return ((InternalEList<?>) getObject()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.PROJECT__SYSTEMS:
+        return ((InternalEList<?>) getSystems()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.PROJECT__ACTOR_LIST:
+        return ((InternalEList<?>) getActorList()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.PROJECT__CLASS_LIST:
+        return ((InternalEList<?>) getClassList()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.PROJECT__MOBJECTS:
+        return ((InternalEList<?>) getMObjects()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -320,16 +324,16 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
         return getProjectName();
       case SWVSPackage.PROJECT__REQUIREMENT:
         return getRequirement();
-      case SWVSPackage.PROJECT__SYSTEM:
-        return getSystem();
-      case SWVSPackage.PROJECT__ACTOR:
-        return getActor();
-      case SWVSPackage.PROJECT__CLASS:
-        return getClass_();
-      case SWVSPackage.PROJECT__OBJECT:
-        return getObject();
-      case SWVSPackage.PROJECT__OBJ_LIST:
-        return getObjList();
+      case SWVSPackage.PROJECT__SYSTEMS:
+        return getSystems();
+      case SWVSPackage.PROJECT__ACTOR_LIST:
+        return getActorList();
+      case SWVSPackage.PROJECT__CLASS_LIST:
+        return getClassList();
+      case SWVSPackage.PROJECT__MOBJECTS:
+        return getMObjects();
+      case SWVSPackage.PROJECT__OBJECTS:
+        return getObjects();
       case SWVSPackage.PROJECT__FIN_DATE:
         return getFinDate();
     }
@@ -352,25 +356,25 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
         getRequirement().clear();
         getRequirement().addAll((Collection<? extends Requirement>) newValue);
         return;
-      case SWVSPackage.PROJECT__SYSTEM:
-        getSystem().clear();
-        getSystem().addAll((Collection<? extends SWVS.System>) newValue);
+      case SWVSPackage.PROJECT__SYSTEMS:
+        getSystems().clear();
+        getSystems().addAll((Collection<? extends MSystem>) newValue);
         return;
-      case SWVSPackage.PROJECT__ACTOR:
-        getActor().clear();
-        getActor().addAll((Collection<? extends Actor>) newValue);
+      case SWVSPackage.PROJECT__ACTOR_LIST:
+        getActorList().clear();
+        getActorList().addAll((Collection<? extends Actor>) newValue);
         return;
-      case SWVSPackage.PROJECT__CLASS:
-        getClass_().clear();
-        getClass_().addAll((Collection<? extends SWVS.Class>) newValue);
+      case SWVSPackage.PROJECT__CLASS_LIST:
+        getClassList().clear();
+        getClassList().addAll((Collection<? extends MClass>) newValue);
         return;
-      case SWVSPackage.PROJECT__OBJECT:
-        getObject().clear();
-        getObject().addAll((Collection<? extends SWVS.Object>) newValue);
+      case SWVSPackage.PROJECT__MOBJECTS:
+        getMObjects().clear();
+        getMObjects().addAll((Collection<? extends MObject>) newValue);
         return;
-      case SWVSPackage.PROJECT__OBJ_LIST:
-        getObjList().clear();
-        getObjList().addAll((Collection<? extends SWVS.Object>) newValue);
+      case SWVSPackage.PROJECT__OBJECTS:
+        getObjects().clear();
+        getObjects().addAll((Collection<? extends MObject>) newValue);
         return;
       case SWVSPackage.PROJECT__FIN_DATE:
         setFinDate((String) newValue);
@@ -393,20 +397,20 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
       case SWVSPackage.PROJECT__REQUIREMENT:
         getRequirement().clear();
         return;
-      case SWVSPackage.PROJECT__SYSTEM:
-        getSystem().clear();
+      case SWVSPackage.PROJECT__SYSTEMS:
+        getSystems().clear();
         return;
-      case SWVSPackage.PROJECT__ACTOR:
-        getActor().clear();
+      case SWVSPackage.PROJECT__ACTOR_LIST:
+        getActorList().clear();
         return;
-      case SWVSPackage.PROJECT__CLASS:
-        getClass_().clear();
+      case SWVSPackage.PROJECT__CLASS_LIST:
+        getClassList().clear();
         return;
-      case SWVSPackage.PROJECT__OBJECT:
-        getObject().clear();
+      case SWVSPackage.PROJECT__MOBJECTS:
+        getMObjects().clear();
         return;
-      case SWVSPackage.PROJECT__OBJ_LIST:
-        getObjList().clear();
+      case SWVSPackage.PROJECT__OBJECTS:
+        getObjects().clear();
         return;
       case SWVSPackage.PROJECT__FIN_DATE:
         setFinDate(FIN_DATE_EDEFAULT);
@@ -428,16 +432,16 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
             : !PROJECT_NAME_EDEFAULT.equals(projectName);
       case SWVSPackage.PROJECT__REQUIREMENT:
         return requirement != null && !requirement.isEmpty();
-      case SWVSPackage.PROJECT__SYSTEM:
-        return system != null && !system.isEmpty();
-      case SWVSPackage.PROJECT__ACTOR:
-        return actor != null && !actor.isEmpty();
-      case SWVSPackage.PROJECT__CLASS:
-        return class_ != null && !class_.isEmpty();
-      case SWVSPackage.PROJECT__OBJECT:
-        return object != null && !object.isEmpty();
-      case SWVSPackage.PROJECT__OBJ_LIST:
-        return objList != null && !objList.isEmpty();
+      case SWVSPackage.PROJECT__SYSTEMS:
+        return systems != null && !systems.isEmpty();
+      case SWVSPackage.PROJECT__ACTOR_LIST:
+        return actorList != null && !actorList.isEmpty();
+      case SWVSPackage.PROJECT__CLASS_LIST:
+        return classList != null && !classList.isEmpty();
+      case SWVSPackage.PROJECT__MOBJECTS:
+        return mObjects != null && !mObjects.isEmpty();
+      case SWVSPackage.PROJECT__OBJECTS:
+        return objects != null && !objects.isEmpty();
       case SWVSPackage.PROJECT__FIN_DATE:
         return FIN_DATE_EDEFAULT == null ? finDate != null : !FIN_DATE_EDEFAULT.equals(finDate);
     }

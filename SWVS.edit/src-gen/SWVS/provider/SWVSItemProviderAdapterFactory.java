@@ -33,594 +33,711 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * @generated
  */
 public class SWVSItemProviderAdapterFactory extends SWVSAdapterFactory
-		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
-	/**
-	 * This keeps track of the root adapter factory that delegates to this adapter factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ComposedAdapterFactory parentAdapterFactory;
-
-	/**
-	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IChangeNotifier changeNotifier = new ChangeNotifier();
-
-	/**
-	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Collection<Object> supportedTypes = new ArrayList<Object>();
-
-	/**
-	 * This constructs an instance.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SWVSItemProviderAdapterFactory() {
-		supportedTypes.add(IEditingDomainItemProvider.class);
-		supportedTypes.add(IStructuredItemContentProvider.class);
-		supportedTypes.add(ITreeItemContentProvider.class);
-		supportedTypes.add(IItemLabelProvider.class);
-		supportedTypes.add(IItemPropertySource.class);
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Project} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ProjectItemProvider projectItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Project}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createProjectAdapter() {
-		if (projectItemProvider == null) {
-			projectItemProvider = new ProjectItemProvider(this);
-		}
-
-		return projectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Requirement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RequirementItemProvider requirementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Requirement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRequirementAdapter() {
-		if (requirementItemProvider == null) {
-			requirementItemProvider = new RequirementItemProvider(this);
-		}
-
-		return requirementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.System} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemItemProvider systemItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.System}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemAdapter() {
-		if (systemItemProvider == null) {
-			systemItemProvider = new SystemItemProvider(this);
-		}
-
-		return systemItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Object} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ObjectItemProvider objectItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Object}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createObjectAdapter() {
-		if (objectItemProvider == null) {
-			objectItemProvider = new ObjectItemProvider(this);
-		}
-
-		return objectItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.UseCase} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UseCaseItemProvider useCaseItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.UseCase}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUseCaseAdapter() {
-		if (useCaseItemProvider == null) {
-			useCaseItemProvider = new UseCaseItemProvider(this);
-		}
-
-		return useCaseItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Flow} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FlowItemProvider flowItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Flow}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFlowAdapter() {
-		if (flowItemProvider == null) {
-			flowItemProvider = new FlowItemProvider(this);
-		}
-
-		return flowItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Actor} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ActorItemProvider actorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Actor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createActorAdapter() {
-		if (actorItemProvider == null) {
-			actorItemProvider = new ActorItemProvider(this);
-		}
-
-		return actorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Condition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConditionItemProvider conditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Condition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConditionAdapter() {
-		if (conditionItemProvider == null) {
-			conditionItemProvider = new ConditionItemProvider(this);
-		}
-
-		return conditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Function} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionItemProvider functionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Function}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionAdapter() {
-		if (functionItemProvider == null) {
-			functionItemProvider = new FunctionItemProvider(this);
-		}
-
-		return functionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Class} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ClassItemProvider classItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Class}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createClassAdapter() {
-		if (classItemProvider == null) {
-			classItemProvider = new ClassItemProvider(this);
-		}
-
-		return classItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Field} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FieldItemProvider fieldItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Field}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFieldAdapter() {
-		if (fieldItemProvider == null) {
-			fieldItemProvider = new FieldItemProvider(this);
-		}
-
-		return fieldItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Beverage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BeverageItemProvider beverageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Beverage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBeverageAdapter() {
-		if (beverageItemProvider == null) {
-			beverageItemProvider = new BeverageItemProvider(this);
-		}
-
-		return beverageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Coffee} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CoffeeItemProvider coffeeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Coffee}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCoffeeAdapter() {
-		if (coffeeItemProvider == null) {
-			coffeeItemProvider = new CoffeeItemProvider(this);
-		}
-
-		return coffeeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Tea} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TeaItemProvider teaItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Tea}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTeaAdapter() {
-		if (teaItemProvider == null) {
-			teaItemProvider = new TeaItemProvider(this);
-		}
-
-		return teaItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Tea_Back} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Tea_BackItemProvider tea_BackItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Tea_Back}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTea_BackAdapter() {
-		if (tea_BackItemProvider == null) {
-			tea_BackItemProvider = new Tea_BackItemProvider(this);
-		}
-
-		return tea_BackItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Customer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CustomerItemProvider customerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Customer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCustomerAdapter() {
-		if (customerItemProvider == null) {
-			customerItemProvider = new CustomerItemProvider(this);
-		}
-
-		return customerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.Method} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MethodItemProvider methodItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.Method}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMethodAdapter() {
-		if (methodItemProvider == null) {
-			methodItemProvider = new MethodItemProvider(this);
-		}
-
-		return methodItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link SWVS.State} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StateItemProvider stateItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link SWVS.State}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStateAdapter() {
-		if (stateItemProvider == null) {
-			stateItemProvider = new StateItemProvider(this);
-		}
-
-		return stateItemProvider;
-	}
-
-	/**
-	 * This returns the root adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-	}
-
-	/**
-	 * This sets the composed adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-		this.parentAdapterFactory = parentAdapterFactory;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean isFactoryForType(Object type) {
-		return supportedTypes.contains(type) || super.isFactoryForType(type);
-	}
-
-	/**
-	 * This implementation substitutes the factory itself as the key for the adapter.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter adapt(Notifier notifier, Object type) {
-		return super.adapt(notifier, this);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
-			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
-				return adapter;
-			}
-		}
-
-		return null;
-	}
-
-	/**
-	 * This adds a listener.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.addListener(notifyChangedListener);
-	}
-
-	/**
-	 * This removes a listener.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.removeListener(notifyChangedListener);
-	}
-
-	/**
-	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void fireNotifyChanged(Notification notification) {
-		changeNotifier.fireNotifyChanged(notification);
-
-		if (parentAdapterFactory != null) {
-			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
-
-	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void dispose() {
-		if (projectItemProvider != null)
-			projectItemProvider.dispose();
-		if (requirementItemProvider != null)
-			requirementItemProvider.dispose();
-		if (systemItemProvider != null)
-			systemItemProvider.dispose();
-		if (objectItemProvider != null)
-			objectItemProvider.dispose();
-		if (useCaseItemProvider != null)
-			useCaseItemProvider.dispose();
-		if (flowItemProvider != null)
-			flowItemProvider.dispose();
-		if (actorItemProvider != null)
-			actorItemProvider.dispose();
-		if (conditionItemProvider != null)
-			conditionItemProvider.dispose();
-		if (functionItemProvider != null)
-			functionItemProvider.dispose();
-		if (classItemProvider != null)
-			classItemProvider.dispose();
-		if (fieldItemProvider != null)
-			fieldItemProvider.dispose();
-		if (beverageItemProvider != null)
-			beverageItemProvider.dispose();
-		if (coffeeItemProvider != null)
-			coffeeItemProvider.dispose();
-		if (teaItemProvider != null)
-			teaItemProvider.dispose();
-		if (tea_BackItemProvider != null)
-			tea_BackItemProvider.dispose();
-		if (customerItemProvider != null)
-			customerItemProvider.dispose();
-		if (methodItemProvider != null)
-			methodItemProvider.dispose();
-		if (stateItemProvider != null)
-			stateItemProvider.dispose();
-	}
+    implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+  /**
+   * This keeps track of the root adapter factory that delegates to this adapter factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ComposedAdapterFactory parentAdapterFactory;
+
+  /**
+   * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected IChangeNotifier changeNotifier = new ChangeNotifier();
+
+  /**
+   * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected Collection<Object> supportedTypes = new ArrayList<Object>();
+
+  /**
+   * This constructs an instance.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SWVSItemProviderAdapterFactory() {
+    supportedTypes.add(IEditingDomainItemProvider.class);
+    supportedTypes.add(IStructuredItemContentProvider.class);
+    supportedTypes.add(ITreeItemContentProvider.class);
+    supportedTypes.add(IItemLabelProvider.class);
+    supportedTypes.add(IItemPropertySource.class);
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Project} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ProjectItemProvider projectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Project}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createProjectAdapter() {
+    if (projectItemProvider == null) {
+      projectItemProvider = new ProjectItemProvider(this);
+    }
+
+    return projectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Requirement} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected RequirementItemProvider requirementItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Requirement}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createRequirementAdapter() {
+    if (requirementItemProvider == null) {
+      requirementItemProvider = new RequirementItemProvider(this);
+    }
+
+    return requirementItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.MSystem} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected MSystemItemProvider mSystemItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.MSystem}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createMSystemAdapter() {
+    if (mSystemItemProvider == null) {
+      mSystemItemProvider = new MSystemItemProvider(this);
+    }
+
+    return mSystemItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.MObject} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected MObjectItemProvider mObjectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.MObject}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createMObjectAdapter() {
+    if (mObjectItemProvider == null) {
+      mObjectItemProvider = new MObjectItemProvider(this);
+    }
+
+    return mObjectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Object} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ObjectItemProvider objectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Object}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createObjectAdapter() {
+    if (objectItemProvider == null) {
+      objectItemProvider = new ObjectItemProvider(this);
+    }
+
+    return objectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Object} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ObjectItemProvider objectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Object}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createObjectAdapter() {
+    if (objectItemProvider == null) {
+      objectItemProvider = new ObjectItemProvider(this);
+    }
+
+    return objectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Object} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ObjectItemProvider objectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Object}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createObjectAdapter() {
+    if (objectItemProvider == null) {
+      objectItemProvider = new ObjectItemProvider(this);
+    }
+
+    return objectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Object} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ObjectItemProvider objectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Object}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createObjectAdapter() {
+    if (objectItemProvider == null) {
+      objectItemProvider = new ObjectItemProvider(this);
+    }
+
+    return objectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Object} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ObjectItemProvider objectItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Object}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createObjectAdapter() {
+    if (objectItemProvider == null) {
+      objectItemProvider = new ObjectItemProvider(this);
+    }
+
+    return objectItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.UseCase} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected UseCaseItemProvider useCaseItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.UseCase}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createUseCaseAdapter() {
+    if (useCaseItemProvider == null) {
+      useCaseItemProvider = new UseCaseItemProvider(this);
+    }
+
+    return useCaseItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Flow} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected FlowItemProvider flowItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Flow}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createFlowAdapter() {
+    if (flowItemProvider == null) {
+      flowItemProvider = new FlowItemProvider(this);
+    }
+
+    return flowItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Actor} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ActorItemProvider actorItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Actor}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createActorAdapter() {
+    if (actorItemProvider == null) {
+      actorItemProvider = new ActorItemProvider(this);
+    }
+
+    return actorItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Condition} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected ConditionItemProvider conditionItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Condition}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createConditionAdapter() {
+    if (conditionItemProvider == null) {
+      conditionItemProvider = new ConditionItemProvider(this);
+    }
+
+    return conditionItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Function} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected FunctionItemProvider functionItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Function}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createFunctionAdapter() {
+    if (functionItemProvider == null) {
+      functionItemProvider = new FunctionItemProvider(this);
+    }
+
+    return functionItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.MClass} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected MClassItemProvider mClassItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.MClass}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createMClassAdapter() {
+    if (mClassItemProvider == null) {
+      mClassItemProvider = new MClassItemProvider(this);
+    }
+
+    return mClassItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Field} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected FieldItemProvider fieldItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Field}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createFieldAdapter() {
+    if (fieldItemProvider == null) {
+      fieldItemProvider = new FieldItemProvider(this);
+    }
+
+    return fieldItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Beverage} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected BeverageItemProvider beverageItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Beverage}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createBeverageAdapter() {
+    if (beverageItemProvider == null) {
+      beverageItemProvider = new BeverageItemProvider(this);
+    }
+
+    return beverageItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Coffee} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected CoffeeItemProvider coffeeItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Coffee}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createCoffeeAdapter() {
+    if (coffeeItemProvider == null) {
+      coffeeItemProvider = new CoffeeItemProvider(this);
+    }
+
+    return coffeeItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Tea} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected TeaItemProvider teaItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Tea}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createTeaAdapter() {
+    if (teaItemProvider == null) {
+      teaItemProvider = new TeaItemProvider(this);
+    }
+
+    return teaItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Tea_Back} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected Tea_BackItemProvider tea_BackItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Tea_Back}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createTea_BackAdapter() {
+    if (tea_BackItemProvider == null) {
+      tea_BackItemProvider = new Tea_BackItemProvider(this);
+    }
+
+    return tea_BackItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.Customer} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected CustomerItemProvider customerItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.Customer}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createCustomerAdapter() {
+    if (customerItemProvider == null) {
+      customerItemProvider = new CustomerItemProvider(this);
+    }
+
+    return customerItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.MMethod} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected MMethodItemProvider mMethodItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.MMethod}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createMMethodAdapter() {
+    if (mMethodItemProvider == null) {
+      mMethodItemProvider = new MMethodItemProvider(this);
+    }
+
+    return mMethodItemProvider;
+  }
+
+  /**
+   * This keeps track of the one adapter used for all {@link SWVS.State} instances.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected StateItemProvider stateItemProvider;
+
+  /**
+   * This creates an adapter for a {@link SWVS.State}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter createStateAdapter() {
+    if (stateItemProvider == null) {
+      stateItemProvider = new StateItemProvider(this);
+    }
+
+    return stateItemProvider;
+  }
+
+  /**
+   * This returns the root adapter factory that contains this factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComposeableAdapterFactory getRootAdapterFactory() {
+    return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+  }
+
+  /**
+   * This sets the composed adapter factory that contains this factory.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    this.parentAdapterFactory = parentAdapterFactory;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean isFactoryForType(Object type) {
+    return supportedTypes.contains(type) || super.isFactoryForType(type);
+  }
+
+  /**
+   * This implementation substitutes the factory itself as the key for the adapter.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Adapter adapt(Notifier notifier, Object type) {
+    return super.adapt(notifier, this);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object adapt(Object object, Object type) {
+    if (isFactoryForType(type)) {
+      Object adapter = super.adapt(object, type);
+      if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+        return adapter;
+      }
+    }
+
+    return null;
+  }
+
+  /**
+   * This adds a listener.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void addListener(INotifyChangedListener notifyChangedListener) {
+    changeNotifier.addListener(notifyChangedListener);
+  }
+
+  /**
+   * This removes a listener.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void removeListener(INotifyChangedListener notifyChangedListener) {
+    changeNotifier.removeListener(notifyChangedListener);
+  }
+
+  /**
+   * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void fireNotifyChanged(Notification notification) {
+    changeNotifier.fireNotifyChanged(notification);
+
+    if (parentAdapterFactory != null) {
+      parentAdapterFactory.fireNotifyChanged(notification);
+    }
+  }
+
+  /**
+   * This disposes all of the item providers created by this factory. 
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void dispose() {
+    if (projectItemProvider != null)
+      projectItemProvider.dispose();
+    if (requirementItemProvider != null)
+      requirementItemProvider.dispose();
+    if (mSystemItemProvider != null)
+      mSystemItemProvider.dispose();
+    if (mObjectItemProvider != null)
+      mObjectItemProvider.dispose();
+    if (useCaseItemProvider != null)
+      useCaseItemProvider.dispose();
+    if (flowItemProvider != null)
+      flowItemProvider.dispose();
+    if (actorItemProvider != null)
+      actorItemProvider.dispose();
+    if (conditionItemProvider != null)
+      conditionItemProvider.dispose();
+    if (functionItemProvider != null)
+      functionItemProvider.dispose();
+    if (mClassItemProvider != null)
+      mClassItemProvider.dispose();
+    if (fieldItemProvider != null)
+      fieldItemProvider.dispose();
+    if (beverageItemProvider != null)
+      beverageItemProvider.dispose();
+    if (coffeeItemProvider != null)
+      coffeeItemProvider.dispose();
+    if (teaItemProvider != null)
+      teaItemProvider.dispose();
+    if (tea_BackItemProvider != null)
+      tea_BackItemProvider.dispose();
+    if (customerItemProvider != null)
+      customerItemProvider.dispose();
+    if (mMethodItemProvider != null)
+      mMethodItemProvider.dispose();
+    if (stateItemProvider != null)
+      stateItemProvider.dispose();
+    if (objectItemProvider != null)
+      objectItemProvider.dispose();
+  }
 
 }

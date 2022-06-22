@@ -6,39 +6,39 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Method</b></em>'.
+ * A representation of the model object '<em><b>MMethod</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link SWVS.Method#getReturnType <em>Return Type</em>}</li>
- *   <li>{@link SWVS.Method#isIsStatic <em>Is Static</em>}</li>
- *   <li>{@link SWVS.Method#getUsecase <em>Usecase</em>}</li>
- *   <li>{@link SWVS.Method#getBase <em>Base</em>}</li>
- *   <li>{@link SWVS.Method#getArgument <em>Argument</em>}</li>
+ *   <li>{@link SWVS.MMethod#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link SWVS.MMethod#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link SWVS.MMethod#getTestUsecase <em>Test Usecase</em>}</li>
+ *   <li>{@link SWVS.MMethod#getBase <em>Base</em>}</li>
+ *   <li>{@link SWVS.MMethod#getArgument <em>Argument</em>}</li>
  * </ul>
  *
- * @see SWVS.SWVSPackage#getMethod()
+ * @see SWVS.SWVSPackage#getMMethod()
  * @model
  * @generated
  */
-public interface Method extends SWVS.Object {
+public interface MMethod extends MObject {
   /**
    * Returns the value of the '<em><b>Return Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Return Type</em>' attribute.
    * @see #setReturnType(String)
-   * @see SWVS.SWVSPackage#getMethod_ReturnType()
+   * @see SWVS.SWVSPackage#getMMethod_ReturnType()
    * @model
    * @generated
    */
   String getReturnType();
 
   /**
-   * Sets the value of the '{@link SWVS.Method#getReturnType <em>Return Type</em>}' attribute.
+   * Sets the value of the '{@link SWVS.MMethod#getReturnType <em>Return Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Return Type</em>' attribute.
@@ -53,14 +53,14 @@ public interface Method extends SWVS.Object {
    * <!-- end-user-doc -->
    * @return the value of the '<em>Is Static</em>' attribute.
    * @see #setIsStatic(boolean)
-   * @see SWVS.SWVSPackage#getMethod_IsStatic()
+   * @see SWVS.SWVSPackage#getMMethod_IsStatic()
    * @model
    * @generated
    */
   boolean isIsStatic();
 
   /**
-   * Sets the value of the '{@link SWVS.Method#isIsStatic <em>Is Static</em>}' attribute.
+   * Sets the value of the '{@link SWVS.MMethod#isIsStatic <em>Is Static</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Is Static</em>' attribute.
@@ -70,38 +70,38 @@ public interface Method extends SWVS.Object {
   void setIsStatic(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Usecase</b></em>' reference.
+   * Returns the value of the '<em><b>Test Usecase</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Usecase</em>' reference.
-   * @see #setUsecase(UseCase)
-   * @see SWVS.SWVSPackage#getMethod_Usecase()
+   * @return the value of the '<em>Test Usecase</em>' reference.
+   * @see #setTestUsecase(UseCase)
+   * @see SWVS.SWVSPackage#getMMethod_TestUsecase()
    * @model
    * @generated
    */
-  UseCase getUsecase();
+  UseCase getTestUsecase();
 
   /**
-   * Sets the value of the '{@link SWVS.Method#getUsecase <em>Usecase</em>}' reference.
+   * Sets the value of the '{@link SWVS.MMethod#getTestUsecase <em>Test Usecase</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Usecase</em>' reference.
-   * @see #getUsecase()
+   * @param value the new value of the '<em>Test Usecase</em>' reference.
+   * @see #getTestUsecase()
    * @generated
    */
-  void setUsecase(UseCase value);
+  void setTestUsecase(UseCase value);
 
   /**
    * Returns the value of the '<em><b>Base</b></em>' reference list.
-   * The list contents are of type {@link SWVS.Object}.
+   * The list contents are of type {@link SWVS.MObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Base</em>' reference list.
-   * @see SWVS.SWVSPackage#getMethod_Base()
+   * @see SWVS.SWVSPackage#getMMethod_Base()
    * @model
    * @generated
    */
-  EList<SWVS.Object> getBase();
+  EList<MObject> getBase();
 
   /**
    * Returns the value of the '<em><b>Argument</b></em>' attribute list.
@@ -109,10 +109,10 @@ public interface Method extends SWVS.Object {
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Argument</em>' attribute list.
-   * @see SWVS.SWVSPackage#getMethod_Argument()
+   * @see SWVS.SWVSPackage#getMMethod_Argument()
    * @model
    * @generated
    */
   EList<String> getArgument();
 
-} // Method
+} // MMethod

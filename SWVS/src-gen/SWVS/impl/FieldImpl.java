@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FieldImpl extends ObjectImpl implements Field {
+public class FieldImpl extends MObjectImpl implements Field {
   /**
    * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
    * <!-- begin-user-doc -->

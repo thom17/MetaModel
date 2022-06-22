@@ -10,7 +10,10 @@ import SWVS.Customer;
 import SWVS.Field;
 import SWVS.Flow;
 import SWVS.Function;
-import SWVS.Method;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.SWVSFactory;
@@ -76,10 +79,10 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
         return createProject();
       case SWVSPackage.REQUIREMENT:
         return createRequirement();
-      case SWVSPackage.SYSTEM:
-        return createSystem();
-      case SWVSPackage.OBJECT:
-        return createObject();
+      case SWVSPackage.MSYSTEM:
+        return createMSystem();
+      case SWVSPackage.MOBJECT:
+        return createMObject();
       case SWVSPackage.USE_CASE:
         return createUseCase();
       case SWVSPackage.FLOW:
@@ -90,8 +93,8 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
         return createCondition();
       case SWVSPackage.FUNCTION:
         return createFunction();
-      case SWVSPackage.CLASS:
-        return createClass();
+      case SWVSPackage.MCLASS:
+        return createMClass();
       case SWVSPackage.FIELD:
         return createField();
       case SWVSPackage.BEVERAGE:
@@ -104,10 +107,12 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
         return createTea_Back();
       case SWVSPackage.CUSTOMER:
         return createCustomer();
-      case SWVSPackage.METHOD:
-        return createMethod();
+      case SWVSPackage.MMETHOD:
+        return createMMethod();
       case SWVSPackage.STATE:
         return createState();
+      case SWVSPackage.OBJECT:
+        return createObject();
       default:
         throw new IllegalArgumentException(
             "The class '" + eClass.getName() + "' is not a valid classifier");
@@ -139,9 +144,9 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public SWVS.System createSystem() {
-    SystemImpl system = new SystemImpl();
-    return system;
+  public MSystem createMSystem() {
+    MSystemImpl mSystem = new MSystemImpl();
+    return mSystem;
   }
 
   /**
@@ -149,9 +154,9 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public SWVS.Object createObject() {
-    ObjectImpl object = new ObjectImpl();
-    return object;
+  public MObject createMObject() {
+    MObjectImpl mObject = new MObjectImpl();
+    return mObject;
   }
 
   /**
@@ -209,9 +214,9 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public SWVS.Class createClass() {
-    ClassImpl class_ = new ClassImpl();
-    return class_;
+  public MClass createMClass() {
+    MClassImpl mClass = new MClassImpl();
+    return mClass;
   }
 
   /**
@@ -279,9 +284,9 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
    * <!-- end-user-doc -->
    * @generated
    */
-  public Method createMethod() {
-    MethodImpl method = new MethodImpl();
-    return method;
+  public MMethod createMMethod() {
+    MMethodImpl mMethod = new MMethodImpl();
+    return mMethod;
   }
 
   /**
@@ -292,6 +297,16 @@ public class SWVSFactoryImpl extends EFactoryImpl implements SWVSFactory {
   public State createState() {
     StateImpl state = new StateImpl();
     return state;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SWVS.Object createObject() {
+    ObjectImpl object = new ObjectImpl();
+    return object;
   }
 
   /**

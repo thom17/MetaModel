@@ -4,14 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import SWVS.Class;
 import SWVS.Field;
 import SWVS.Flow;
-import SWVS.Method;
-import SWVS.Object;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.SWVSFactory;
-import SWVS.System;
 import SWVS.impl.SWVSPackageImpl;
 import codeGenerater.JavaCodeGenerater;
 import diagram.ClassDg;
@@ -31,8 +31,8 @@ public class ModelManager {
   RqManager rqManager = new RqManager(this);
 
   public Project project;
-  public EList<System> systemList;
-  public EList<Class> classList;
+  public EList<MSystem> systemList;
+  public EList<MClass> classList;
   public Field fieldList[];
   public Flow flowList[];
 
@@ -45,11 +45,11 @@ public class ModelManager {
   public ModelManager(String filePath) {
     xmiReader = new XmiReader(filePath);
     project = (Project) xmiReader.getRoot();
-    classList = project.getClass_();
-    systemList = project.getSystem();
+    classList = project.getClassList();
+    systemList = project.getSystems();
   }
 
-  public EList<Class> getClassList() {
+  public EList<MClass> getClassList() {
     return classList;
   }
 
@@ -59,8 +59,8 @@ public class ModelManager {
    * @param data_base_src
    * @return ¿÷¥Ÿ∏È SWVS.Class or null
    */
-  public Class findClassBySrc(String data_base_src) {
-    for (Class cls : classList) {
+  public MClass findClassBySrc(String data_base_src) {
+    for (MClass cls : classList) {
       if (cls.getData_base_SrcName().equals(data_base_src))
         return cls;
     }
@@ -70,52 +70,52 @@ public class ModelManager {
   /**
    * 
    * @param srcClassName
-   * @param srcMethodName
+   * @param srcMMethodName
    * @return
    */
-  public boolean checkIsMethod(String srcClassName, String srcMethodName) {
-    Class cls = findClassBySrc(srcClassName);
+  public boolean checkIsMMethod(String srcClassName, String srcMMethodName) {
+    MClass cls = findClassBySrc(srcClassName);
     if (cls == null)
       return false;
-    for (Object fun : cls.getMethod()) {
-      if (fun.getData_base_SrcName().equals(srcMethodName))
+    for (MObject fun : cls.getMethods()) {
+      if (fun.getData_base_SrcName().equals(srcMMethodName))
         return true;
     }
     return false;
   }
 
-  public void implementM(Method m, String srcName) {
-    if (m.getUsecase() == null)
-      for (Object fl : m.getBase()) {
+  public void implementM(MMethod m, String srcName) {
+    if (m.getTestUsecase() == null)
+      for (MObject fl : m.getBase()) {
         fl.setData_base_SrcName(srcName);
         EObject usecase = fl.eContainer();
       }
     else
-      m.getUsecase().setData_base_SrcName(srcName);
+      m.getTestUsecase().setData_base_SrcName(srcName);
     xmiReader.save();
   }
 
 
 
-  public void addMethod(Class cls, String sig) {
+  public void addMMethod(MClass cls, String sig) {
     if (cls == null)
       return;
     SWVSPackageImpl.init();
-    Method function = f.createMethod();
-    cls.getMethod().add(function);
+    MMethod function = f.createMMethod();
+    cls.getMethods().add(function);
     function.setData_base_SrcName(cls.getData_base_SrcName() + "." + sig);
     function.setObjectType("function");
     function.setAddedObject(true);
     xmiReader.save();
   }
 
-  public void addMethod(String clsSrcName, String name, String sig) {
-    Class cls = findClassBySrc(clsSrcName);
+  public void addMMethod(String clsSrcName, String name, String sig) {
+    MClass cls = findClassBySrc(clsSrcName);
     if (cls == null)
       return;
     SWVSPackageImpl.init();
-    Method function = f.createMethod();
-    cls.getMethod().add(function);
+    MMethod function = f.createMMethod();
+    cls.getMethods().add(function);
     function.setData_base_SrcName(cls.getData_base_SrcName() + "." + sig);
     function.setObjectType("function");
     function.setObjectName(name);

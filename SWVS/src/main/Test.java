@@ -125,7 +125,7 @@ public class Test {
     mmg.save();
     graphMake();
     codeMaker();
-    // mmg.save();
+    mmg.save();
     System.out.println("oneWay done");
 
 

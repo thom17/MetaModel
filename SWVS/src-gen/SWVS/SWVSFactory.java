@@ -40,22 +40,22 @@ public interface SWVSFactory extends EFactory {
   Requirement createRequirement();
 
   /**
-   * Returns a new object of class '<em>System</em>'.
+   * Returns a new object of class '<em>MSystem</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>System</em>'.
+   * @return a new object of class '<em>MSystem</em>'.
    * @generated
    */
-  System createSystem();
+  MSystem createMSystem();
 
   /**
-   * Returns a new object of class '<em>Object</em>'.
+   * Returns a new object of class '<em>MObject</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Object</em>'.
+   * @return a new object of class '<em>MObject</em>'.
    * @generated
    */
-  Object createObject();
+  MObject createMObject();
 
   /**
    * Returns a new object of class '<em>Use Case</em>'.
@@ -103,13 +103,13 @@ public interface SWVSFactory extends EFactory {
   Function createFunction();
 
   /**
-   * Returns a new object of class '<em>Class</em>'.
+   * Returns a new object of class '<em>MClass</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Class</em>'.
+   * @return a new object of class '<em>MClass</em>'.
    * @generated
    */
-  Class createClass();
+  MClass createMClass();
 
   /**
    * Returns a new object of class '<em>Field</em>'.
@@ -166,13 +166,13 @@ public interface SWVSFactory extends EFactory {
   Customer createCustomer();
 
   /**
-   * Returns a new object of class '<em>Method</em>'.
+   * Returns a new object of class '<em>MMethod</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Method</em>'.
+   * @return a new object of class '<em>MMethod</em>'.
    * @generated
    */
-  Method createMethod();
+  MMethod createMMethod();
 
   /**
    * Returns a new object of class '<em>State</em>'.
@@ -182,6 +182,15 @@ public interface SWVSFactory extends EFactory {
    * @generated
    */
   State createState();
+
+  /**
+   * Returns a new object of class '<em>Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Object</em>'.
+   * @generated
+   */
+  Object createObject();
 
   /**
    * Returns the package supported by this factory.

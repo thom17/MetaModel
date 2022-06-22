@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link SWVS.UseCase#getExtend <em>Extend</em>}</li>
  *   <li>{@link SWVS.UseCase#getInclude <em>Include</em>}</li>
- *   <li>{@link SWVS.UseCase#getFlow <em>Flow</em>}</li>
+ *   <li>{@link SWVS.UseCase#getFlows <em>Flows</em>}</li>
  *   <li>{@link SWVS.UseCase#getContext <em>Context</em>}</li>
  *   <li>{@link SWVS.UseCase#getActActors <em>Act Actors</em>}</li>
  *   <li>{@link SWVS.UseCase#getCondition <em>Condition</em>}</li>
@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface UseCase extends SWVS.Object {
+public interface UseCase extends MObject {
   /**
    * Returns the value of the '<em><b>Extend</b></em>' containment reference list.
    * The list contents are of type {@link SWVS.UseCase}.
@@ -51,16 +51,16 @@ public interface UseCase extends SWVS.Object {
   EList<UseCase> getInclude();
 
   /**
-   * Returns the value of the '<em><b>Flow</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Flows</b></em>' containment reference list.
    * The list contents are of type {@link SWVS.Flow}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Flow</em>' containment reference list.
-   * @see SWVS.SWVSPackage#getUseCase_Flow()
+   * @return the value of the '<em>Flows</em>' containment reference list.
+   * @see SWVS.SWVSPackage#getUseCase_Flows()
    * @model containment="true"
    * @generated
    */
-  EList<Flow> getFlow();
+  EList<Flow> getFlows();
 
   /**
    * Returns the value of the '<em><b>Context</b></em>' attribute.

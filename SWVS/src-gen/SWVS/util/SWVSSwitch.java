@@ -10,7 +10,10 @@ import SWVS.Customer;
 import SWVS.Field;
 import SWVS.Flow;
 import SWVS.Function;
-import SWVS.Method;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.SWVSPackage;
@@ -92,23 +95,23 @@ public class SWVSSwitch<T> extends Switch<T> {
         Requirement requirement = (Requirement) theEObject;
         T result = caseRequirement(requirement);
         if (result == null)
-          result = caseObject(requirement);
+          result = caseMObject(requirement);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
       }
-      case SWVSPackage.SYSTEM: {
-        SWVS.System system = (SWVS.System) theEObject;
-        T result = caseSystem(system);
+      case SWVSPackage.MSYSTEM: {
+        MSystem mSystem = (MSystem) theEObject;
+        T result = caseMSystem(mSystem);
         if (result == null)
-          result = caseObject(system);
+          result = caseMObject(mSystem);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
       }
-      case SWVSPackage.OBJECT: {
-        SWVS.Object object = (SWVS.Object) theEObject;
-        T result = caseObject(object);
+      case SWVSPackage.MOBJECT: {
+        MObject mObject = (MObject) theEObject;
+        T result = caseMObject(mObject);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -117,7 +120,7 @@ public class SWVSSwitch<T> extends Switch<T> {
         UseCase useCase = (UseCase) theEObject;
         T result = caseUseCase(useCase);
         if (result == null)
-          result = caseObject(useCase);
+          result = caseMObject(useCase);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -126,7 +129,7 @@ public class SWVSSwitch<T> extends Switch<T> {
         Flow flow = (Flow) theEObject;
         T result = caseFlow(flow);
         if (result == null)
-          result = caseObject(flow);
+          result = caseMObject(flow);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -135,7 +138,7 @@ public class SWVSSwitch<T> extends Switch<T> {
         Actor actor = (Actor) theEObject;
         T result = caseActor(actor);
         if (result == null)
-          result = caseObject(actor);
+          result = caseMObject(actor);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -154,11 +157,11 @@ public class SWVSSwitch<T> extends Switch<T> {
           result = defaultCase(theEObject);
         return result;
       }
-      case SWVSPackage.CLASS: {
-        SWVS.Class class_ = (SWVS.Class) theEObject;
-        T result = caseClass(class_);
+      case SWVSPackage.MCLASS: {
+        MClass mClass = (MClass) theEObject;
+        T result = caseMClass(mClass);
         if (result == null)
-          result = caseObject(class_);
+          result = caseMObject(mClass);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -167,7 +170,7 @@ public class SWVSSwitch<T> extends Switch<T> {
         Field field = (Field) theEObject;
         T result = caseField(field);
         if (result == null)
-          result = caseObject(field);
+          result = caseMObject(field);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -211,11 +214,11 @@ public class SWVSSwitch<T> extends Switch<T> {
           result = defaultCase(theEObject);
         return result;
       }
-      case SWVSPackage.METHOD: {
-        Method method = (Method) theEObject;
-        T result = caseMethod(method);
+      case SWVSPackage.MMETHOD: {
+        MMethod mMethod = (MMethod) theEObject;
+        T result = caseMMethod(mMethod);
         if (result == null)
-          result = caseObject(method);
+          result = caseMObject(mMethod);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -223,6 +226,13 @@ public class SWVSSwitch<T> extends Switch<T> {
       case SWVSPackage.STATE: {
         State state = (State) theEObject;
         T result = caseState(state);
+        if (result == null)
+          result = defaultCase(theEObject);
+        return result;
+      }
+      case SWVSPackage.OBJECT: {
+        SWVS.Object object = (SWVS.Object) theEObject;
+        T result = caseObject(object);
         if (result == null)
           result = defaultCase(theEObject);
         return result;
@@ -263,32 +273,32 @@ public class SWVSSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>System</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>MSystem</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>System</em>'.
+   * @return the result of interpreting the object as an instance of '<em>MSystem</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSystem(SWVS.System object) {
+  public T caseMSystem(MSystem object) {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>MObject</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Object</em>'.
+   * @return the result of interpreting the object as an instance of '<em>MObject</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseObject(SWVS.Object object) {
+  public T caseMObject(MObject object) {
     return null;
   }
 
@@ -368,17 +378,17 @@ public class SWVSSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Class</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>MClass</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Class</em>'.
+   * @return the result of interpreting the object as an instance of '<em>MClass</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseClass(SWVS.Class object) {
+  public T caseMClass(MClass object) {
     return null;
   }
 
@@ -473,17 +483,17 @@ public class SWVSSwitch<T> extends Switch<T> {
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Method</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>MMethod</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Method</em>'.
+   * @return the result of interpreting the object as an instance of '<em>MMethod</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMethod(Method object) {
+  public T caseMMethod(MMethod object) {
     return null;
   }
 
@@ -499,6 +509,21 @@ public class SWVSSwitch<T> extends Switch<T> {
    * @generated
    */
   public T caseState(State object) {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseObject(SWVS.Object object) {
     return null;
   }
 

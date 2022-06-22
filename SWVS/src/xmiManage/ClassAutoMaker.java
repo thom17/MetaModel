@@ -1,10 +1,10 @@
 package xmiManage;
 
-import SWVS.Class;
 import SWVS.Flow;
-import SWVS.Method;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MSystem;
 import SWVS.SWVSFactory;
-import SWVS.System;
 import SWVS.UseCase;
 
 /**
@@ -47,8 +47,8 @@ public class ClassAutoMaker {
    */
   private void system2Class() {
     // TODO Auto-generated method stub
-    for (SWVS.System sys : mmg.systemList) {
-      SWVS.Class cls = f.createClass();
+    for (MSystem sys : mmg.systemList) {
+      MClass cls = f.createMClass();
       cls.setId("cls-" + sys.getId());
       cls.setObjectName(getClassName(sys));
       cls.getDefBase().add(sys);
@@ -56,7 +56,7 @@ public class ClassAutoMaker {
       cls.setObjectType("autoGenClass");
       cls.setClassType("SystemClass");
       sys.getDefClass().add(cls);
-      mmg.project.getClass_().add(cls);
+      mmg.project.getClassList().add(cls);
       for (UseCase uc : sys.getUsecase())
         usecase2Method(cls, uc);
     }
@@ -69,25 +69,25 @@ public class ClassAutoMaker {
    * @param sys : 클래스화 될 시스템
    * @return name : string
    */
-  private String getClassName(System sys) {
+  private String getClassName(MSystem sys) {
     if (sys.getObjectName() == null || sys.getObjectName().length() < 1) {
       return sys.getId();
     } else
       return sys.getObjectName();
   }
 
-  private void usecase2Method(Class cls, UseCase uc) {
+  private void usecase2Method(MClass cls, UseCase uc) {
     // TODO Auto-generated method stub
 
-    Method fun = f.createMethod();
+    MMethod fun = f.createMMethod();
 
-    fun.setUsecase(uc);
+    fun.setTestUsecase(uc);
     fun.setId("fun-" + uc.getId());
     fun.setObjectName(getMethodName(uc));
     fun.setReturnType("void");
     fun.setObjectType("autoGenFunUc");
-    cls.getMethod().add(fun);
-    for (Flow fl : uc.getFlow()) {
+    cls.getMethods().add(fun);
+    for (Flow fl : uc.getFlows()) {
       fun.getBase().add(fl);
       flow2Method(cls, fl);
     }
@@ -112,15 +112,15 @@ public class ClassAutoMaker {
     return name;
   }
 
-  private void flow2Method(Class cls, Flow fl) {
+  private void flow2Method(MClass cls, Flow fl) {
     // TODO Auto-generated method stub
-    Method fun = f.createMethod();
+    MMethod fun = f.createMMethod();
     fun.setId(fl.getId());
     fun.setObjectName(fl.getObjectName());
     fun.getBase().add(fl);
     fun.setReturnType("void");
     fun.setObjectType("autoGenFunFlow");
-    cls.getMethod().add(fun);
+    cls.getMethods().add(fun);
   }
 
 }

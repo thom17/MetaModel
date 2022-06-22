@@ -10,7 +10,10 @@ import SWVS.Customer;
 import SWVS.Field;
 import SWVS.Flow;
 import SWVS.Function;
-import SWVS.Method;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.SWVSFactory;
@@ -55,14 +58,14 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass systemEClass = null;
+  private EClass mSystemEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass objectEClass = null;
+  private EClass mObjectEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -104,7 +107,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass classEClass = null;
+  private EClass mClassEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -153,7 +156,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass methodEClass = null;
+  private EClass mMethodEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -161,6 +164,13 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * @generated
    */
   private EClass stateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass objectEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -261,7 +271,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProject_System() {
+  public EReference getProject_Systems() {
     return (EReference) projectEClass.getEStructuralFeatures().get(2);
   }
 
@@ -270,7 +280,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProject_Actor() {
+  public EReference getProject_ActorList() {
     return (EReference) projectEClass.getEStructuralFeatures().get(3);
   }
 
@@ -279,7 +289,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProject_Class() {
+  public EReference getProject_ClassList() {
     return (EReference) projectEClass.getEStructuralFeatures().get(4);
   }
 
@@ -288,7 +298,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProject_Object() {
+  public EReference getProject_MObjects() {
     return (EReference) projectEClass.getEStructuralFeatures().get(5);
   }
 
@@ -297,7 +307,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProject_ObjList() {
+  public EReference getProject_Objects() {
     return (EReference) projectEClass.getEStructuralFeatures().get(6);
   }
 
@@ -351,8 +361,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSystem() {
-    return systemEClass;
+  public EClass getMSystem() {
+    return mSystemEClass;
   }
 
   /**
@@ -360,8 +370,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSystem_SystemType() {
-    return (EAttribute) systemEClass.getEStructuralFeatures().get(0);
+  public EAttribute getMSystem_SystemType() {
+    return (EAttribute) mSystemEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -369,8 +379,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSystem_Usecase() {
-    return (EReference) systemEClass.getEStructuralFeatures().get(1);
+  public EReference getMSystem_Usecase() {
+    return (EReference) mSystemEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -378,8 +388,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSystem_DefClass() {
-    return (EReference) systemEClass.getEStructuralFeatures().get(2);
+  public EReference getMSystem_DefClass() {
+    return (EReference) mSystemEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -387,8 +397,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSystem_State() {
-    return (EReference) systemEClass.getEStructuralFeatures().get(3);
+  public EReference getMSystem_States() {
+    return (EReference) mSystemEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -396,8 +406,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getObject() {
-    return objectEClass;
+  public EClass getMObject() {
+    return mObjectEClass;
   }
 
   /**
@@ -405,8 +415,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_Id() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(0);
+  public EAttribute getMObject_Id() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -414,8 +424,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_Data_base_SrcName() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(1);
+  public EAttribute getMObject_Data_base_SrcName() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -423,8 +433,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_ObjectType() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(2);
+  public EAttribute getMObject_ObjectType() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -432,8 +442,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_FilePath() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(3);
+  public EAttribute getMObject_FilePath() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -441,8 +451,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_AddedObject() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(4);
+  public EAttribute getMObject_AddedObject() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -450,8 +460,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_ImplementName() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(5);
+  public EAttribute getMObject_ImplementName() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -459,8 +469,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getObject_ObjectName() {
-    return (EAttribute) objectEClass.getEStructuralFeatures().get(6);
+  public EAttribute getMObject_ObjectName() {
+    return (EAttribute) mObjectEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -468,8 +478,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getObject_Requirement() {
-    return (EReference) objectEClass.getEStructuralFeatures().get(7);
+  public EReference getMObject_Requirements() {
+    return (EReference) mObjectEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -504,7 +514,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUseCase_Flow() {
+  public EReference getUseCase_Flows() {
     return (EReference) useCaseEClass.getEStructuralFeatures().get(2);
   }
 
@@ -567,7 +577,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFlow_Client() {
+  public EReference getFlow_Clients() {
     return (EReference) flowEClass.getEStructuralFeatures().get(2);
   }
 
@@ -585,7 +595,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFlow_DetailFlow() {
+  public EReference getFlow_DetailFlows() {
     return (EReference) flowEClass.getEStructuralFeatures().get(4);
   }
 
@@ -666,8 +676,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getClass_() {
-    return classEClass;
+  public EClass getMClass() {
+    return mClassEClass;
   }
 
   /**
@@ -675,8 +685,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_Field() {
-    return (EReference) classEClass.getEStructuralFeatures().get(0);
+  public EReference getMClass_Fields() {
+    return (EReference) mClassEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -684,8 +694,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getClass_Package() {
-    return (EAttribute) classEClass.getEStructuralFeatures().get(1);
+  public EAttribute getMClass_Package() {
+    return (EAttribute) mClassEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -693,8 +703,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_HasClass() {
-    return (EReference) classEClass.getEStructuralFeatures().get(2);
+  public EReference getMClass_HasClassList() {
+    return (EReference) mClassEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -702,8 +712,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_SuperClass() {
-    return (EReference) classEClass.getEStructuralFeatures().get(3);
+  public EReference getMClass_SuperClassList() {
+    return (EReference) mClassEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -711,8 +721,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_Method() {
-    return (EReference) classEClass.getEStructuralFeatures().get(4);
+  public EReference getMClass_Methods() {
+    return (EReference) mClassEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -720,8 +730,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getClass_DefBase() {
-    return (EReference) classEClass.getEStructuralFeatures().get(5);
+  public EReference getMClass_DefBase() {
+    return (EReference) mClassEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -729,8 +739,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getClass_ClassType() {
-    return (EAttribute) classEClass.getEStructuralFeatures().get(6);
+  public EAttribute getMClass_ClassType() {
+    return (EAttribute) mClassEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -873,8 +883,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMethod() {
-    return methodEClass;
+  public EClass getMMethod() {
+    return mMethodEClass;
   }
 
   /**
@@ -882,8 +892,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMethod_ReturnType() {
-    return (EAttribute) methodEClass.getEStructuralFeatures().get(0);
+  public EAttribute getMMethod_ReturnType() {
+    return (EAttribute) mMethodEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -891,8 +901,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMethod_IsStatic() {
-    return (EAttribute) methodEClass.getEStructuralFeatures().get(1);
+  public EAttribute getMMethod_IsStatic() {
+    return (EAttribute) mMethodEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -900,8 +910,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMethod_Usecase() {
-    return (EReference) methodEClass.getEStructuralFeatures().get(2);
+  public EReference getMMethod_TestUsecase() {
+    return (EReference) mMethodEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -909,8 +919,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMethod_Base() {
-    return (EReference) methodEClass.getEStructuralFeatures().get(3);
+  public EReference getMMethod_Base() {
+    return (EReference) mMethodEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -918,8 +928,8 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMethod_Argument() {
-    return (EAttribute) methodEClass.getEStructuralFeatures().get(4);
+  public EAttribute getMMethod_Argument() {
+    return (EAttribute) mMethodEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -963,6 +973,87 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getObject() {
+    return objectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_Id() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_Data_base_SrcName() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_ObjectType() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_FilePath() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_AddedObject() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_ImplementName() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObject_ObjectName() {
+    return (EAttribute) objectEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getObject_Requirement() {
+    return (EReference) objectEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SWVSFactory getSWVSFactory() {
     return (SWVSFactory) getEFactoryInstance();
   }
@@ -990,11 +1081,11 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     projectEClass = createEClass(PROJECT);
     createEAttribute(projectEClass, PROJECT__PROJECT_NAME);
     createEReference(projectEClass, PROJECT__REQUIREMENT);
-    createEReference(projectEClass, PROJECT__SYSTEM);
-    createEReference(projectEClass, PROJECT__ACTOR);
-    createEReference(projectEClass, PROJECT__CLASS);
-    createEReference(projectEClass, PROJECT__OBJECT);
-    createEReference(projectEClass, PROJECT__OBJ_LIST);
+    createEReference(projectEClass, PROJECT__SYSTEMS);
+    createEReference(projectEClass, PROJECT__ACTOR_LIST);
+    createEReference(projectEClass, PROJECT__CLASS_LIST);
+    createEReference(projectEClass, PROJECT__MOBJECTS);
+    createEReference(projectEClass, PROJECT__OBJECTS);
     createEAttribute(projectEClass, PROJECT__FIN_DATE);
 
     requirementEClass = createEClass(REQUIREMENT);
@@ -1002,26 +1093,26 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     createEAttribute(requirementEClass, REQUIREMENT__RQ_TYPE);
     createEAttribute(requirementEClass, REQUIREMENT__DEPARTMENT);
 
-    systemEClass = createEClass(SYSTEM);
-    createEAttribute(systemEClass, SYSTEM__SYSTEM_TYPE);
-    createEReference(systemEClass, SYSTEM__USECASE);
-    createEReference(systemEClass, SYSTEM__DEF_CLASS);
-    createEReference(systemEClass, SYSTEM__STATE);
+    mSystemEClass = createEClass(MSYSTEM);
+    createEAttribute(mSystemEClass, MSYSTEM__SYSTEM_TYPE);
+    createEReference(mSystemEClass, MSYSTEM__USECASE);
+    createEReference(mSystemEClass, MSYSTEM__DEF_CLASS);
+    createEReference(mSystemEClass, MSYSTEM__STATES);
 
-    objectEClass = createEClass(OBJECT);
-    createEAttribute(objectEClass, OBJECT__ID);
-    createEAttribute(objectEClass, OBJECT__DATA_BASE_SRC_NAME);
-    createEAttribute(objectEClass, OBJECT__OBJECT_TYPE);
-    createEAttribute(objectEClass, OBJECT__FILE_PATH);
-    createEAttribute(objectEClass, OBJECT__ADDED_OBJECT);
-    createEAttribute(objectEClass, OBJECT__IMPLEMENT_NAME);
-    createEAttribute(objectEClass, OBJECT__OBJECT_NAME);
-    createEReference(objectEClass, OBJECT__REQUIREMENT);
+    mObjectEClass = createEClass(MOBJECT);
+    createEAttribute(mObjectEClass, MOBJECT__ID);
+    createEAttribute(mObjectEClass, MOBJECT__DATA_BASE_SRC_NAME);
+    createEAttribute(mObjectEClass, MOBJECT__OBJECT_TYPE);
+    createEAttribute(mObjectEClass, MOBJECT__FILE_PATH);
+    createEAttribute(mObjectEClass, MOBJECT__ADDED_OBJECT);
+    createEAttribute(mObjectEClass, MOBJECT__IMPLEMENT_NAME);
+    createEAttribute(mObjectEClass, MOBJECT__OBJECT_NAME);
+    createEReference(mObjectEClass, MOBJECT__REQUIREMENTS);
 
     useCaseEClass = createEClass(USE_CASE);
     createEReference(useCaseEClass, USE_CASE__EXTEND);
     createEReference(useCaseEClass, USE_CASE__INCLUDE);
-    createEReference(useCaseEClass, USE_CASE__FLOW);
+    createEReference(useCaseEClass, USE_CASE__FLOWS);
     createEAttribute(useCaseEClass, USE_CASE__CONTEXT);
     createEReference(useCaseEClass, USE_CASE__ACT_ACTORS);
     createEReference(useCaseEClass, USE_CASE__CONDITION);
@@ -1029,9 +1120,9 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     flowEClass = createEClass(FLOW);
     createEAttribute(flowEClass, FLOW__FLOW_ID);
     createEReference(flowEClass, FLOW__HOST);
-    createEReference(flowEClass, FLOW__CLIENT);
+    createEReference(flowEClass, FLOW__CLIENTS);
     createEAttribute(flowEClass, FLOW__CONTEXT);
-    createEReference(flowEClass, FLOW__DETAIL_FLOW);
+    createEReference(flowEClass, FLOW__DETAIL_FLOWS);
     createEAttribute(flowEClass, FLOW__RESULT);
     createEReference(flowEClass, FLOW__CONDITION);
 
@@ -1044,14 +1135,14 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
 
     functionEClass = createEClass(FUNCTION);
 
-    classEClass = createEClass(CLASS);
-    createEReference(classEClass, CLASS__FIELD);
-    createEAttribute(classEClass, CLASS__PACKAGE);
-    createEReference(classEClass, CLASS__HAS_CLASS);
-    createEReference(classEClass, CLASS__SUPER_CLASS);
-    createEReference(classEClass, CLASS__METHOD);
-    createEReference(classEClass, CLASS__DEF_BASE);
-    createEAttribute(classEClass, CLASS__CLASS_TYPE);
+    mClassEClass = createEClass(MCLASS);
+    createEReference(mClassEClass, MCLASS__FIELDS);
+    createEAttribute(mClassEClass, MCLASS__PACKAGE);
+    createEReference(mClassEClass, MCLASS__HAS_CLASS_LIST);
+    createEReference(mClassEClass, MCLASS__SUPER_CLASS_LIST);
+    createEReference(mClassEClass, MCLASS__METHODS);
+    createEReference(mClassEClass, MCLASS__DEF_BASE);
+    createEAttribute(mClassEClass, MCLASS__CLASS_TYPE);
 
     fieldEClass = createEClass(FIELD);
     createEAttribute(fieldEClass, FIELD__TYPE_NAME);
@@ -1074,17 +1165,27 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     createEAttribute(customerEClass, CUSTOMER__NAME);
     createEReference(customerEClass, CUSTOMER__BEVERAGE);
 
-    methodEClass = createEClass(METHOD);
-    createEAttribute(methodEClass, METHOD__RETURN_TYPE);
-    createEAttribute(methodEClass, METHOD__IS_STATIC);
-    createEReference(methodEClass, METHOD__USECASE);
-    createEReference(methodEClass, METHOD__BASE);
-    createEAttribute(methodEClass, METHOD__ARGUMENT);
+    mMethodEClass = createEClass(MMETHOD);
+    createEAttribute(mMethodEClass, MMETHOD__RETURN_TYPE);
+    createEAttribute(mMethodEClass, MMETHOD__IS_STATIC);
+    createEReference(mMethodEClass, MMETHOD__TEST_USECASE);
+    createEReference(mMethodEClass, MMETHOD__BASE);
+    createEAttribute(mMethodEClass, MMETHOD__ARGUMENT);
 
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__STATE_ID);
     createEAttribute(stateEClass, STATE__USE_CASE_STATUS);
     createEAttribute(stateEClass, STATE__IMPLEMENTATION_STATUS);
+
+    objectEClass = createEClass(OBJECT);
+    createEAttribute(objectEClass, OBJECT__ID);
+    createEAttribute(objectEClass, OBJECT__DATA_BASE_SRC_NAME);
+    createEAttribute(objectEClass, OBJECT__OBJECT_TYPE);
+    createEAttribute(objectEClass, OBJECT__FILE_PATH);
+    createEAttribute(objectEClass, OBJECT__ADDED_OBJECT);
+    createEAttribute(objectEClass, OBJECT__IMPLEMENT_NAME);
+    createEAttribute(objectEClass, OBJECT__OBJECT_NAME);
+    createEReference(objectEClass, OBJECT__REQUIREMENT);
   }
 
   /**
@@ -1120,16 +1221,16 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    requirementEClass.getESuperTypes().add(this.getObject());
-    systemEClass.getESuperTypes().add(this.getObject());
-    useCaseEClass.getESuperTypes().add(this.getObject());
-    flowEClass.getESuperTypes().add(this.getObject());
-    actorEClass.getESuperTypes().add(this.getObject());
-    classEClass.getESuperTypes().add(this.getObject());
-    fieldEClass.getESuperTypes().add(this.getObject());
+    requirementEClass.getESuperTypes().add(this.getMObject());
+    mSystemEClass.getESuperTypes().add(this.getMObject());
+    useCaseEClass.getESuperTypes().add(this.getMObject());
+    flowEClass.getESuperTypes().add(this.getMObject());
+    actorEClass.getESuperTypes().add(this.getMObject());
+    mClassEClass.getESuperTypes().add(this.getMObject());
+    fieldEClass.getESuperTypes().add(this.getMObject());
     coffeeEClass.getESuperTypes().add(this.getBeverage());
     teaEClass.getESuperTypes().add(this.getBeverage());
-    methodEClass.getESuperTypes().add(this.getObject());
+    mMethodEClass.getESuperTypes().add(this.getMObject());
 
     // Initialize classes, features, and operations; add parameters
     initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1140,19 +1241,19 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     initEReference(getProject_Requirement(), this.getRequirement(), null, "requirement", null, 0,
         -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
         !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProject_System(), this.getSystem(), null, "system", null, 0, -1,
+    initEReference(getProject_Systems(), this.getMSystem(), null, "systems", null, 0, -1,
         Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
         !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProject_Actor(), this.getActor(), null, "actor", null, 0, -1, Project.class,
-        !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProject_Class(), this.getClass_(), null, "class", null, 0, -1, Project.class,
-        !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProject_Object(), this.getObject(), null, "object", null, 0, -1,
+    initEReference(getProject_ActorList(), this.getActor(), null, "actorList", null, 0, -1,
         Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
         !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProject_ObjList(), this.getObject(), null, "objList", null, 0, -1,
+    initEReference(getProject_ClassList(), this.getMClass(), null, "classList", null, 0, -1,
+        Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProject_MObjects(), this.getMObject(), null, "mObjects", null, 0, -1,
+        Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProject_Objects(), this.getMObject(), null, "objects", null, 0, -1,
         Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
         IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProject_FinDate(), theXMLTypePackage.getString(), "finDate", null, 0, 1,
@@ -1171,46 +1272,46 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
         Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(systemEClass, SWVS.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE,
+    initEClass(mSystemEClass, MSystem.class, "MSystem", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSystem_SystemType(), ecorePackage.getEString(), "systemType", null, 0, 1,
-        SWVS.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+    initEAttribute(getMSystem_SystemType(), ecorePackage.getEString(), "systemType", null, 0, 1,
+        MSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSystem_Usecase(), this.getUseCase(), null, "usecase", null, 0, -1,
-        SWVS.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+    initEReference(getMSystem_Usecase(), this.getUseCase(), null, "usecase", null, 0, -1,
+        MSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
         !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSystem_DefClass(), this.getClass_(), null, "defClass", null, 0, -1,
-        SWVS.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+    initEReference(getMSystem_DefClass(), this.getMClass(), null, "defClass", null, 0, -1,
+        MSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
         IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSystem_State(), this.getState(), null, "state", null, 0, -1,
-        SWVS.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-        !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMSystem_States(), this.getState(), null, "states", null, 0, -1, MSystem.class,
+        !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(objectEClass, SWVS.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE,
+    initEClass(mObjectEClass, MObject.class, "MObject", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getObject_Id(), ecorePackage.getEString(), "id", "", 0, 1, SWVS.Object.class,
+    initEAttribute(getMObject_Id(), ecorePackage.getEString(), "id", "", 0, 1, MObject.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED,
         IS_ORDERED);
-    initEAttribute(getObject_Data_base_SrcName(), ecorePackage.getEString(), "data_base_SrcName",
-        null, 0, 1, SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+    initEAttribute(getMObject_Data_base_SrcName(), ecorePackage.getEString(), "data_base_SrcName",
+        null, 0, 1, MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
         !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObject_ObjectType(), ecorePackage.getEString(), "objectType", null, 0, 1,
-        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+    initEAttribute(getMObject_ObjectType(), ecorePackage.getEString(), "objectType", null, 0, 1,
+        MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObject_FilePath(), ecorePackage.getEString(), "filePath", null, 0, 1,
-        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+    initEAttribute(getMObject_FilePath(), ecorePackage.getEString(), "filePath", null, 0, 1,
+        MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObject_AddedObject(), theXMLTypePackage.getBoolean(), "addedObject", null, 0,
-        1, SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+    initEAttribute(getMObject_AddedObject(), theXMLTypePackage.getBoolean(), "addedObject", null, 0,
+        1, MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObject_ImplementName(), ecorePackage.getEString(), "implementName", null, 0,
-        1, SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+    initEAttribute(getMObject_ImplementName(), ecorePackage.getEString(), "implementName", null, 0,
+        1, MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObject_ObjectName(), ecorePackage.getEString(), "objectName", null, 0, 1,
-        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+    initEAttribute(getMObject_ObjectName(), ecorePackage.getEString(), "objectName", null, 0, 1,
+        MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
         !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-    initEReference(getObject_Requirement(), this.getRequirement(), null, "requirement", null, 0, -1,
-        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+    initEReference(getMObject_Requirements(), this.getRequirement(), null, "requirements", null, 0,
+        -1, MObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
         IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(useCaseEClass, UseCase.class, "UseCase", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1221,7 +1322,7 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     initEReference(getUseCase_Include(), this.getUseCase(), null, "include", null, 0, -1,
         UseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
         !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUseCase_Flow(), this.getFlow(), null, "flow", null, 0, -1, UseCase.class,
+    initEReference(getUseCase_Flows(), this.getFlow(), null, "flows", null, 0, -1, UseCase.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getUseCase_Context(), ecorePackage.getEString(), "context", null, 0, 1,
@@ -1239,16 +1340,16 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     initEAttribute(getFlow_FlowId(), ecorePackage.getEString(), "flowId", null, 0, 1, Flow.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
         IS_ORDERED);
-    initEReference(getFlow_Host(), this.getObject(), null, "host", null, 0, -1, Flow.class,
+    initEReference(getFlow_Host(), this.getMObject(), null, "host", null, 0, -1, Flow.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFlow_Client(), this.getObject(), null, "client", null, 0, -1, Flow.class,
+    initEReference(getFlow_Clients(), this.getMObject(), null, "clients", null, 0, -1, Flow.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFlow_Context(), ecorePackage.getEString(), "context", null, 0, 1, Flow.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
         IS_ORDERED);
-    initEReference(getFlow_DetailFlow(), this.getFlow(), null, "detailFlow", null, 0, -1,
+    initEReference(getFlow_DetailFlows(), this.getFlow(), null, "detailFlows", null, 0, -1,
         Flow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFlow_Result(), ecorePackage.getEString(), "result", null, 0, 1, Flow.class,
@@ -1276,29 +1377,29 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(classEClass, SWVS.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE,
+    initEClass(mClassEClass, MClass.class, "MClass", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getClass_Field(), this.getField(), null, "field", null, 0, -1, SWVS.Class.class,
+    initEReference(getMClass_Fields(), this.getField(), null, "fields", null, 0, -1, MClass.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getClass_Package(), ecorePackage.getEString(), "package", null, 0, 1,
-        SWVS.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_HasClass(), this.getClass_(), null, "hasClass", null, 0, -1,
-        SWVS.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+    initEAttribute(getMClass_Package(), ecorePackage.getEString(), "package", null, 0, 1,
+        MClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        !IS_DERIVED, IS_ORDERED);
+    initEReference(getMClass_HasClassList(), this.getMClass(), null, "hasClassList", null, 0, -1,
+        MClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMClass_SuperClassList(), this.getMClass(), null, "superClassList", null, 0,
+        -1, MClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
         IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_SuperClass(), this.getClass_(), null, "superClass", null, 0, -1,
-        SWVS.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-        IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_Method(), this.getMethod(), null, "method", null, 0, -1,
-        SWVS.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-        !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_DefBase(), this.getObject(), null, "defBase", null, 0, -1,
-        SWVS.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-        IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getClass_ClassType(), ecorePackage.getEString(), "classType", null, 0, 1,
-        SWVS.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMClass_Methods(), this.getMMethod(), null, "methods", null, 0, -1,
+        MClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMClass_DefBase(), this.getMObject(), null, "defBase", null, 0, -1,
+        MClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMClass_ClassType(), ecorePackage.getEString(), "classType", null, 0, 1,
+        MClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        !IS_DERIVED, IS_ORDERED);
 
     initEClass(fieldEClass, Field.class, "Field", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
@@ -1345,23 +1446,23 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
         Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
         IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(methodEClass, Method.class, "Method", !IS_ABSTRACT, !IS_INTERFACE,
+    initEClass(mMethodEClass, MMethod.class, "MMethod", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMethod_ReturnType(), ecorePackage.getEString(), "returnType", null, 0, 1,
-        Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-        !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMethod_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1,
-        Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-        !IS_DERIVED, IS_ORDERED);
-    initEReference(getMethod_Usecase(), this.getUseCase(), null, "usecase", null, 0, 1,
-        Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-        !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMethod_Base(), this.getObject(), null, "base", null, 0, -1, Method.class,
+    initEAttribute(getMMethod_ReturnType(), ecorePackage.getEString(), "returnType", null, 0, 1,
+        MMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMMethod_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1,
+        MMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMMethod_TestUsecase(), this.getUseCase(), null, "testUsecase", null, 0, 1,
+        MMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+        IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMMethod_Base(), this.getMObject(), null, "base", null, 0, -1, MMethod.class,
         !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
         !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMethod_Argument(), ecorePackage.getEString(), "argument", null, 0, -1,
-        Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-        !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMMethod_Argument(), ecorePackage.getEString(), "argument", null, 0, -1,
+        MMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE,
         IS_GENERATED_INSTANCE_CLASS);
@@ -1374,6 +1475,33 @@ public class SWVSPackageImpl extends EPackageImpl implements SWVSPackage {
     initEAttribute(getState_ImplementationStatus(), ecorePackage.getEString(),
         "implementationStatus", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
         !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(objectEClass, SWVS.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE,
+        IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getObject_Id(), ecorePackage.getEString(), "id", "", 0, 1, SWVS.Object.class,
+        !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED,
+        IS_ORDERED);
+    initEAttribute(getObject_Data_base_SrcName(), ecorePackage.getEString(), "data_base_SrcName",
+        null, 0, 1, SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+        !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getObject_ObjectType(), ecorePackage.getEString(), "objectType", null, 0, 1,
+        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getObject_FilePath(), ecorePackage.getEString(), "filePath", null, 0, 1,
+        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getObject_AddedObject(), theXMLTypePackage.getBoolean(), "addedObject", null, 0,
+        1, SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getObject_ImplementName(), ecorePackage.getEString(), "implementName", null, 0,
+        1, SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getObject_ObjectName(), ecorePackage.getEString(), "objectName", null, 0, 1,
+        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+    initEReference(getObject_Requirement(), this.getRequirement(), null, "requirement", null, 0, -1,
+        SWVS.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+        IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

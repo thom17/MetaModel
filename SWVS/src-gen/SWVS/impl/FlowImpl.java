@@ -4,6 +4,7 @@ package SWVS.impl;
 
 import SWVS.Condition;
 import SWVS.Flow;
+import SWVS.MObject;
 import SWVS.SWVSPackage;
 
 import java.util.Collection;
@@ -32,16 +33,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link SWVS.impl.FlowImpl#getFlowId <em>Flow Id</em>}</li>
  *   <li>{@link SWVS.impl.FlowImpl#getHost <em>Host</em>}</li>
- *   <li>{@link SWVS.impl.FlowImpl#getClient <em>Client</em>}</li>
+ *   <li>{@link SWVS.impl.FlowImpl#getClients <em>Clients</em>}</li>
  *   <li>{@link SWVS.impl.FlowImpl#getContext <em>Context</em>}</li>
- *   <li>{@link SWVS.impl.FlowImpl#getDetailFlow <em>Detail Flow</em>}</li>
+ *   <li>{@link SWVS.impl.FlowImpl#getDetailFlows <em>Detail Flows</em>}</li>
  *   <li>{@link SWVS.impl.FlowImpl#getResult <em>Result</em>}</li>
  *   <li>{@link SWVS.impl.FlowImpl#getCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FlowImpl extends ObjectImpl implements Flow {
+public class FlowImpl extends MObjectImpl implements Flow {
   /**
    * The default value of the '{@link #getFlowId() <em>Flow Id</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -70,17 +71,17 @@ public class FlowImpl extends ObjectImpl implements Flow {
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Object> host;
+  protected EList<MObject> host;
 
   /**
-   * The cached value of the '{@link #getClient() <em>Client</em>}' reference list.
+   * The cached value of the '{@link #getClients() <em>Clients</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getClient()
+   * @see #getClients()
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Object> client;
+  protected EList<MObject> clients;
 
   /**
    * The default value of the '{@link #getContext() <em>Context</em>}' attribute.
@@ -103,14 +104,14 @@ public class FlowImpl extends ObjectImpl implements Flow {
   protected String context = CONTEXT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getDetailFlow() <em>Detail Flow</em>}' containment reference list.
+   * The cached value of the '{@link #getDetailFlows() <em>Detail Flows</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDetailFlow()
+   * @see #getDetailFlows()
    * @generated
    * @ordered
    */
-  protected EList<Flow> detailFlow;
+  protected EList<Flow> detailFlows;
 
   /**
    * The default value of the '{@link #getResult() <em>Result</em>}' attribute.
@@ -188,10 +189,9 @@ public class FlowImpl extends ObjectImpl implements Flow {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Object> getHost() {
+  public EList<MObject> getHost() {
     if (host == null) {
-      host =
-          new EObjectResolvingEList<SWVS.Object>(SWVS.Object.class, this, SWVSPackage.FLOW__HOST);
+      host = new EObjectResolvingEList<MObject>(MObject.class, this, SWVSPackage.FLOW__HOST);
     }
     return host;
   }
@@ -201,12 +201,11 @@ public class FlowImpl extends ObjectImpl implements Flow {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Object> getClient() {
-    if (client == null) {
-      client =
-          new EObjectResolvingEList<SWVS.Object>(SWVS.Object.class, this, SWVSPackage.FLOW__CLIENT);
+  public EList<MObject> getClients() {
+    if (clients == null) {
+      clients = new EObjectResolvingEList<MObject>(MObject.class, this, SWVSPackage.FLOW__CLIENTS);
     }
-    return client;
+    return clients;
   }
 
   /**
@@ -236,12 +235,12 @@ public class FlowImpl extends ObjectImpl implements Flow {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Flow> getDetailFlow() {
-    if (detailFlow == null) {
-      detailFlow =
-          new EObjectContainmentEList<Flow>(Flow.class, this, SWVSPackage.FLOW__DETAIL_FLOW);
+  public EList<Flow> getDetailFlows() {
+    if (detailFlows == null) {
+      detailFlows =
+          new EObjectContainmentEList<Flow>(Flow.class, this, SWVSPackage.FLOW__DETAIL_FLOWS);
     }
-    return detailFlow;
+    return detailFlows;
   }
 
   /**
@@ -325,8 +324,8 @@ public class FlowImpl extends ObjectImpl implements Flow {
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
       NotificationChain msgs) {
     switch (featureID) {
-      case SWVSPackage.FLOW__DETAIL_FLOW:
-        return ((InternalEList<?>) getDetailFlow()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.FLOW__DETAIL_FLOWS:
+        return ((InternalEList<?>) getDetailFlows()).basicRemove(otherEnd, msgs);
       case SWVSPackage.FLOW__CONDITION:
         return basicSetCondition(null, msgs);
     }
@@ -345,12 +344,12 @@ public class FlowImpl extends ObjectImpl implements Flow {
         return getFlowId();
       case SWVSPackage.FLOW__HOST:
         return getHost();
-      case SWVSPackage.FLOW__CLIENT:
-        return getClient();
+      case SWVSPackage.FLOW__CLIENTS:
+        return getClients();
       case SWVSPackage.FLOW__CONTEXT:
         return getContext();
-      case SWVSPackage.FLOW__DETAIL_FLOW:
-        return getDetailFlow();
+      case SWVSPackage.FLOW__DETAIL_FLOWS:
+        return getDetailFlows();
       case SWVSPackage.FLOW__RESULT:
         return getResult();
       case SWVSPackage.FLOW__CONDITION:
@@ -373,18 +372,18 @@ public class FlowImpl extends ObjectImpl implements Flow {
         return;
       case SWVSPackage.FLOW__HOST:
         getHost().clear();
-        getHost().addAll((Collection<? extends SWVS.Object>) newValue);
+        getHost().addAll((Collection<? extends MObject>) newValue);
         return;
-      case SWVSPackage.FLOW__CLIENT:
-        getClient().clear();
-        getClient().addAll((Collection<? extends SWVS.Object>) newValue);
+      case SWVSPackage.FLOW__CLIENTS:
+        getClients().clear();
+        getClients().addAll((Collection<? extends MObject>) newValue);
         return;
       case SWVSPackage.FLOW__CONTEXT:
         setContext((String) newValue);
         return;
-      case SWVSPackage.FLOW__DETAIL_FLOW:
-        getDetailFlow().clear();
-        getDetailFlow().addAll((Collection<? extends Flow>) newValue);
+      case SWVSPackage.FLOW__DETAIL_FLOWS:
+        getDetailFlows().clear();
+        getDetailFlows().addAll((Collection<? extends Flow>) newValue);
         return;
       case SWVSPackage.FLOW__RESULT:
         setResult((String) newValue);
@@ -410,14 +409,14 @@ public class FlowImpl extends ObjectImpl implements Flow {
       case SWVSPackage.FLOW__HOST:
         getHost().clear();
         return;
-      case SWVSPackage.FLOW__CLIENT:
-        getClient().clear();
+      case SWVSPackage.FLOW__CLIENTS:
+        getClients().clear();
         return;
       case SWVSPackage.FLOW__CONTEXT:
         setContext(CONTEXT_EDEFAULT);
         return;
-      case SWVSPackage.FLOW__DETAIL_FLOW:
-        getDetailFlow().clear();
+      case SWVSPackage.FLOW__DETAIL_FLOWS:
+        getDetailFlows().clear();
         return;
       case SWVSPackage.FLOW__RESULT:
         setResult(RESULT_EDEFAULT);
@@ -441,12 +440,12 @@ public class FlowImpl extends ObjectImpl implements Flow {
         return FLOW_ID_EDEFAULT == null ? flowId != null : !FLOW_ID_EDEFAULT.equals(flowId);
       case SWVSPackage.FLOW__HOST:
         return host != null && !host.isEmpty();
-      case SWVSPackage.FLOW__CLIENT:
-        return client != null && !client.isEmpty();
+      case SWVSPackage.FLOW__CLIENTS:
+        return clients != null && !clients.isEmpty();
       case SWVSPackage.FLOW__CONTEXT:
         return CONTEXT_EDEFAULT == null ? context != null : !CONTEXT_EDEFAULT.equals(context);
-      case SWVSPackage.FLOW__DETAIL_FLOW:
-        return detailFlow != null && !detailFlow.isEmpty();
+      case SWVSPackage.FLOW__DETAIL_FLOWS:
+        return detailFlows != null && !detailFlows.isEmpty();
       case SWVSPackage.FLOW__RESULT:
         return RESULT_EDEFAULT == null ? result != null : !RESULT_EDEFAULT.equals(result);
       case SWVSPackage.FLOW__CONDITION:

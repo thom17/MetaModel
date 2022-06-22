@@ -7,17 +7,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
-import SWVS.Class;
 import SWVS.Flow;
+import SWVS.MClass;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
-import SWVS.System;
 import SWVS.UseCase;
 import xmiManage.XmiReader;
 
 public class TableMaker {
   XmiReader reader;
-  EList<System> systemList;
+  EList<MSystem> systemList;
   EList<Requirement> rqList;
   EList<Flow> eventFlList;
   ArrayList<UseCase> ucList = new ArrayList<UseCase>();
@@ -46,7 +46,7 @@ public class TableMaker {
     Project project = (Project) reader.getRoot();
 
     makeRq(project.getRequirement());
-    makeUc(project.getSystem());
+    makeUc(project.getSystems());
     // makeRqUc();
     makeSysCls();
     makeFile();
@@ -54,13 +54,13 @@ public class TableMaker {
   }
 
   private void makeSysCls() {
-    EList<Class> list = ((Project) reader.getRoot()).getClass_();
+    EList<MClass> list = ((Project) reader.getRoot()).getClassList();
     sb.append("\nSys-Cls, ");
-    for (System s : systemList) {
+    for (MSystem s : systemList) {
       sb.append("\t" + s.getId() + ",");
     }
     sb.append("\n");
-    for (Class cls : list) {
+    for (MClass cls : list) {
       sb.append(cls.getPackage() + "." + cls.getObjectName() + ", ");
       for (int i = 0; i < systemList.size(); i++) {
         if (systemList.get(i).getId().equals(cls.getId()))
@@ -96,9 +96,9 @@ public class TableMaker {
    * sb.append(" ,"); else { UseCase uc = (UseCase) checkList.get(pos++);
    * sb.append(uc.getId()+", "); } } sb.append("\n"); } }
    */
-  private void makeUc(EList<System> system) {
+  private void makeUc(EList<MSystem> system) {
     systemList = system;
-    for (System s : system) {
+    for (MSystem s : system) {
       for (UseCase uc : s.getUsecase()) {
         ucList.add(uc);
         for (UseCase exUc : uc.getExtend())

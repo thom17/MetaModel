@@ -6,11 +6,12 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
-import SWVS.Class;
 import SWVS.Field;
 import SWVS.Flow;
-import SWVS.Method;
-import SWVS.Object;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.UseCase;
@@ -18,12 +19,12 @@ import SWVS.UseCase;
 public class JavaCodeGenerater {
   String codePath = "autoGen/java/";
   Project project;
-  EList<Class> classList;
+  EList<MClass> classList;
   File filePath;
 
   public JavaCodeGenerater(Project project) {
     this.project = project;
-    classList = project.getClass_();
+    classList = project.getClassList();
 
   }
 
@@ -48,7 +49,7 @@ public class JavaCodeGenerater {
 
   public void make() {
     makeTimePath();
-    for (Class cls : classList) {
+    for (MClass cls : classList) {
       filePathSet(cls);
       String code = makeCode(cls);
       try {
@@ -62,41 +63,41 @@ public class JavaCodeGenerater {
     }
   }
 
-  private String makeCode(Class cls) {
+  private String makeCode(MClass cls) {
     cls.getPackage();
     StringBuilder sb = new StringBuilder("package " + cls.getPackage() + ";\n");
     sb.append("\n");
     makeImportDef(cls, sb);
     sb.append("\n");
-    makeClassDef(cls, sb);
+    makeMClassDef(cls, sb);
     sb.append("\n");
     return sb.toString();
   }
 
-  private void makeMethod(Class cls, StringBuilder sb) {
-    for (Method method : cls.getMethod()) {
-      if (method.getUsecase() == null)
-        for (Object flow : method.getBase()) {
-          makeMethodBlock((Flow) flow, method, sb);
+  private void makeMMethod(MClass cls, StringBuilder sb) {
+    for (MMethod method : cls.getMethods()) {
+      if (method.getTestUsecase() == null)
+        for (MObject flow : method.getBase()) {
+          makeMMethodBlock((Flow) flow, method, sb);
           sb.append("\n");
         }
       else {
-        makeMethodBlock(method, sb);
+        makeMMethodBlock(method, sb);
         sb.append("\n");
       }
     }
 
   }
 
-  // Use case Method Blcok
-  private void makeMethodBlock(Method method, StringBuilder sb) {
+  // Use case MMethod Blcok
+  private void makeMMethodBlock(MMethod method, StringBuilder sb) {
     String tab = "\t";
     String intab = "\t\t";
     String type = "public ";
     if (method.isIsStatic())
       type += "static ";
     type += method.getReturnType() + " ";
-    String comment = makeMethodComment(method.getUsecase(), "\t");
+    String comment = makeMMethodComment(method.getTestUsecase(), "\t");
     sb.append(comment);
     sb.append(tab + type + method.getObjectName() + "\n\t{\n");
 
@@ -109,13 +110,13 @@ public class JavaCodeGenerater {
 
   }// 위랑 통일해야됨 사실상
 
-  private void makeMethodBlock(Flow flow, Method method, StringBuilder sb) {
+  private void makeMMethodBlock(Flow flow, MMethod method, StringBuilder sb) {
     String tab = "\t";
     String intab = "\t\t";
-    String comment = makeMethodComment(flow, "\t");
+    String comment = makeMMethodComment(flow, "\t");
     sb.append(comment);
     sb.append(tab + "public void " + method.getObjectName() + "\n\t{\n");
-    callExpByFlows(flow.getDetailFlow(), sb, intab);
+    callExpByFlows(flow.getDetailFlows(), sb, intab);
     sb.append(tab + "}\n");
 
     // TODO Auto-generated method stub
@@ -123,9 +124,9 @@ public class JavaCodeGenerater {
   }
 
   private void callExpByFlows(EList<Flow> detailFlow, StringBuilder sb, String tab) {
-    for (Flow callMethod : detailFlow) {
+    for (Flow callMMethod : detailFlow) {
       // 컬 내부 정보 정리?
-      Object host = getHost(callMethod.getHost());
+      MObject host = getHost(callMMethod.getHost());
       String hostName = "";
       if (host != null) {
         if (host.getObjectName() != null)
@@ -133,20 +134,20 @@ public class JavaCodeGenerater {
         else
           hostName = host.getId() + ".";
       }
-      String callLine = hostName + callMethod.getObjectName() + ";\n";
-      sb.append(tab + "//" + callMethod.getContext() + tab + callMethod.getId() + "\n");
+      String callLine = hostName + callMMethod.getObjectName() + ";\n";
+      sb.append(tab + "//" + callMMethod.getContext() + tab + callMMethod.getId() + "\n");
       sb.append(tab + callLine + "\n");
     }
   }
 
-  private String makeMethodComment(UseCase uc, String tab) {
+  private String makeMMethodComment(UseCase uc, String tab) {
     StringBuilder sb = new StringBuilder(tab + "/**" + uc.getId() + "\n");
     sb.append(tab + uc.getContext() + "\n");
     sb.append(tab + "*/\n");
     return sb.toString();
   }
 
-  private String makeMethodComment(Flow flow, String tab) {
+  private String makeMMethodComment(Flow flow, String tab) {
     StringBuilder sb = new StringBuilder(tab + "/**" + flow.getId() + "\n");
     sb.append(tab + flow.getContext() + "\n");
 
@@ -157,19 +158,19 @@ public class JavaCodeGenerater {
     return sb.toString();
   }
 
-  private Object getHost(EList<Object> eList) {
-    for (Object ob : eList) {
-      if (ob instanceof Class || ob instanceof SWVS.System)
+  private MObject getHost(EList<MObject> eList) {
+    for (MObject ob : eList) {
+      if (ob instanceof MClass || ob instanceof MSystem)
         return ob;
     }
     return null;
   }
 
-  private void callExp(EList<Object> objList, StringBuilder sb, String tab) {
-    for (Object obj : objList) {
+  private void callExp(EList<MObject> objList, StringBuilder sb, String tab) {
+    for (MObject obj : objList) {
       // 컬 내부 정보 정리?
-      Flow callMethod = (Flow) obj;
-      Object host = getHost(callMethod.getHost());
+      Flow callMMethod = (Flow) obj;
+      MObject host = getHost(callMMethod.getHost());
       String hostName = "";
       if (host != null) {
         if (host.getObjectName() != null)
@@ -177,16 +178,16 @@ public class JavaCodeGenerater {
         else
           hostName = host.getId() + ".";
       }
-      String callLine = hostName + callMethod.getObjectName() + ";\n";
-      sb.append(tab + "//" + callMethod.getContext() + tab + callMethod.getId() + "\n");
+      String callLine = hostName + callMMethod.getObjectName() + ";\n";
+      sb.append(tab + "//" + callMMethod.getContext() + tab + callMMethod.getId() + "\n");
       sb.append(tab + callLine + "\n");
     }
   }
 
 
 
-  private void makeImportDef(Class cls, StringBuilder sb) {
-    for (Class has : cls.getHasClass()) {
+  private void makeImportDef(MClass cls, StringBuilder sb) {
+    for (MClass has : cls.getHasClassList()) {
       String packageName = has.getPackage();
       String name = has.getObjectName();
       String importStr = "import " + packageName + "." + name + ";";
@@ -201,13 +202,13 @@ public class JavaCodeGenerater {
    * @param cls 타겟 클래스
    * @param sb 작성중인 코드
    */
-  private void makeClassComment(Class cls, StringBuilder sb) {
+  private void makeMClassComment(MClass cls, StringBuilder sb) {
     sb.append("\t/**");
-    for (Object base : cls.getDefBase()) {
-      if (base instanceof SWVS.System) {
-        SWVS.System baseSys = (SWVS.System) base;
+    for (MObject base : cls.getDefBase()) {
+      if (base instanceof MSystem) {
+        MSystem baseSys = (MSystem) base;
         for (UseCase uc : baseSys.getUsecase()) {
-          for (Requirement rq : uc.getRequirement())
+          for (Requirement rq : uc.getRequirements())
             sb.append("\t" + rq.getId() + ":" + rq.getContents() + "\n");
         }
       }
@@ -215,16 +216,16 @@ public class JavaCodeGenerater {
     sb.append("\t*/\n");
   }
 
-  private void makeClassDef(Class cls, StringBuilder sb) {
+  private void makeMClassDef(MClass cls, StringBuilder sb) {
     String tab = "\t";
     cls.setData_base_SrcName(cls.getPackage() + "." + cls.getObjectName());
-    makeClassComment(cls, sb);
+    makeMClassComment(cls, sb);
     sb.append("public class " + cls.getObjectName() + "\n{\n");
-    for (Field filed : cls.getField()) {
+    for (Field filed : cls.getFields()) {
       makeField(filed, sb, tab);
     }
     sb.append("\n");
-    makeMethod(cls, sb);
+    makeMMethod(cls, sb);
     sb.append("}\n");
   }
 
@@ -234,7 +235,7 @@ public class JavaCodeGenerater {
   }
 
   // digram.usecase.test 와 같은 패키지 폴더내 폴더 후에 처리해야함
-  private void filePathSet(Class cls) {
+  private void filePathSet(MClass cls) {
     String packageName = cls.getPackage();
     String className = cls.getObjectName();
 

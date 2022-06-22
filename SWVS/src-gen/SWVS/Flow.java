@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link SWVS.Flow#getFlowId <em>Flow Id</em>}</li>
  *   <li>{@link SWVS.Flow#getHost <em>Host</em>}</li>
- *   <li>{@link SWVS.Flow#getClient <em>Client</em>}</li>
+ *   <li>{@link SWVS.Flow#getClients <em>Clients</em>}</li>
  *   <li>{@link SWVS.Flow#getContext <em>Context</em>}</li>
- *   <li>{@link SWVS.Flow#getDetailFlow <em>Detail Flow</em>}</li>
+ *   <li>{@link SWVS.Flow#getDetailFlows <em>Detail Flows</em>}</li>
  *   <li>{@link SWVS.Flow#getResult <em>Result</em>}</li>
  *   <li>{@link SWVS.Flow#getCondition <em>Condition</em>}</li>
  * </ul>
@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Flow extends SWVS.Object {
+public interface Flow extends MObject {
   /**
    * Returns the value of the '<em><b>Flow Id</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public interface Flow extends SWVS.Object {
 
   /**
    * Returns the value of the '<em><b>Host</b></em>' reference list.
-   * The list contents are of type {@link SWVS.Object}.
+   * The list contents are of type {@link SWVS.MObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Host</em>' reference list.
@@ -59,19 +59,19 @@ public interface Flow extends SWVS.Object {
    * @model
    * @generated
    */
-  EList<SWVS.Object> getHost();
+  EList<MObject> getHost();
 
   /**
-   * Returns the value of the '<em><b>Client</b></em>' reference list.
-   * The list contents are of type {@link SWVS.Object}.
+   * Returns the value of the '<em><b>Clients</b></em>' reference list.
+   * The list contents are of type {@link SWVS.MObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Client</em>' reference list.
-   * @see SWVS.SWVSPackage#getFlow_Client()
+   * @return the value of the '<em>Clients</em>' reference list.
+   * @see SWVS.SWVSPackage#getFlow_Clients()
    * @model
    * @generated
    */
-  EList<SWVS.Object> getClient();
+  EList<MObject> getClients();
 
   /**
    * Returns the value of the '<em><b>Context</b></em>' attribute.
@@ -96,16 +96,16 @@ public interface Flow extends SWVS.Object {
   void setContext(String value);
 
   /**
-   * Returns the value of the '<em><b>Detail Flow</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Detail Flows</b></em>' containment reference list.
    * The list contents are of type {@link SWVS.Flow}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Detail Flow</em>' containment reference list.
-   * @see SWVS.SWVSPackage#getFlow_DetailFlow()
+   * @return the value of the '<em>Detail Flows</em>' containment reference list.
+   * @see SWVS.SWVSPackage#getFlow_DetailFlows()
    * @model containment="true"
    * @generated
    */
-  EList<Flow> getDetailFlow();
+  EList<Flow> getDetailFlows();
 
   /**
    * Returns the value of the '<em><b>Result</b></em>' attribute.

@@ -3,9 +3,10 @@ package xmiManage;
 import java.util.ArrayList;
 import org.eclipse.emf.common.util.EList;
 import SWVS.Flow;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
-import SWVS.System;
 import SWVS.UseCase;
 
 public class RQTracer {
@@ -19,14 +20,14 @@ public class RQTracer {
    */
   public static ArrayList<Requirement> projectTrace(Project project) {
     ArrayList<Requirement> rqList = new ArrayList<Requirement>();
-    for (System sys : project.getSystem()) {
+    for (MSystem sys : project.getSystems()) {
       traceSystem(sys, rqList);
     }
     return rqList;
   }
 
   private static void traceFlow(Flow flow) {
-    EList<Flow> detaileFlows = flow.getDetailFlow();
+    EList<Flow> detaileFlows = flow.getDetailFlows();
     if (0 < detaileFlows.size()) {
       for (Flow fl : detaileFlows)
         traceFlow(fl);
@@ -36,14 +37,14 @@ public class RQTracer {
 
   }
 
-  private static void traceSystem(System sys, ArrayList<Requirement> rqList) {
+  private static void traceSystem(MSystem sys, ArrayList<Requirement> rqList) {
     // TODO Auto-generated method stub
     for (UseCase uc : sys.getUsecase()) {
-      for (Flow flow : uc.getFlow()) {
+      for (Flow flow : uc.getFlows()) {
         traceFlow(flow);
       }
     }
-    for (Requirement rq : sys.getRequirement()) {
+    for (Requirement rq : sys.getRequirements()) {
       if (!rqList.contains(rq)) {
         rqList.add(rq);
       }
@@ -57,14 +58,14 @@ public class RQTracer {
    * 
    * @param obj: System이 아니라면 상단의 Rq 업데이트 함.
    */
-  private static void updateRqTop(SWVS.Object obj) {
-    if (obj instanceof SWVS.System)
+  private static void updateRqTop(MObject obj) {
+    if (obj instanceof MSystem)
       return;
-    SWVS.Object container = (SWVS.Object) obj.eContainer();
+    MObject container = (MObject) obj.eContainer();
 
     // java.lang.System.out.println(container.getId());
-    EList<Requirement> rqList = container.getRequirement();
-    for (Requirement rq : obj.getRequirement()) {
+    EList<Requirement> rqList = container.getRequirements();
+    for (Requirement rq : obj.getRequirements()) {
       if (!rqList.contains(rq))
         rqList.add(rq);
     }

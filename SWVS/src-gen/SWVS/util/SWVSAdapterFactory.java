@@ -10,7 +10,10 @@ import SWVS.Customer;
 import SWVS.Field;
 import SWVS.Flow;
 import SWVS.Function;
-import SWVS.Method;
+import SWVS.MClass;
+import SWVS.MMethod;
+import SWVS.MObject;
+import SWVS.MSystem;
 import SWVS.Project;
 import SWVS.Requirement;
 import SWVS.SWVSPackage;
@@ -92,13 +95,13 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
     }
 
     @Override
-    public Adapter caseSystem(SWVS.System object) {
-      return createSystemAdapter();
+    public Adapter caseMSystem(MSystem object) {
+      return createMSystemAdapter();
     }
 
     @Override
-    public Adapter caseObject(SWVS.Object object) {
-      return createObjectAdapter();
+    public Adapter caseMObject(MObject object) {
+      return createMObjectAdapter();
     }
 
     @Override
@@ -127,8 +130,8 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
     }
 
     @Override
-    public Adapter caseClass(SWVS.Class object) {
-      return createClassAdapter();
+    public Adapter caseMClass(MClass object) {
+      return createMClassAdapter();
     }
 
     @Override
@@ -162,13 +165,18 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
     }
 
     @Override
-    public Adapter caseMethod(Method object) {
-      return createMethodAdapter();
+    public Adapter caseMMethod(MMethod object) {
+      return createMMethodAdapter();
     }
 
     @Override
     public Adapter caseState(State object) {
       return createStateAdapter();
+    }
+
+    @Override
+    public Adapter caseObject(SWVS.Object object) {
+      return createObjectAdapter();
     }
 
     @Override
@@ -220,30 +228,30 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link SWVS.System <em>System</em>}'.
+   * Creates a new adapter for an object of class '{@link SWVS.MSystem <em>MSystem</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see SWVS.System
+   * @see SWVS.MSystem
    * @generated
    */
-  public Adapter createSystemAdapter() {
+  public Adapter createMSystemAdapter() {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link SWVS.Object <em>Object</em>}'.
+   * Creates a new adapter for an object of class '{@link SWVS.MObject <em>MObject</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see SWVS.Object
+   * @see SWVS.MObject
    * @generated
    */
-  public Adapter createObjectAdapter() {
+  public Adapter createMObjectAdapter() {
     return null;
   }
 
@@ -318,16 +326,16 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link SWVS.Class <em>Class</em>}'.
+   * Creates a new adapter for an object of class '{@link SWVS.MClass <em>MClass</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see SWVS.Class
+   * @see SWVS.MClass
    * @generated
    */
-  public Adapter createClassAdapter() {
+  public Adapter createMClassAdapter() {
     return null;
   }
 
@@ -416,16 +424,16 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link SWVS.Method <em>Method</em>}'.
+   * Creates a new adapter for an object of class '{@link SWVS.MMethod <em>MMethod</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see SWVS.Method
+   * @see SWVS.MMethod
    * @generated
    */
-  public Adapter createMethodAdapter() {
+  public Adapter createMMethodAdapter() {
     return null;
   }
 
@@ -440,6 +448,20 @@ public class SWVSAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createStateAdapter() {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link SWVS.Object <em>Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see SWVS.Object
+   * @generated
+   */
+  public Adapter createObjectAdapter() {
     return null;
   }
 

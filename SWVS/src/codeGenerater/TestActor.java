@@ -7,8 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import org.eclipse.emf.common.util.EList;
 import SWVS.Actor;
-import SWVS.Class;
 import SWVS.Flow;
+import SWVS.MClass;
+import SWVS.MSystem;
 import SWVS.Project;
 
 public class TestActor {
@@ -16,7 +17,7 @@ public class TestActor {
   String packageName = "actorTestCode";
   String className;
   Project project;
-  EList<Class> classList;
+  EList<MClass> classList;
   EList<Actor> actorList;
   File filePath;
 
@@ -26,8 +27,8 @@ public class TestActor {
 
   public TestActor(Project project) {
     this.project = project;
-    classList = project.getClass_();
-    actorList = project.getActor();
+    classList = project.getClassList();
+    actorList = project.getActorList();
   }
 
   protected void makeFile(String code) throws IOException {
@@ -64,23 +65,23 @@ public class TestActor {
 
   private String makeCode(Actor actor) {
     StringBuilder sb = new StringBuilder("package " + packageName + ";\n");
-    ArrayList<SWVS.Class> classList = new ArrayList<SWVS.Class>();
+    ArrayList<SWVS.MClass> classList = new ArrayList<SWVS.MClass>();
     EList<SWVS.UseCase> usecaseList = actor.getActUsecases();
     for (SWVS.UseCase uc : usecaseList) {
-      SWVS.System system = (SWVS.System) uc.eContainer();
-      SWVS.Class cls = system.getDefClass().get(0);
+      MSystem system = (MSystem) uc.eContainer();
+      SWVS.MClass cls = system.getDefClass().get(0);
       if (cls != null && !classList.contains(cls))
         classList.add(cls);
     }
 
     makeImportDef(classList, sb);
 
-    makeClassDef(actor, sb);
+    makeMClassDef(actor, sb);
 
     return sb.toString();
     /*
      * StringBuilder sb = new StringBuilder("package "+actor.getPackage()+";\n"); sb.append("\n");
-     * makeImportDef(actor, sb); sb.append("\n"); makeClassDef(actor, sb); sb.append("\n"); return
+     * makeImportDef(actor, sb); sb.append("\n"); makeMClassDef(actor, sb); sb.append("\n"); return
      * sb.toString();
      */
 
@@ -88,13 +89,13 @@ public class TestActor {
 
   private void makeMethod(SWVS.UseCase usecase, StringBuilder sb) {
     String ucId = usecase.getId();
-    SWVS.System system = (SWVS.System) usecase.eContainer();
-    SWVS.Class cls = system.getDefClass().get(0);
+    MSystem system = (MSystem) usecase.eContainer();
+    SWVS.MClass cls = system.getDefClass().get(0);
     String line = "";
     if (cls != null) {
       line = cls.getObjectName() + ".";
     }
-    EList<Flow> flowList = usecase.getFlow();
+    EList<Flow> flowList = usecase.getFlows();
     if (flowList.size() == 0) {
       line += "not_define_Flow()";
     } else
@@ -129,15 +130,15 @@ public class TestActor {
    * sb.append(tab+"}\n"); }
    */
   // import SWVS.Actor;
-  private void makeImportDef(ArrayList<SWVS.Class> classList, StringBuilder sb) {
-    for (SWVS.Class cls : classList) {
+  private void makeImportDef(ArrayList<SWVS.MClass> classList, StringBuilder sb) {
+    for (SWVS.MClass cls : classList) {
       sb.append("import " + cls.getPackage() + "." + cls.getObjectName() + ";\n");
     }
     sb.append("\n");
 
   }
 
-  private void makeClassDef(SWVS.Actor actor, StringBuilder sb) {
+  private void makeMClassDef(SWVS.Actor actor, StringBuilder sb) {
     sb.append("public class " + className + "\n{\n");
     for (SWVS.UseCase usecase : actor.getActUsecases()) {
       makeMethod(usecase, sb);

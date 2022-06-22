@@ -85,49 +85,49 @@ public interface SWVSPackage extends EPackage {
   int PROJECT__REQUIREMENT = 1;
 
   /**
-   * The feature id for the '<em><b>System</b></em>' containment reference list.
+   * The feature id for the '<em><b>Systems</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJECT__SYSTEM = 2;
+  int PROJECT__SYSTEMS = 2;
 
   /**
-   * The feature id for the '<em><b>Actor</b></em>' containment reference list.
+   * The feature id for the '<em><b>Actor List</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJECT__ACTOR = 3;
+  int PROJECT__ACTOR_LIST = 3;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' containment reference list.
+   * The feature id for the '<em><b>Class List</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJECT__CLASS = 4;
+  int PROJECT__CLASS_LIST = 4;
 
   /**
-   * The feature id for the '<em><b>Object</b></em>' containment reference list.
+   * The feature id for the '<em><b>MObjects</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJECT__OBJECT = 5;
+  int PROJECT__MOBJECTS = 5;
 
   /**
-   * The feature id for the '<em><b>Obj List</b></em>' reference list.
+   * The feature id for the '<em><b>Objects</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROJECT__OBJ_LIST = 6;
+  int PROJECT__OBJECTS = 6;
 
   /**
    * The feature id for the '<em><b>Fin Date</b></em>' attribute.
@@ -157,14 +157,14 @@ public interface SWVSPackage extends EPackage {
   int PROJECT_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link SWVS.impl.ObjectImpl <em>Object</em>}' class.
+   * The meta object id for the '{@link SWVS.impl.MObjectImpl <em>MObject</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see SWVS.impl.ObjectImpl
-   * @see SWVS.impl.SWVSPackageImpl#getObject()
+   * @see SWVS.impl.MObjectImpl
+   * @see SWVS.impl.SWVSPackageImpl#getMObject()
    * @generated
    */
-  int OBJECT = 3;
+  int MOBJECT = 3;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -173,7 +173,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__ID = 0;
+  int MOBJECT__ID = 0;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -182,7 +182,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__DATA_BASE_SRC_NAME = 1;
+  int MOBJECT__DATA_BASE_SRC_NAME = 1;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -191,7 +191,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__OBJECT_TYPE = 2;
+  int MOBJECT__OBJECT_TYPE = 2;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -200,7 +200,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__FILE_PATH = 3;
+  int MOBJECT__FILE_PATH = 3;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -209,7 +209,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__ADDED_OBJECT = 4;
+  int MOBJECT__ADDED_OBJECT = 4;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -218,7 +218,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__IMPLEMENT_NAME = 5;
+  int MOBJECT__IMPLEMENT_NAME = 5;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -227,34 +227,34 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int OBJECT__OBJECT_NAME = 6;
+  int MOBJECT__OBJECT_NAME = 6;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECT__REQUIREMENT = 7;
+  int MOBJECT__REQUIREMENTS = 7;
 
   /**
-   * The number of structural features of the '<em>Object</em>' class.
+   * The number of structural features of the '<em>MObject</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECT_FEATURE_COUNT = 8;
+  int MOBJECT_FEATURE_COUNT = 8;
 
   /**
-   * The number of operations of the '<em>Object</em>' class.
+   * The number of operations of the '<em>MObject</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECT_OPERATION_COUNT = 0;
+  int MOBJECT_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.RequirementImpl <em>Requirement</em>}' class.
@@ -273,7 +273,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__ID = OBJECT__ID;
+  int REQUIREMENT__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -282,7 +282,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int REQUIREMENT__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -291,7 +291,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int REQUIREMENT__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -300,7 +300,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__FILE_PATH = OBJECT__FILE_PATH;
+  int REQUIREMENT__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -309,7 +309,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int REQUIREMENT__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -318,7 +318,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int REQUIREMENT__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -327,16 +327,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int REQUIREMENT__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REQUIREMENT__REQUIREMENT = OBJECT__REQUIREMENT;
+  int REQUIREMENT__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>Contents</b></em>' attribute.
@@ -345,7 +345,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__CONTENTS = OBJECT_FEATURE_COUNT + 0;
+  int REQUIREMENT__CONTENTS = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Rq Type</b></em>' attribute.
@@ -354,7 +354,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__RQ_TYPE = OBJECT_FEATURE_COUNT + 1;
+  int REQUIREMENT__RQ_TYPE = MOBJECT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Department</b></em>' attribute.
@@ -363,7 +363,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT__DEPARTMENT = OBJECT_FEATURE_COUNT + 2;
+  int REQUIREMENT__DEPARTMENT = MOBJECT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Requirement</em>' class.
@@ -372,7 +372,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 3;
+  int REQUIREMENT_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 3;
 
   /**
    * The number of operations of the '<em>Requirement</em>' class.
@@ -381,17 +381,17 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int REQUIREMENT_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int REQUIREMENT_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link SWVS.impl.SystemImpl <em>System</em>}' class.
+   * The meta object id for the '{@link SWVS.impl.MSystemImpl <em>MSystem</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see SWVS.impl.SystemImpl
-   * @see SWVS.impl.SWVSPackageImpl#getSystem()
+   * @see SWVS.impl.MSystemImpl
+   * @see SWVS.impl.SWVSPackageImpl#getMSystem()
    * @generated
    */
-  int SYSTEM = 2;
+  int MSYSTEM = 2;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -400,7 +400,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__ID = OBJECT__ID;
+  int MSYSTEM__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -409,7 +409,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int MSYSTEM__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -418,7 +418,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int MSYSTEM__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -427,7 +427,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__FILE_PATH = OBJECT__FILE_PATH;
+  int MSYSTEM__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -436,7 +436,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int MSYSTEM__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -445,7 +445,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int MSYSTEM__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -454,16 +454,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int MSYSTEM__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SYSTEM__REQUIREMENT = OBJECT__REQUIREMENT;
+  int MSYSTEM__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>System Type</b></em>' attribute.
@@ -472,7 +472,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__SYSTEM_TYPE = OBJECT_FEATURE_COUNT + 0;
+  int MSYSTEM__SYSTEM_TYPE = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Usecase</b></em>' containment reference list.
@@ -481,7 +481,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__USECASE = OBJECT_FEATURE_COUNT + 1;
+  int MSYSTEM__USECASE = MOBJECT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Def Class</b></em>' reference list.
@@ -490,34 +490,34 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int SYSTEM__DEF_CLASS = OBJECT_FEATURE_COUNT + 2;
+  int MSYSTEM__DEF_CLASS = MOBJECT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>State</b></em>' containment reference list.
+   * The feature id for the '<em><b>States</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SYSTEM__STATE = OBJECT_FEATURE_COUNT + 3;
+  int MSYSTEM__STATES = MOBJECT_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>System</em>' class.
+   * The number of structural features of the '<em>MSystem</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SYSTEM_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 4;
+  int MSYSTEM_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 4;
 
   /**
-   * The number of operations of the '<em>System</em>' class.
+   * The number of operations of the '<em>MSystem</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SYSTEM_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int MSYSTEM_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.UseCaseImpl <em>Use Case</em>}' class.
@@ -536,7 +536,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__ID = OBJECT__ID;
+  int USE_CASE__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -545,7 +545,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int USE_CASE__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -554,7 +554,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int USE_CASE__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -563,7 +563,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__FILE_PATH = OBJECT__FILE_PATH;
+  int USE_CASE__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -572,7 +572,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int USE_CASE__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -581,7 +581,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int USE_CASE__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -590,16 +590,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int USE_CASE__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USE_CASE__REQUIREMENT = OBJECT__REQUIREMENT;
+  int USE_CASE__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>Extend</b></em>' containment reference list.
@@ -608,7 +608,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__EXTEND = OBJECT_FEATURE_COUNT + 0;
+  int USE_CASE__EXTEND = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Include</b></em>' containment reference list.
@@ -617,16 +617,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__INCLUDE = OBJECT_FEATURE_COUNT + 1;
+  int USE_CASE__INCLUDE = MOBJECT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Flow</b></em>' containment reference list.
+   * The feature id for the '<em><b>Flows</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int USE_CASE__FLOW = OBJECT_FEATURE_COUNT + 2;
+  int USE_CASE__FLOWS = MOBJECT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Context</b></em>' attribute.
@@ -635,7 +635,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__CONTEXT = OBJECT_FEATURE_COUNT + 3;
+  int USE_CASE__CONTEXT = MOBJECT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Act Actors</b></em>' reference list.
@@ -644,7 +644,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__ACT_ACTORS = OBJECT_FEATURE_COUNT + 4;
+  int USE_CASE__ACT_ACTORS = MOBJECT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -653,7 +653,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE__CONDITION = OBJECT_FEATURE_COUNT + 5;
+  int USE_CASE__CONDITION = MOBJECT_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Use Case</em>' class.
@@ -662,7 +662,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 6;
+  int USE_CASE_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 6;
 
   /**
    * The number of operations of the '<em>Use Case</em>' class.
@@ -671,7 +671,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int USE_CASE_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int USE_CASE_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.FlowImpl <em>Flow</em>}' class.
@@ -690,7 +690,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__ID = OBJECT__ID;
+  int FLOW__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -699,7 +699,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int FLOW__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -708,7 +708,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int FLOW__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -717,7 +717,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__FILE_PATH = OBJECT__FILE_PATH;
+  int FLOW__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -726,7 +726,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int FLOW__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -735,7 +735,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int FLOW__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -744,16 +744,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int FLOW__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FLOW__REQUIREMENT = OBJECT__REQUIREMENT;
+  int FLOW__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>Flow Id</b></em>' attribute.
@@ -762,7 +762,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__FLOW_ID = OBJECT_FEATURE_COUNT + 0;
+  int FLOW__FLOW_ID = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Host</b></em>' reference list.
@@ -771,16 +771,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__HOST = OBJECT_FEATURE_COUNT + 1;
+  int FLOW__HOST = MOBJECT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Client</b></em>' reference list.
+   * The feature id for the '<em><b>Clients</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FLOW__CLIENT = OBJECT_FEATURE_COUNT + 2;
+  int FLOW__CLIENTS = MOBJECT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Context</b></em>' attribute.
@@ -789,16 +789,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__CONTEXT = OBJECT_FEATURE_COUNT + 3;
+  int FLOW__CONTEXT = MOBJECT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Detail Flow</b></em>' containment reference list.
+   * The feature id for the '<em><b>Detail Flows</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FLOW__DETAIL_FLOW = OBJECT_FEATURE_COUNT + 4;
+  int FLOW__DETAIL_FLOWS = MOBJECT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Result</b></em>' attribute.
@@ -807,7 +807,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__RESULT = OBJECT_FEATURE_COUNT + 5;
+  int FLOW__RESULT = MOBJECT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -816,7 +816,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW__CONDITION = OBJECT_FEATURE_COUNT + 6;
+  int FLOW__CONDITION = MOBJECT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Flow</em>' class.
@@ -825,7 +825,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 7;
+  int FLOW_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 7;
 
   /**
    * The number of operations of the '<em>Flow</em>' class.
@@ -834,7 +834,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FLOW_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int FLOW_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.ActorImpl <em>Actor</em>}' class.
@@ -853,7 +853,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__ID = OBJECT__ID;
+  int ACTOR__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -862,7 +862,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int ACTOR__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -871,7 +871,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int ACTOR__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -880,7 +880,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__FILE_PATH = OBJECT__FILE_PATH;
+  int ACTOR__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -889,7 +889,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int ACTOR__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -898,7 +898,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int ACTOR__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -907,16 +907,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int ACTOR__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTOR__REQUIREMENT = OBJECT__REQUIREMENT;
+  int ACTOR__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>Act Usecases</b></em>' reference list.
@@ -925,7 +925,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR__ACT_USECASES = OBJECT_FEATURE_COUNT + 0;
+  int ACTOR__ACT_USECASES = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Actor</em>' class.
@@ -934,7 +934,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 1;
+  int ACTOR_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 1;
 
   /**
    * The number of operations of the '<em>Actor</em>' class.
@@ -943,7 +943,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ACTOR_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int ACTOR_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.ConditionImpl <em>Condition</em>}' class.
@@ -1020,14 +1020,14 @@ public interface SWVSPackage extends EPackage {
   int FUNCTION_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link SWVS.impl.ClassImpl <em>Class</em>}' class.
+   * The meta object id for the '{@link SWVS.impl.MClassImpl <em>MClass</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see SWVS.impl.ClassImpl
-   * @see SWVS.impl.SWVSPackageImpl#getClass_()
+   * @see SWVS.impl.MClassImpl
+   * @see SWVS.impl.SWVSPackageImpl#getMClass()
    * @generated
    */
-  int CLASS = 9;
+  int MCLASS = 9;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1036,7 +1036,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__ID = OBJECT__ID;
+  int MCLASS__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -1045,7 +1045,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int MCLASS__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -1054,7 +1054,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int MCLASS__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -1063,7 +1063,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__FILE_PATH = OBJECT__FILE_PATH;
+  int MCLASS__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -1072,7 +1072,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int MCLASS__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -1081,7 +1081,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int MCLASS__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -1090,25 +1090,25 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int MCLASS__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS__REQUIREMENT = OBJECT__REQUIREMENT;
+  int MCLASS__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
-   * The feature id for the '<em><b>Field</b></em>' containment reference list.
+   * The feature id for the '<em><b>Fields</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS__FIELD = OBJECT_FEATURE_COUNT + 0;
+  int MCLASS__FIELDS = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Package</b></em>' attribute.
@@ -1117,34 +1117,34 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__PACKAGE = OBJECT_FEATURE_COUNT + 1;
+  int MCLASS__PACKAGE = MOBJECT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Has Class</b></em>' reference list.
+   * The feature id for the '<em><b>Has Class List</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS__HAS_CLASS = OBJECT_FEATURE_COUNT + 2;
+  int MCLASS__HAS_CLASS_LIST = MOBJECT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Super Class</b></em>' reference list.
+   * The feature id for the '<em><b>Super Class List</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS__SUPER_CLASS = OBJECT_FEATURE_COUNT + 3;
+  int MCLASS__SUPER_CLASS_LIST = MOBJECT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Method</b></em>' containment reference list.
+   * The feature id for the '<em><b>Methods</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS__METHOD = OBJECT_FEATURE_COUNT + 4;
+  int MCLASS__METHODS = MOBJECT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Def Base</b></em>' reference list.
@@ -1153,7 +1153,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__DEF_BASE = OBJECT_FEATURE_COUNT + 5;
+  int MCLASS__DEF_BASE = MOBJECT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Class Type</b></em>' attribute.
@@ -1162,25 +1162,25 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int CLASS__CLASS_TYPE = OBJECT_FEATURE_COUNT + 6;
+  int MCLASS__CLASS_TYPE = MOBJECT_FEATURE_COUNT + 6;
 
   /**
-   * The number of structural features of the '<em>Class</em>' class.
+   * The number of structural features of the '<em>MClass</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 7;
+  int MCLASS_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 7;
 
   /**
-   * The number of operations of the '<em>Class</em>' class.
+   * The number of operations of the '<em>MClass</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLASS_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int MCLASS_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.FieldImpl <em>Field</em>}' class.
@@ -1199,7 +1199,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__ID = OBJECT__ID;
+  int FIELD__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -1208,7 +1208,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int FIELD__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -1217,7 +1217,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int FIELD__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -1226,7 +1226,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__FILE_PATH = OBJECT__FILE_PATH;
+  int FIELD__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -1235,7 +1235,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int FIELD__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -1244,7 +1244,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int FIELD__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -1253,16 +1253,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int FIELD__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIELD__REQUIREMENT = OBJECT__REQUIREMENT;
+  int FIELD__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>Type Name</b></em>' attribute.
@@ -1271,7 +1271,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__TYPE_NAME = OBJECT_FEATURE_COUNT + 0;
+  int FIELD__TYPE_NAME = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Is Class</b></em>' attribute.
@@ -1280,7 +1280,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD__IS_CLASS = OBJECT_FEATURE_COUNT + 1;
+  int FIELD__IS_CLASS = MOBJECT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Field</em>' class.
@@ -1289,7 +1289,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 2;
+  int FIELD_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 2;
 
   /**
    * The number of operations of the '<em>Field</em>' class.
@@ -1298,7 +1298,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int FIELD_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int FIELD_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.BeverageImpl <em>Beverage</em>}' class.
@@ -1540,14 +1540,14 @@ public interface SWVSPackage extends EPackage {
   int CUSTOMER_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link SWVS.impl.MethodImpl <em>Method</em>}' class.
+   * The meta object id for the '{@link SWVS.impl.MMethodImpl <em>MMethod</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see SWVS.impl.MethodImpl
-   * @see SWVS.impl.SWVSPackageImpl#getMethod()
+   * @see SWVS.impl.MMethodImpl
+   * @see SWVS.impl.SWVSPackageImpl#getMMethod()
    * @generated
    */
-  int METHOD = 16;
+  int MMETHOD = 16;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1556,7 +1556,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__ID = OBJECT__ID;
+  int MMETHOD__ID = MOBJECT__ID;
 
   /**
    * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
@@ -1565,7 +1565,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__DATA_BASE_SRC_NAME = OBJECT__DATA_BASE_SRC_NAME;
+  int MMETHOD__DATA_BASE_SRC_NAME = MOBJECT__DATA_BASE_SRC_NAME;
 
   /**
    * The feature id for the '<em><b>Object Type</b></em>' attribute.
@@ -1574,7 +1574,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__OBJECT_TYPE = OBJECT__OBJECT_TYPE;
+  int MMETHOD__OBJECT_TYPE = MOBJECT__OBJECT_TYPE;
 
   /**
    * The feature id for the '<em><b>File Path</b></em>' attribute.
@@ -1583,7 +1583,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__FILE_PATH = OBJECT__FILE_PATH;
+  int MMETHOD__FILE_PATH = MOBJECT__FILE_PATH;
 
   /**
    * The feature id for the '<em><b>Added Object</b></em>' attribute.
@@ -1592,7 +1592,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__ADDED_OBJECT = OBJECT__ADDED_OBJECT;
+  int MMETHOD__ADDED_OBJECT = MOBJECT__ADDED_OBJECT;
 
   /**
    * The feature id for the '<em><b>Implement Name</b></em>' attribute.
@@ -1601,7 +1601,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__IMPLEMENT_NAME = OBJECT__IMPLEMENT_NAME;
+  int MMETHOD__IMPLEMENT_NAME = MOBJECT__IMPLEMENT_NAME;
 
   /**
    * The feature id for the '<em><b>Object Name</b></em>' attribute.
@@ -1610,16 +1610,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__OBJECT_NAME = OBJECT__OBJECT_NAME;
+  int MMETHOD__OBJECT_NAME = MOBJECT__OBJECT_NAME;
 
   /**
-   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * The feature id for the '<em><b>Requirements</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHOD__REQUIREMENT = OBJECT__REQUIREMENT;
+  int MMETHOD__REQUIREMENTS = MOBJECT__REQUIREMENTS;
 
   /**
    * The feature id for the '<em><b>Return Type</b></em>' attribute.
@@ -1628,7 +1628,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__RETURN_TYPE = OBJECT_FEATURE_COUNT + 0;
+  int MMETHOD__RETURN_TYPE = MOBJECT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Is Static</b></em>' attribute.
@@ -1637,16 +1637,16 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__IS_STATIC = OBJECT_FEATURE_COUNT + 1;
+  int MMETHOD__IS_STATIC = MOBJECT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Usecase</b></em>' reference.
+   * The feature id for the '<em><b>Test Usecase</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHOD__USECASE = OBJECT_FEATURE_COUNT + 2;
+  int MMETHOD__TEST_USECASE = MOBJECT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Base</b></em>' reference list.
@@ -1655,7 +1655,7 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__BASE = OBJECT_FEATURE_COUNT + 3;
+  int MMETHOD__BASE = MOBJECT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Argument</b></em>' attribute list.
@@ -1664,25 +1664,25 @@ public interface SWVSPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int METHOD__ARGUMENT = OBJECT_FEATURE_COUNT + 4;
+  int MMETHOD__ARGUMENT = MOBJECT_FEATURE_COUNT + 4;
 
   /**
-   * The number of structural features of the '<em>Method</em>' class.
+   * The number of structural features of the '<em>MMethod</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHOD_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 5;
+  int MMETHOD_FEATURE_COUNT = MOBJECT_FEATURE_COUNT + 5;
 
   /**
-   * The number of operations of the '<em>Method</em>' class.
+   * The number of operations of the '<em>MMethod</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHOD_OPERATION_COUNT = OBJECT_OPERATION_COUNT + 0;
+  int MMETHOD_OPERATION_COUNT = MOBJECT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link SWVS.impl.StateImpl <em>State</em>}' class.
@@ -1739,6 +1739,106 @@ public interface SWVSPackage extends EPackage {
    */
   int STATE_OPERATION_COUNT = 0;
 
+  /**
+   * The meta object id for the '{@link SWVS.impl.ObjectImpl <em>Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see SWVS.impl.ObjectImpl
+   * @see SWVS.impl.SWVSPackageImpl#getObject()
+   * @generated
+   */
+  int OBJECT = 18;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__ID = 0;
+
+  /**
+   * The feature id for the '<em><b>Data base Src Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__DATA_BASE_SRC_NAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Object Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__OBJECT_TYPE = 2;
+
+  /**
+   * The feature id for the '<em><b>File Path</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__FILE_PATH = 3;
+
+  /**
+   * The feature id for the '<em><b>Added Object</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__ADDED_OBJECT = 4;
+
+  /**
+   * The feature id for the '<em><b>Implement Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__IMPLEMENT_NAME = 5;
+
+  /**
+   * The feature id for the '<em><b>Object Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__OBJECT_NAME = 6;
+
+  /**
+   * The feature id for the '<em><b>Requirement</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT__REQUIREMENT = 7;
+
+  /**
+   * The number of structural features of the '<em>Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_FEATURE_COUNT = 8;
+
+  /**
+   * The number of operations of the '<em>Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_OPERATION_COUNT = 0;
+
 
   /**
    * Returns the meta object for class '{@link SWVS.Project <em>Project</em>}'.
@@ -1773,59 +1873,59 @@ public interface SWVSPackage extends EPackage {
   EReference getProject_Requirement();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Project#getSystem <em>System</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.Project#getSystems <em>Systems</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>System</em>'.
-   * @see SWVS.Project#getSystem()
+   * @return the meta object for the containment reference list '<em>Systems</em>'.
+   * @see SWVS.Project#getSystems()
    * @see #getProject()
    * @generated
    */
-  EReference getProject_System();
+  EReference getProject_Systems();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Project#getActor <em>Actor</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.Project#getActorList <em>Actor List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Actor</em>'.
-   * @see SWVS.Project#getActor()
+   * @return the meta object for the containment reference list '<em>Actor List</em>'.
+   * @see SWVS.Project#getActorList()
    * @see #getProject()
    * @generated
    */
-  EReference getProject_Actor();
+  EReference getProject_ActorList();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Project#getClass_ <em>Class</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.Project#getClassList <em>Class List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Class</em>'.
-   * @see SWVS.Project#getClass_()
+   * @return the meta object for the containment reference list '<em>Class List</em>'.
+   * @see SWVS.Project#getClassList()
    * @see #getProject()
    * @generated
    */
-  EReference getProject_Class();
+  EReference getProject_ClassList();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Project#getObject <em>Object</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.Project#getMObjects <em>MObjects</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Object</em>'.
-   * @see SWVS.Project#getObject()
+   * @return the meta object for the containment reference list '<em>MObjects</em>'.
+   * @see SWVS.Project#getMObjects()
    * @see #getProject()
    * @generated
    */
-  EReference getProject_Object();
+  EReference getProject_MObjects();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Project#getObjList <em>Obj List</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.Project#getObjects <em>Objects</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Obj List</em>'.
-   * @see SWVS.Project#getObjList()
+   * @return the meta object for the reference list '<em>Objects</em>'.
+   * @see SWVS.Project#getObjects()
    * @see #getProject()
    * @generated
    */
-  EReference getProject_ObjList();
+  EReference getProject_Objects();
 
   /**
    * Returns the meta object for the attribute '{@link SWVS.Project#getFinDate <em>Fin Date</em>}'.
@@ -1882,156 +1982,156 @@ public interface SWVSPackage extends EPackage {
   EAttribute getRequirement_Department();
 
   /**
-   * Returns the meta object for class '{@link SWVS.System <em>System</em>}'.
+   * Returns the meta object for class '{@link SWVS.MSystem <em>MSystem</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>System</em>'.
-   * @see SWVS.System
+   * @return the meta object for class '<em>MSystem</em>'.
+   * @see SWVS.MSystem
    * @generated
    */
-  EClass getSystem();
+  EClass getMSystem();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.System#getSystemType <em>System Type</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MSystem#getSystemType <em>System Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>System Type</em>'.
-   * @see SWVS.System#getSystemType()
-   * @see #getSystem()
+   * @see SWVS.MSystem#getSystemType()
+   * @see #getMSystem()
    * @generated
    */
-  EAttribute getSystem_SystemType();
+  EAttribute getMSystem_SystemType();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.System#getUsecase <em>Usecase</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.MSystem#getUsecase <em>Usecase</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Usecase</em>'.
-   * @see SWVS.System#getUsecase()
-   * @see #getSystem()
+   * @see SWVS.MSystem#getUsecase()
+   * @see #getMSystem()
    * @generated
    */
-  EReference getSystem_Usecase();
+  EReference getMSystem_Usecase();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.System#getDefClass <em>Def Class</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.MSystem#getDefClass <em>Def Class</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Def Class</em>'.
-   * @see SWVS.System#getDefClass()
-   * @see #getSystem()
+   * @see SWVS.MSystem#getDefClass()
+   * @see #getMSystem()
    * @generated
    */
-  EReference getSystem_DefClass();
+  EReference getMSystem_DefClass();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.System#getState <em>State</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.MSystem#getStates <em>States</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>State</em>'.
-   * @see SWVS.System#getState()
-   * @see #getSystem()
+   * @return the meta object for the containment reference list '<em>States</em>'.
+   * @see SWVS.MSystem#getStates()
+   * @see #getMSystem()
    * @generated
    */
-  EReference getSystem_State();
+  EReference getMSystem_States();
 
   /**
-   * Returns the meta object for class '{@link SWVS.Object <em>Object</em>}'.
+   * Returns the meta object for class '{@link SWVS.MObject <em>MObject</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Object</em>'.
-   * @see SWVS.Object
+   * @return the meta object for class '<em>MObject</em>'.
+   * @see SWVS.MObject
    * @generated
    */
-  EClass getObject();
+  EClass getMObject();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#getId <em>Id</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Id</em>'.
-   * @see SWVS.Object#getId()
-   * @see #getObject()
+   * @see SWVS.MObject#getId()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_Id();
+  EAttribute getMObject_Id();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#getData_base_SrcName <em>Data base Src Name</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#getData_base_SrcName <em>Data base Src Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Data base Src Name</em>'.
-   * @see SWVS.Object#getData_base_SrcName()
-   * @see #getObject()
+   * @see SWVS.MObject#getData_base_SrcName()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_Data_base_SrcName();
+  EAttribute getMObject_Data_base_SrcName();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#getObjectType <em>Object Type</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#getObjectType <em>Object Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Object Type</em>'.
-   * @see SWVS.Object#getObjectType()
-   * @see #getObject()
+   * @see SWVS.MObject#getObjectType()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_ObjectType();
+  EAttribute getMObject_ObjectType();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#getFilePath <em>File Path</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#getFilePath <em>File Path</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>File Path</em>'.
-   * @see SWVS.Object#getFilePath()
-   * @see #getObject()
+   * @see SWVS.MObject#getFilePath()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_FilePath();
+  EAttribute getMObject_FilePath();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#isAddedObject <em>Added Object</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#isAddedObject <em>Added Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Added Object</em>'.
-   * @see SWVS.Object#isAddedObject()
-   * @see #getObject()
+   * @see SWVS.MObject#isAddedObject()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_AddedObject();
+  EAttribute getMObject_AddedObject();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#getImplementName <em>Implement Name</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#getImplementName <em>Implement Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Implement Name</em>'.
-   * @see SWVS.Object#getImplementName()
-   * @see #getObject()
+   * @see SWVS.MObject#getImplementName()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_ImplementName();
+  EAttribute getMObject_ImplementName();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Object#getObjectName <em>Object Name</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MObject#getObjectName <em>Object Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Object Name</em>'.
-   * @see SWVS.Object#getObjectName()
-   * @see #getObject()
+   * @see SWVS.MObject#getObjectName()
+   * @see #getMObject()
    * @generated
    */
-  EAttribute getObject_ObjectName();
+  EAttribute getMObject_ObjectName();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Object#getRequirement <em>Requirement</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.MObject#getRequirements <em>Requirements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Requirement</em>'.
-   * @see SWVS.Object#getRequirement()
-   * @see #getObject()
+   * @return the meta object for the reference list '<em>Requirements</em>'.
+   * @see SWVS.MObject#getRequirements()
+   * @see #getMObject()
    * @generated
    */
-  EReference getObject_Requirement();
+  EReference getMObject_Requirements();
 
   /**
    * Returns the meta object for class '{@link SWVS.UseCase <em>Use Case</em>}'.
@@ -2066,15 +2166,15 @@ public interface SWVSPackage extends EPackage {
   EReference getUseCase_Include();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.UseCase#getFlow <em>Flow</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.UseCase#getFlows <em>Flows</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Flow</em>'.
-   * @see SWVS.UseCase#getFlow()
+   * @return the meta object for the containment reference list '<em>Flows</em>'.
+   * @see SWVS.UseCase#getFlows()
    * @see #getUseCase()
    * @generated
    */
-  EReference getUseCase_Flow();
+  EReference getUseCase_Flows();
 
   /**
    * Returns the meta object for the attribute '{@link SWVS.UseCase#getContext <em>Context</em>}'.
@@ -2142,15 +2242,15 @@ public interface SWVSPackage extends EPackage {
   EReference getFlow_Host();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Flow#getClient <em>Client</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.Flow#getClients <em>Clients</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Client</em>'.
-   * @see SWVS.Flow#getClient()
+   * @return the meta object for the reference list '<em>Clients</em>'.
+   * @see SWVS.Flow#getClients()
    * @see #getFlow()
    * @generated
    */
-  EReference getFlow_Client();
+  EReference getFlow_Clients();
 
   /**
    * Returns the meta object for the attribute '{@link SWVS.Flow#getContext <em>Context</em>}'.
@@ -2164,15 +2264,15 @@ public interface SWVSPackage extends EPackage {
   EAttribute getFlow_Context();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Flow#getDetailFlow <em>Detail Flow</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.Flow#getDetailFlows <em>Detail Flows</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Detail Flow</em>'.
-   * @see SWVS.Flow#getDetailFlow()
+   * @return the meta object for the containment reference list '<em>Detail Flows</em>'.
+   * @see SWVS.Flow#getDetailFlows()
    * @see #getFlow()
    * @generated
    */
-  EReference getFlow_DetailFlow();
+  EReference getFlow_DetailFlows();
 
   /**
    * Returns the meta object for the attribute '{@link SWVS.Flow#getResult <em>Result</em>}'.
@@ -2260,91 +2360,91 @@ public interface SWVSPackage extends EPackage {
   EClass getFunction();
 
   /**
-   * Returns the meta object for class '{@link SWVS.Class <em>Class</em>}'.
+   * Returns the meta object for class '{@link SWVS.MClass <em>MClass</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Class</em>'.
-   * @see SWVS.Class
+   * @return the meta object for class '<em>MClass</em>'.
+   * @see SWVS.MClass
    * @generated
    */
-  EClass getClass_();
+  EClass getMClass();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Class#getField <em>Field</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.MClass#getFields <em>Fields</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Field</em>'.
-   * @see SWVS.Class#getField()
-   * @see #getClass_()
+   * @return the meta object for the containment reference list '<em>Fields</em>'.
+   * @see SWVS.MClass#getFields()
+   * @see #getMClass()
    * @generated
    */
-  EReference getClass_Field();
+  EReference getMClass_Fields();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Class#getPackage <em>Package</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MClass#getPackage <em>Package</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Package</em>'.
-   * @see SWVS.Class#getPackage()
-   * @see #getClass_()
+   * @see SWVS.MClass#getPackage()
+   * @see #getMClass()
    * @generated
    */
-  EAttribute getClass_Package();
+  EAttribute getMClass_Package();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Class#getHasClass <em>Has Class</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.MClass#getHasClassList <em>Has Class List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Has Class</em>'.
-   * @see SWVS.Class#getHasClass()
-   * @see #getClass_()
+   * @return the meta object for the reference list '<em>Has Class List</em>'.
+   * @see SWVS.MClass#getHasClassList()
+   * @see #getMClass()
    * @generated
    */
-  EReference getClass_HasClass();
+  EReference getMClass_HasClassList();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Class#getSuperClass <em>Super Class</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.MClass#getSuperClassList <em>Super Class List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Super Class</em>'.
-   * @see SWVS.Class#getSuperClass()
-   * @see #getClass_()
+   * @return the meta object for the reference list '<em>Super Class List</em>'.
+   * @see SWVS.MClass#getSuperClassList()
+   * @see #getMClass()
    * @generated
    */
-  EReference getClass_SuperClass();
+  EReference getMClass_SuperClassList();
 
   /**
-   * Returns the meta object for the containment reference list '{@link SWVS.Class#getMethod <em>Method</em>}'.
+   * Returns the meta object for the containment reference list '{@link SWVS.MClass#getMethods <em>Methods</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Method</em>'.
-   * @see SWVS.Class#getMethod()
-   * @see #getClass_()
+   * @return the meta object for the containment reference list '<em>Methods</em>'.
+   * @see SWVS.MClass#getMethods()
+   * @see #getMClass()
    * @generated
    */
-  EReference getClass_Method();
+  EReference getMClass_Methods();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Class#getDefBase <em>Def Base</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.MClass#getDefBase <em>Def Base</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Def Base</em>'.
-   * @see SWVS.Class#getDefBase()
-   * @see #getClass_()
+   * @see SWVS.MClass#getDefBase()
+   * @see #getMClass()
    * @generated
    */
-  EReference getClass_DefBase();
+  EReference getMClass_DefBase();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Class#getClassType <em>Class Type</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MClass#getClassType <em>Class Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Class Type</em>'.
-   * @see SWVS.Class#getClassType()
-   * @see #getClass_()
+   * @see SWVS.MClass#getClassType()
+   * @see #getMClass()
    * @generated
    */
-  EAttribute getClass_ClassType();
+  EAttribute getMClass_ClassType();
 
   /**
    * Returns the meta object for class '{@link SWVS.Field <em>Field</em>}'.
@@ -2506,69 +2606,69 @@ public interface SWVSPackage extends EPackage {
   EReference getCustomer_Beverage();
 
   /**
-   * Returns the meta object for class '{@link SWVS.Method <em>Method</em>}'.
+   * Returns the meta object for class '{@link SWVS.MMethod <em>MMethod</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Method</em>'.
-   * @see SWVS.Method
+   * @return the meta object for class '<em>MMethod</em>'.
+   * @see SWVS.MMethod
    * @generated
    */
-  EClass getMethod();
+  EClass getMMethod();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Method#getReturnType <em>Return Type</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MMethod#getReturnType <em>Return Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Return Type</em>'.
-   * @see SWVS.Method#getReturnType()
-   * @see #getMethod()
+   * @see SWVS.MMethod#getReturnType()
+   * @see #getMMethod()
    * @generated
    */
-  EAttribute getMethod_ReturnType();
+  EAttribute getMMethod_ReturnType();
 
   /**
-   * Returns the meta object for the attribute '{@link SWVS.Method#isIsStatic <em>Is Static</em>}'.
+   * Returns the meta object for the attribute '{@link SWVS.MMethod#isIsStatic <em>Is Static</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Is Static</em>'.
-   * @see SWVS.Method#isIsStatic()
-   * @see #getMethod()
+   * @see SWVS.MMethod#isIsStatic()
+   * @see #getMMethod()
    * @generated
    */
-  EAttribute getMethod_IsStatic();
+  EAttribute getMMethod_IsStatic();
 
   /**
-   * Returns the meta object for the reference '{@link SWVS.Method#getUsecase <em>Usecase</em>}'.
+   * Returns the meta object for the reference '{@link SWVS.MMethod#getTestUsecase <em>Test Usecase</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Usecase</em>'.
-   * @see SWVS.Method#getUsecase()
-   * @see #getMethod()
+   * @return the meta object for the reference '<em>Test Usecase</em>'.
+   * @see SWVS.MMethod#getTestUsecase()
+   * @see #getMMethod()
    * @generated
    */
-  EReference getMethod_Usecase();
+  EReference getMMethod_TestUsecase();
 
   /**
-   * Returns the meta object for the reference list '{@link SWVS.Method#getBase <em>Base</em>}'.
+   * Returns the meta object for the reference list '{@link SWVS.MMethod#getBase <em>Base</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Base</em>'.
-   * @see SWVS.Method#getBase()
-   * @see #getMethod()
+   * @see SWVS.MMethod#getBase()
+   * @see #getMMethod()
    * @generated
    */
-  EReference getMethod_Base();
+  EReference getMMethod_Base();
 
   /**
-   * Returns the meta object for the attribute list '{@link SWVS.Method#getArgument <em>Argument</em>}'.
+   * Returns the meta object for the attribute list '{@link SWVS.MMethod#getArgument <em>Argument</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute list '<em>Argument</em>'.
-   * @see SWVS.Method#getArgument()
-   * @see #getMethod()
+   * @see SWVS.MMethod#getArgument()
+   * @see #getMMethod()
    * @generated
    */
-  EAttribute getMethod_Argument();
+  EAttribute getMMethod_Argument();
 
   /**
    * Returns the meta object for class '{@link SWVS.State <em>State</em>}'.
@@ -2614,6 +2714,104 @@ public interface SWVSPackage extends EPackage {
   EAttribute getState_ImplementationStatus();
 
   /**
+   * Returns the meta object for class '{@link SWVS.Object <em>Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Object</em>'.
+   * @see SWVS.Object
+   * @generated
+   */
+  EClass getObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see SWVS.Object#getId()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_Id();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#getData_base_SrcName <em>Data base Src Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Data base Src Name</em>'.
+   * @see SWVS.Object#getData_base_SrcName()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_Data_base_SrcName();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#getObjectType <em>Object Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Object Type</em>'.
+   * @see SWVS.Object#getObjectType()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_ObjectType();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#getFilePath <em>File Path</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>File Path</em>'.
+   * @see SWVS.Object#getFilePath()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_FilePath();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#isAddedObject <em>Added Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Added Object</em>'.
+   * @see SWVS.Object#isAddedObject()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_AddedObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#getImplementName <em>Implement Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Implement Name</em>'.
+   * @see SWVS.Object#getImplementName()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_ImplementName();
+
+  /**
+   * Returns the meta object for the attribute '{@link SWVS.Object#getObjectName <em>Object Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Object Name</em>'.
+   * @see SWVS.Object#getObjectName()
+   * @see #getObject()
+   * @generated
+   */
+  EAttribute getObject_ObjectName();
+
+  /**
+   * Returns the meta object for the reference list '{@link SWVS.Object#getRequirement <em>Requirement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Requirement</em>'.
+   * @see SWVS.Object#getRequirement()
+   * @see #getObject()
+   * @generated
+   */
+  EReference getObject_Requirement();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2637,688 +2835,762 @@ public interface SWVSPackage extends EPackage {
    */
   interface Literals {
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.ProjectImpl <em>Project</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.ProjectImpl <em>Project</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.ProjectImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getProject()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.ProjectImpl
+     * @see SWVS.impl.SWVSPackageImpl#getProject()
+     * @generated
+     */
     EClass PROJECT = eINSTANCE.getProject();
 
     /**
-    	 * The meta object literal for the '<em><b>Project Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Project Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute PROJECT__PROJECT_NAME = eINSTANCE.getProject_ProjectName();
 
     /**
-    	 * The meta object literal for the '<em><b>Requirement</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Requirement</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference PROJECT__REQUIREMENT = eINSTANCE.getProject_Requirement();
 
     /**
-    	 * The meta object literal for the '<em><b>System</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Systems</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference PROJECT__SYSTEM = eINSTANCE.getProject_System();
+     * @generated
+     */
+    EReference PROJECT__SYSTEMS = eINSTANCE.getProject_Systems();
 
     /**
-    	 * The meta object literal for the '<em><b>Actor</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Actor List</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference PROJECT__ACTOR = eINSTANCE.getProject_Actor();
+     * @generated
+     */
+    EReference PROJECT__ACTOR_LIST = eINSTANCE.getProject_ActorList();
 
     /**
-    	 * The meta object literal for the '<em><b>Class</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Class List</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference PROJECT__CLASS = eINSTANCE.getProject_Class();
+     * @generated
+     */
+    EReference PROJECT__CLASS_LIST = eINSTANCE.getProject_ClassList();
 
     /**
-    	 * The meta object literal for the '<em><b>Object</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>MObjects</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference PROJECT__OBJECT = eINSTANCE.getProject_Object();
+     * @generated
+     */
+    EReference PROJECT__MOBJECTS = eINSTANCE.getProject_MObjects();
 
     /**
-    	 * The meta object literal for the '<em><b>Obj List</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Objects</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference PROJECT__OBJ_LIST = eINSTANCE.getProject_ObjList();
+     * @generated
+     */
+    EReference PROJECT__OBJECTS = eINSTANCE.getProject_Objects();
 
     /**
-    	 * The meta object literal for the '<em><b>Fin Date</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Fin Date</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute PROJECT__FIN_DATE = eINSTANCE.getProject_FinDate();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.RequirementImpl <em>Requirement</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.RequirementImpl <em>Requirement</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.RequirementImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getRequirement()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.RequirementImpl
+     * @see SWVS.impl.SWVSPackageImpl#getRequirement()
+     * @generated
+     */
     EClass REQUIREMENT = eINSTANCE.getRequirement();
 
     /**
-    	 * The meta object literal for the '<em><b>Contents</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Contents</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute REQUIREMENT__CONTENTS = eINSTANCE.getRequirement_Contents();
 
     /**
-    	 * The meta object literal for the '<em><b>Rq Type</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Rq Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute REQUIREMENT__RQ_TYPE = eINSTANCE.getRequirement_RqType();
 
     /**
-    	 * The meta object literal for the '<em><b>Department</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Department</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute REQUIREMENT__DEPARTMENT = eINSTANCE.getRequirement_Department();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.SystemImpl <em>System</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.MSystemImpl <em>MSystem</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.SystemImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getSystem()
-    	 * @generated
-    	 */
-    EClass SYSTEM = eINSTANCE.getSystem();
+     * @see SWVS.impl.MSystemImpl
+     * @see SWVS.impl.SWVSPackageImpl#getMSystem()
+     * @generated
+     */
+    EClass MSYSTEM = eINSTANCE.getMSystem();
 
     /**
-    	 * The meta object literal for the '<em><b>System Type</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>System Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute SYSTEM__SYSTEM_TYPE = eINSTANCE.getSystem_SystemType();
+     * @generated
+     */
+    EAttribute MSYSTEM__SYSTEM_TYPE = eINSTANCE.getMSystem_SystemType();
 
     /**
-    	 * The meta object literal for the '<em><b>Usecase</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Usecase</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference SYSTEM__USECASE = eINSTANCE.getSystem_Usecase();
+     * @generated
+     */
+    EReference MSYSTEM__USECASE = eINSTANCE.getMSystem_Usecase();
 
     /**
-    	 * The meta object literal for the '<em><b>Def Class</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Def Class</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference SYSTEM__DEF_CLASS = eINSTANCE.getSystem_DefClass();
+     * @generated
+     */
+    EReference MSYSTEM__DEF_CLASS = eINSTANCE.getMSystem_DefClass();
 
     /**
-    	 * The meta object literal for the '<em><b>State</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference SYSTEM__STATE = eINSTANCE.getSystem_State();
+     * @generated
+     */
+    EReference MSYSTEM__STATES = eINSTANCE.getMSystem_States();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.ObjectImpl <em>Object</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.MObjectImpl <em>MObject</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.ObjectImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getObject()
-    	 * @generated
-    	 */
-    EClass OBJECT = eINSTANCE.getObject();
+     * @see SWVS.impl.MObjectImpl
+     * @see SWVS.impl.SWVSPackageImpl#getMObject()
+     * @generated
+     */
+    EClass MOBJECT = eINSTANCE.getMObject();
 
     /**
-    	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__ID = eINSTANCE.getObject_Id();
+     * @generated
+     */
+    EAttribute MOBJECT__ID = eINSTANCE.getMObject_Id();
 
     /**
-    	 * The meta object literal for the '<em><b>Data base Src Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Data base Src Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__DATA_BASE_SRC_NAME = eINSTANCE.getObject_Data_base_SrcName();
+     * @generated
+     */
+    EAttribute MOBJECT__DATA_BASE_SRC_NAME = eINSTANCE.getMObject_Data_base_SrcName();
 
     /**
-    	 * The meta object literal for the '<em><b>Object Type</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Object Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__OBJECT_TYPE = eINSTANCE.getObject_ObjectType();
+     * @generated
+     */
+    EAttribute MOBJECT__OBJECT_TYPE = eINSTANCE.getMObject_ObjectType();
 
     /**
-    	 * The meta object literal for the '<em><b>File Path</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>File Path</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__FILE_PATH = eINSTANCE.getObject_FilePath();
+     * @generated
+     */
+    EAttribute MOBJECT__FILE_PATH = eINSTANCE.getMObject_FilePath();
 
     /**
-    	 * The meta object literal for the '<em><b>Added Object</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Added Object</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__ADDED_OBJECT = eINSTANCE.getObject_AddedObject();
+     * @generated
+     */
+    EAttribute MOBJECT__ADDED_OBJECT = eINSTANCE.getMObject_AddedObject();
 
     /**
-    	 * The meta object literal for the '<em><b>Implement Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Implement Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__IMPLEMENT_NAME = eINSTANCE.getObject_ImplementName();
+     * @generated
+     */
+    EAttribute MOBJECT__IMPLEMENT_NAME = eINSTANCE.getMObject_ImplementName();
 
     /**
-    	 * The meta object literal for the '<em><b>Object Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Object Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute OBJECT__OBJECT_NAME = eINSTANCE.getObject_ObjectName();
+     * @generated
+     */
+    EAttribute MOBJECT__OBJECT_NAME = eINSTANCE.getMObject_ObjectName();
 
     /**
-    	 * The meta object literal for the '<em><b>Requirement</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
-    	 * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference OBJECT__REQUIREMENT = eINSTANCE.getObject_Requirement();
+     * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MOBJECT__REQUIREMENTS = eINSTANCE.getMObject_Requirements();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.UseCaseImpl <em>Use Case</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.UseCaseImpl <em>Use Case</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.UseCaseImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getUseCase()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.UseCaseImpl
+     * @see SWVS.impl.SWVSPackageImpl#getUseCase()
+     * @generated
+     */
     EClass USE_CASE = eINSTANCE.getUseCase();
 
     /**
-    	 * The meta object literal for the '<em><b>Extend</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Extend</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference USE_CASE__EXTEND = eINSTANCE.getUseCase_Extend();
 
     /**
-    	 * The meta object literal for the '<em><b>Include</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Include</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference USE_CASE__INCLUDE = eINSTANCE.getUseCase_Include();
 
     /**
-    	 * The meta object literal for the '<em><b>Flow</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Flows</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference USE_CASE__FLOW = eINSTANCE.getUseCase_Flow();
+     * @generated
+     */
+    EReference USE_CASE__FLOWS = eINSTANCE.getUseCase_Flows();
 
     /**
-    	 * The meta object literal for the '<em><b>Context</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Context</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute USE_CASE__CONTEXT = eINSTANCE.getUseCase_Context();
 
     /**
-    	 * The meta object literal for the '<em><b>Act Actors</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Act Actors</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference USE_CASE__ACT_ACTORS = eINSTANCE.getUseCase_ActActors();
 
     /**
-    	 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference USE_CASE__CONDITION = eINSTANCE.getUseCase_Condition();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.FlowImpl <em>Flow</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.FlowImpl <em>Flow</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.FlowImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getFlow()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.FlowImpl
+     * @see SWVS.impl.SWVSPackageImpl#getFlow()
+     * @generated
+     */
     EClass FLOW = eINSTANCE.getFlow();
 
     /**
-    	 * The meta object literal for the '<em><b>Flow Id</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Flow Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute FLOW__FLOW_ID = eINSTANCE.getFlow_FlowId();
 
     /**
-    	 * The meta object literal for the '<em><b>Host</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Host</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference FLOW__HOST = eINSTANCE.getFlow_Host();
 
     /**
-    	 * The meta object literal for the '<em><b>Client</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Clients</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference FLOW__CLIENT = eINSTANCE.getFlow_Client();
+     * @generated
+     */
+    EReference FLOW__CLIENTS = eINSTANCE.getFlow_Clients();
 
     /**
-    	 * The meta object literal for the '<em><b>Context</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Context</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute FLOW__CONTEXT = eINSTANCE.getFlow_Context();
 
     /**
-    	 * The meta object literal for the '<em><b>Detail Flow</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Detail Flows</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference FLOW__DETAIL_FLOW = eINSTANCE.getFlow_DetailFlow();
+     * @generated
+     */
+    EReference FLOW__DETAIL_FLOWS = eINSTANCE.getFlow_DetailFlows();
 
     /**
-    	 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute FLOW__RESULT = eINSTANCE.getFlow_Result();
 
     /**
-    	 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference FLOW__CONDITION = eINSTANCE.getFlow_Condition();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.ActorImpl <em>Actor</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.ActorImpl <em>Actor</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.ActorImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getActor()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.ActorImpl
+     * @see SWVS.impl.SWVSPackageImpl#getActor()
+     * @generated
+     */
     EClass ACTOR = eINSTANCE.getActor();
 
     /**
-    	 * The meta object literal for the '<em><b>Act Usecases</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Act Usecases</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference ACTOR__ACT_USECASES = eINSTANCE.getActor_ActUsecases();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.ConditionImpl <em>Condition</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.ConditionImpl <em>Condition</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.ConditionImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getCondition()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.ConditionImpl
+     * @see SWVS.impl.SWVSPackageImpl#getCondition()
+     * @generated
+     */
     EClass CONDITION = eINSTANCE.getCondition();
 
     /**
-    	 * The meta object literal for the '<em><b>Pre Condition</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Pre Condition</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute CONDITION__PRE_CONDITION = eINSTANCE.getCondition_PreCondition();
 
     /**
-    	 * The meta object literal for the '<em><b>Post Condition</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Post Condition</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute CONDITION__POST_CONDITION = eINSTANCE.getCondition_PostCondition();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.FunctionImpl <em>Function</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.FunctionImpl <em>Function</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.FunctionImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getFunction()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.FunctionImpl
+     * @see SWVS.impl.SWVSPackageImpl#getFunction()
+     * @generated
+     */
     EClass FUNCTION = eINSTANCE.getFunction();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.ClassImpl <em>Class</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.MClassImpl <em>MClass</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.ClassImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getClass_()
-    	 * @generated
-    	 */
-    EClass CLASS = eINSTANCE.getClass_();
+     * @see SWVS.impl.MClassImpl
+     * @see SWVS.impl.SWVSPackageImpl#getMClass()
+     * @generated
+     */
+    EClass MCLASS = eINSTANCE.getMClass();
 
     /**
-    	 * The meta object literal for the '<em><b>Field</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference CLASS__FIELD = eINSTANCE.getClass_Field();
+     * @generated
+     */
+    EReference MCLASS__FIELDS = eINSTANCE.getMClass_Fields();
 
     /**
-    	 * The meta object literal for the '<em><b>Package</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Package</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute CLASS__PACKAGE = eINSTANCE.getClass_Package();
+     * @generated
+     */
+    EAttribute MCLASS__PACKAGE = eINSTANCE.getMClass_Package();
 
     /**
-    	 * The meta object literal for the '<em><b>Has Class</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Has Class List</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference CLASS__HAS_CLASS = eINSTANCE.getClass_HasClass();
+     * @generated
+     */
+    EReference MCLASS__HAS_CLASS_LIST = eINSTANCE.getMClass_HasClassList();
 
     /**
-    	 * The meta object literal for the '<em><b>Super Class</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Super Class List</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference CLASS__SUPER_CLASS = eINSTANCE.getClass_SuperClass();
+     * @generated
+     */
+    EReference MCLASS__SUPER_CLASS_LIST = eINSTANCE.getMClass_SuperClassList();
 
     /**
-    	 * The meta object literal for the '<em><b>Method</b></em>' containment reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference CLASS__METHOD = eINSTANCE.getClass_Method();
+     * @generated
+     */
+    EReference MCLASS__METHODS = eINSTANCE.getMClass_Methods();
 
     /**
-    	 * The meta object literal for the '<em><b>Def Base</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Def Base</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference CLASS__DEF_BASE = eINSTANCE.getClass_DefBase();
+     * @generated
+     */
+    EReference MCLASS__DEF_BASE = eINSTANCE.getMClass_DefBase();
 
     /**
-    	 * The meta object literal for the '<em><b>Class Type</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Class Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute CLASS__CLASS_TYPE = eINSTANCE.getClass_ClassType();
+     * @generated
+     */
+    EAttribute MCLASS__CLASS_TYPE = eINSTANCE.getMClass_ClassType();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.FieldImpl <em>Field</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.FieldImpl <em>Field</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.FieldImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getField()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.FieldImpl
+     * @see SWVS.impl.SWVSPackageImpl#getField()
+     * @generated
+     */
     EClass FIELD = eINSTANCE.getField();
 
     /**
-    	 * The meta object literal for the '<em><b>Type Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Type Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute FIELD__TYPE_NAME = eINSTANCE.getField_TypeName();
 
     /**
-    	 * The meta object literal for the '<em><b>Is Class</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Is Class</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute FIELD__IS_CLASS = eINSTANCE.getField_IsClass();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.BeverageImpl <em>Beverage</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.BeverageImpl <em>Beverage</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.BeverageImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getBeverage()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.BeverageImpl
+     * @see SWVS.impl.SWVSPackageImpl#getBeverage()
+     * @generated
+     */
     EClass BEVERAGE = eINSTANCE.getBeverage();
 
     /**
-    	 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute BEVERAGE__PRICE = eINSTANCE.getBeverage_Price();
 
     /**
-    	 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute BEVERAGE__NAME = eINSTANCE.getBeverage_Name();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.CoffeeImpl <em>Coffee</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.CoffeeImpl <em>Coffee</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.CoffeeImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getCoffee()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.CoffeeImpl
+     * @see SWVS.impl.SWVSPackageImpl#getCoffee()
+     * @generated
+     */
     EClass COFFEE = eINSTANCE.getCoffee();
 
     /**
-    	 * The meta object literal for the '<em><b>Caffeine</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Caffeine</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute COFFEE__CAFFEINE = eINSTANCE.getCoffee_Caffeine();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.TeaImpl <em>Tea</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.TeaImpl <em>Tea</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.TeaImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getTea()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.TeaImpl
+     * @see SWVS.impl.SWVSPackageImpl#getTea()
+     * @generated
+     */
     EClass TEA = eINSTANCE.getTea();
 
     /**
-    	 * The meta object literal for the '<em><b>Tea back</b></em>' containment reference feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Tea back</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference TEA__TEA_BACK = eINSTANCE.getTea_Tea_back();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.Tea_BackImpl <em>Tea Back</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.Tea_BackImpl <em>Tea Back</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.Tea_BackImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getTea_Back()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.Tea_BackImpl
+     * @see SWVS.impl.SWVSPackageImpl#getTea_Back()
+     * @generated
+     */
     EClass TEA_BACK = eINSTANCE.getTea_Back();
 
     /**
-    	 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute TEA_BACK__WEIGHT = eINSTANCE.getTea_Back_Weight();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.CustomerImpl <em>Customer</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.CustomerImpl <em>Customer</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.CustomerImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getCustomer()
-    	 * @generated
-    	 */
+     * @see SWVS.impl.CustomerImpl
+     * @see SWVS.impl.SWVSPackageImpl#getCustomer()
+     * @generated
+     */
     EClass CUSTOMER = eINSTANCE.getCustomer();
 
     /**
-    	 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute CUSTOMER__NAME = eINSTANCE.getCustomer_Name();
 
     /**
-    	 * The meta object literal for the '<em><b>Beverage</b></em>' reference feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Beverage</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EReference CUSTOMER__BEVERAGE = eINSTANCE.getCustomer_Beverage();
 
     /**
-    	 * The meta object literal for the '{@link SWVS.impl.MethodImpl <em>Method</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '{@link SWVS.impl.MMethodImpl <em>MMethod</em>}' class.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.MethodImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getMethod()
-    	 * @generated
-    	 */
-    EClass METHOD = eINSTANCE.getMethod();
+     * @see SWVS.impl.MMethodImpl
+     * @see SWVS.impl.SWVSPackageImpl#getMMethod()
+     * @generated
+     */
+    EClass MMETHOD = eINSTANCE.getMMethod();
 
     /**
-    	 * The meta object literal for the '<em><b>Return Type</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Return Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute METHOD__RETURN_TYPE = eINSTANCE.getMethod_ReturnType();
+     * @generated
+     */
+    EAttribute MMETHOD__RETURN_TYPE = eINSTANCE.getMMethod_ReturnType();
 
     /**
-    	 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute METHOD__IS_STATIC = eINSTANCE.getMethod_IsStatic();
+     * @generated
+     */
+    EAttribute MMETHOD__IS_STATIC = eINSTANCE.getMMethod_IsStatic();
 
     /**
-    	 * The meta object literal for the '<em><b>Usecase</b></em>' reference feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Test Usecase</b></em>' reference feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference METHOD__USECASE = eINSTANCE.getMethod_Usecase();
+     * @generated
+     */
+    EReference MMETHOD__TEST_USECASE = eINSTANCE.getMMethod_TestUsecase();
 
     /**
-    	 * The meta object literal for the '<em><b>Base</b></em>' reference list feature.
-    	 * <!-- begin-user-doc -->
-    	 * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EReference METHOD__BASE = eINSTANCE.getMethod_Base();
-
-    /**
-    	 * The meta object literal for the '<em><b>Argument</b></em>' attribute list feature.
-    	 * <!-- begin-user-doc -->
-    	 * <!-- end-user-doc -->
-    	 * @generated
-    	 */
-    EAttribute METHOD__ARGUMENT = eINSTANCE.getMethod_Argument();
-
-    /**
-    	 * The meta object literal for the '{@link SWVS.impl.StateImpl <em>State</em>}' class.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Base</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @see SWVS.impl.StateImpl
-    	 * @see SWVS.impl.SWVSPackageImpl#getState()
-    	 * @generated
-    	 */
+     * @generated
+     */
+    EReference MMETHOD__BASE = eINSTANCE.getMMethod_Base();
+
+    /**
+     * The meta object literal for the '<em><b>Argument</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MMETHOD__ARGUMENT = eINSTANCE.getMMethod_Argument();
+
+    /**
+     * The meta object literal for the '{@link SWVS.impl.StateImpl <em>State</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see SWVS.impl.StateImpl
+     * @see SWVS.impl.SWVSPackageImpl#getState()
+     * @generated
+     */
     EClass STATE = eINSTANCE.getState();
 
     /**
-    	 * The meta object literal for the '<em><b>State Id</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>State Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute STATE__STATE_ID = eINSTANCE.getState_StateId();
 
     /**
-    	 * The meta object literal for the '<em><b>Use Case Status</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Use Case Status</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute STATE__USE_CASE_STATUS = eINSTANCE.getState_UseCaseStatus();
 
     /**
-    	 * The meta object literal for the '<em><b>Implementation Status</b></em>' attribute feature.
-    	 * <!-- begin-user-doc -->
+     * The meta object literal for the '<em><b>Implementation Status</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-    	 * @generated
-    	 */
+     * @generated
+     */
     EAttribute STATE__IMPLEMENTATION_STATUS = eINSTANCE.getState_ImplementationStatus();
+
+    /**
+     * The meta object literal for the '{@link SWVS.impl.ObjectImpl <em>Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see SWVS.impl.ObjectImpl
+     * @see SWVS.impl.SWVSPackageImpl#getObject()
+     * @generated
+     */
+    EClass OBJECT = eINSTANCE.getObject();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__ID = eINSTANCE.getObject_Id();
+
+    /**
+     * The meta object literal for the '<em><b>Data base Src Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__DATA_BASE_SRC_NAME = eINSTANCE.getObject_Data_base_SrcName();
+
+    /**
+     * The meta object literal for the '<em><b>Object Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__OBJECT_TYPE = eINSTANCE.getObject_ObjectType();
+
+    /**
+     * The meta object literal for the '<em><b>File Path</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__FILE_PATH = eINSTANCE.getObject_FilePath();
+
+    /**
+     * The meta object literal for the '<em><b>Added Object</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__ADDED_OBJECT = eINSTANCE.getObject_AddedObject();
+
+    /**
+     * The meta object literal for the '<em><b>Implement Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__IMPLEMENT_NAME = eINSTANCE.getObject_ImplementName();
+
+    /**
+     * The meta object literal for the '<em><b>Object Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OBJECT__OBJECT_NAME = eINSTANCE.getObject_ObjectName();
+
+    /**
+     * The meta object literal for the '<em><b>Requirement</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OBJECT__REQUIREMENT = eINSTANCE.getObject_Requirement();
 
   }
 

@@ -21,7 +21,7 @@ package SWVS;
  * @model
  * @generated
  */
-public interface Requirement extends SWVS.Object {
+public interface Requirement extends MObject {
   /**
    * Returns the value of the '<em><b>Contents</b></em>' attribute.
    * <!-- begin-user-doc -->

@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Actor extends SWVS.Object {
+public interface Actor extends MObject {
   /**
    * Returns the value of the '<em><b>Act Usecases</b></em>' reference list.
    * The list contents are of type {@link SWVS.UseCase}.

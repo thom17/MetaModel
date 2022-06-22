@@ -2,6 +2,8 @@
  */
 package SWVS.impl;
 
+import SWVS.MClass;
+import SWVS.MSystem;
 import SWVS.SWVSPackage;
 import SWVS.State;
 import SWVS.UseCase;
@@ -24,21 +26,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>System</b></em>'.
+ * An implementation of the model object '<em><b>MSystem</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link SWVS.impl.SystemImpl#getSystemType <em>System Type</em>}</li>
- *   <li>{@link SWVS.impl.SystemImpl#getUsecase <em>Usecase</em>}</li>
- *   <li>{@link SWVS.impl.SystemImpl#getDefClass <em>Def Class</em>}</li>
- *   <li>{@link SWVS.impl.SystemImpl#getState <em>State</em>}</li>
+ *   <li>{@link SWVS.impl.MSystemImpl#getSystemType <em>System Type</em>}</li>
+ *   <li>{@link SWVS.impl.MSystemImpl#getUsecase <em>Usecase</em>}</li>
+ *   <li>{@link SWVS.impl.MSystemImpl#getDefClass <em>Def Class</em>}</li>
+ *   <li>{@link SWVS.impl.MSystemImpl#getStates <em>States</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SystemImpl extends ObjectImpl implements SWVS.System {
+public class MSystemImpl extends MObjectImpl implements MSystem {
   /**
    * The default value of the '{@link #getSystemType() <em>System Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -77,24 +79,24 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
    * @generated
    * @ordered
    */
-  protected EList<SWVS.Class> defClass;
+  protected EList<MClass> defClass;
 
   /**
-   * The cached value of the '{@link #getState() <em>State</em>}' containment reference list.
+   * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getState()
+   * @see #getStates()
    * @generated
    * @ordered
    */
-  protected EList<State> state;
+  protected EList<State> states;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SystemImpl() {
+  protected MSystemImpl() {
     super();
   }
 
@@ -105,7 +107,7 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
    */
   @Override
   protected EClass eStaticClass() {
-    return SWVSPackage.Literals.SYSTEM;
+    return SWVSPackage.Literals.MSYSTEM;
   }
 
   /**
@@ -126,7 +128,7 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
     String oldSystemType = systemType;
     systemType = newSystemType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.SYSTEM__SYSTEM_TYPE,
+      eNotify(new ENotificationImpl(this, Notification.SET, SWVSPackage.MSYSTEM__SYSTEM_TYPE,
           oldSystemType, systemType));
   }
 
@@ -138,7 +140,7 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
   public EList<UseCase> getUsecase() {
     if (usecase == null) {
       usecase =
-          new EObjectContainmentEList<UseCase>(UseCase.class, this, SWVSPackage.SYSTEM__USECASE);
+          new EObjectContainmentEList<UseCase>(UseCase.class, this, SWVSPackage.MSYSTEM__USECASE);
     }
     return usecase;
   }
@@ -148,10 +150,10 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SWVS.Class> getDefClass() {
+  public EList<MClass> getDefClass() {
     if (defClass == null) {
-      defClass = new EObjectResolvingEList<SWVS.Class>(SWVS.Class.class, this,
-          SWVSPackage.SYSTEM__DEF_CLASS);
+      defClass =
+          new EObjectResolvingEList<MClass>(MClass.class, this, SWVSPackage.MSYSTEM__DEF_CLASS);
     }
     return defClass;
   }
@@ -161,11 +163,11 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<State> getState() {
-    if (state == null) {
-      state = new EObjectContainmentEList<State>(State.class, this, SWVSPackage.SYSTEM__STATE);
+  public EList<State> getStates() {
+    if (states == null) {
+      states = new EObjectContainmentEList<State>(State.class, this, SWVSPackage.MSYSTEM__STATES);
     }
-    return state;
+    return states;
   }
 
   /**
@@ -177,10 +179,10 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
       NotificationChain msgs) {
     switch (featureID) {
-      case SWVSPackage.SYSTEM__USECASE:
+      case SWVSPackage.MSYSTEM__USECASE:
         return ((InternalEList<?>) getUsecase()).basicRemove(otherEnd, msgs);
-      case SWVSPackage.SYSTEM__STATE:
-        return ((InternalEList<?>) getState()).basicRemove(otherEnd, msgs);
+      case SWVSPackage.MSYSTEM__STATES:
+        return ((InternalEList<?>) getStates()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -193,14 +195,14 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case SWVSPackage.SYSTEM__SYSTEM_TYPE:
+      case SWVSPackage.MSYSTEM__SYSTEM_TYPE:
         return getSystemType();
-      case SWVSPackage.SYSTEM__USECASE:
+      case SWVSPackage.MSYSTEM__USECASE:
         return getUsecase();
-      case SWVSPackage.SYSTEM__DEF_CLASS:
+      case SWVSPackage.MSYSTEM__DEF_CLASS:
         return getDefClass();
-      case SWVSPackage.SYSTEM__STATE:
-        return getState();
+      case SWVSPackage.MSYSTEM__STATES:
+        return getStates();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -214,20 +216,20 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case SWVSPackage.SYSTEM__SYSTEM_TYPE:
+      case SWVSPackage.MSYSTEM__SYSTEM_TYPE:
         setSystemType((String) newValue);
         return;
-      case SWVSPackage.SYSTEM__USECASE:
+      case SWVSPackage.MSYSTEM__USECASE:
         getUsecase().clear();
         getUsecase().addAll((Collection<? extends UseCase>) newValue);
         return;
-      case SWVSPackage.SYSTEM__DEF_CLASS:
+      case SWVSPackage.MSYSTEM__DEF_CLASS:
         getDefClass().clear();
-        getDefClass().addAll((Collection<? extends SWVS.Class>) newValue);
+        getDefClass().addAll((Collection<? extends MClass>) newValue);
         return;
-      case SWVSPackage.SYSTEM__STATE:
-        getState().clear();
-        getState().addAll((Collection<? extends State>) newValue);
+      case SWVSPackage.MSYSTEM__STATES:
+        getStates().clear();
+        getStates().addAll((Collection<? extends State>) newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,17 +243,17 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case SWVSPackage.SYSTEM__SYSTEM_TYPE:
+      case SWVSPackage.MSYSTEM__SYSTEM_TYPE:
         setSystemType(SYSTEM_TYPE_EDEFAULT);
         return;
-      case SWVSPackage.SYSTEM__USECASE:
+      case SWVSPackage.MSYSTEM__USECASE:
         getUsecase().clear();
         return;
-      case SWVSPackage.SYSTEM__DEF_CLASS:
+      case SWVSPackage.MSYSTEM__DEF_CLASS:
         getDefClass().clear();
         return;
-      case SWVSPackage.SYSTEM__STATE:
-        getState().clear();
+      case SWVSPackage.MSYSTEM__STATES:
+        getStates().clear();
         return;
     }
     super.eUnset(featureID);
@@ -265,15 +267,15 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case SWVSPackage.SYSTEM__SYSTEM_TYPE:
+      case SWVSPackage.MSYSTEM__SYSTEM_TYPE:
         return SYSTEM_TYPE_EDEFAULT == null ? systemType != null
             : !SYSTEM_TYPE_EDEFAULT.equals(systemType);
-      case SWVSPackage.SYSTEM__USECASE:
+      case SWVSPackage.MSYSTEM__USECASE:
         return usecase != null && !usecase.isEmpty();
-      case SWVSPackage.SYSTEM__DEF_CLASS:
+      case SWVSPackage.MSYSTEM__DEF_CLASS:
         return defClass != null && !defClass.isEmpty();
-      case SWVSPackage.SYSTEM__STATE:
-        return state != null && !state.isEmpty();
+      case SWVSPackage.MSYSTEM__STATES:
+        return states != null && !states.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -295,4 +297,4 @@ public class SystemImpl extends ObjectImpl implements SWVS.System {
     return result.toString();
   }
 
-} //SystemImpl
+} //MSystemImpl

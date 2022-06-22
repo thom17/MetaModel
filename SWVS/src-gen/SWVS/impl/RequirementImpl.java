@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RequirementImpl extends ObjectImpl implements Requirement {
+public class RequirementImpl extends MObjectImpl implements Requirement {
   /**
    * The default value of the '{@link #getContents() <em>Contents</em>}' attribute.
    * <!-- begin-user-doc -->

@@ -4,8 +4,8 @@ import java.io.IOException;
 import org.eclipse.emf.common.util.EList;
 import SWVS.Actor;
 import SWVS.Flow;
+import SWVS.MSystem;
 import SWVS.Project;
-import SWVS.System;
 import SWVS.UseCase;
 import xmiManage.XmiReader;
 
@@ -21,16 +21,16 @@ public class UsecaseDg2 extends Base {
 
   protected void draw() {
     sb.append("@startuml\n left to right direction\n");
-    for (Actor actor : project.getActor()) {
+    for (Actor actor : project.getActorList()) {
       drwaActor(actor);
     }
-    for (SWVS.System system : project.getSystem()) {
+    for (MSystem system : project.getSystems()) {
       drawSystem(system);
     }
     sb.append("@enduml");
   }
 
-  private void drawSystem(System system) {
+  private void drawSystem(MSystem system) {
     sb.append("rectangle \"" + system.getObjectName() + "\" as " + system.getId() + "{\n");
     for (UseCase usecase : system.getUsecase()) {
       drawUsecase(usecase);
@@ -41,8 +41,8 @@ public class UsecaseDg2 extends Base {
 
   private double getImpUse(UseCase usecase) {
     int impNum = 0;
-    int size = usecase.getFlow().size();
-    for (Flow fl : usecase.getFlow()) {
+    int size = usecase.getFlows().size();
+    for (Flow fl : usecase.getFlows()) {
       if (fl.getData_base_SrcName() == null)
         continue;
       else
@@ -68,7 +68,7 @@ public class UsecaseDg2 extends Base {
       sb.append("\t" + "usecase \"" + usecase.getObjectName() + "(" + percent + "%)" + "\" as "
           + usecase.getId() + " #red\n");
 
-    for (Flow fl : usecase.getFlow()) {
+    for (Flow fl : usecase.getFlows()) {
       if (fl.getData_base_SrcName() != null) {
 
         sb.append("\t\t" + "usecase \"" + fl.getData_base_SrcName() + "\" as " + fl.getId() + "\n");
